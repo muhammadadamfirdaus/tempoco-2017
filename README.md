@@ -11,4 +11,4 @@ Started from early on April, this project was involved frontend and backend in o
 #### Ricky
 #### Arief
 #### Julius
-edit lagi
+edit lagi by adam
