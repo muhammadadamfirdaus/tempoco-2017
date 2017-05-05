@@ -30,6 +30,7 @@
 <meta property="DC.date.issued" content="2017-02-01T18:00:00+07:00" />
 <link rel="shortcut icon" href="https://cdn.tmpo.co/favicon/tempo-white.ico" type="image/x-icon">
 <!-- <link rel="stylesheet" type="text/css" href="css/menu.css"> -->
+<link rel="stylesheet" type="text/css" href="css/photoswipe.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/swiper.css">
 <!--[if lte IE 9]>
@@ -37,7 +38,7 @@
 <![endif]-->
 <script src="https://cdn.tmpo.co/js/jquery-3.1.1.min.js"></script>
 <!-- <script src="https://cdn.tmpo.co/js/slide.min.js"></script> -->
-<script defer src="js/swiper.min.js"></script>
+<script defer src="js/core.js"></script>
 <script defer src="js/main.js"></script>
 </head>
 <body>
@@ -45,7 +46,7 @@
 	<header>
     <div class="header-top">
       <div class="container-desktop date">
-        <span>
+        <span class="date">
           Kamis, 09 Februari 2017
         </span>
       </div>
@@ -77,7 +78,6 @@
 								</a>
 							</div>
 						</div>
-						<div class="swiper-pagination"></div>
 						<div class="swiper-button-next swiper-button-black"></div>
 		        <div class="swiper-button-prev swiper-button-black"></div>
 					</div>
@@ -144,14 +144,76 @@
 		<div class="container-desktop">
 			<section id="article" class="clearfix">
 				<div class="col w-70">
-					<article>
-						<div class="wrapper">
-							<nav>
-								<li><a href="#">Home</a></li>
-								<li><a href="#">Judul Artikel</a></li>
-							</nav>
-						</div>
-					</article>
+					<div class="wrapper">
+						<nav>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Sub-Category</a></li>
+							<li><a href="#">Judul Artikel</a></li>
+						</nav>
+						<article>
+							<h1>
+								Paris Saint-Germain Inginkan Sergio Aguero Bergabung dengan Lorem Ipsum Dolor sit Amet
+							</h1>
+							<div class="sub-head">
+								<div id="author" class="author">
+									<p>oleh:</p><h4>Gadi Makitan</h4>
+								</div>
+								<span id="date" class="date">Minggu, 06 Januari 2017</span><span id="time" class="time">15:45 WIB</span>
+							</div>
+							<div class="sub-head">
+								<div class="col w-50">
+									x
+								</div>
+								<div class="col w-50">
+									y
+								</div>
+							</div>
+							<figure>
+								<a href="images/77.jpg">
+									<img src="images/77.jpg" data-original-src="images/77.jpg" alt="pasangin deskripsi gambar">
+								</a>
+								<figcaption>
+									<p>Aguero saat digantinkan pada menit 66 saat melawan PSG.</p>
+								</figcaption>
+							</figure>
+							<p><strong>TEMPO.CO, Paris</strong> &ndash; Paris Saint-Germain dikabarkan tertarik untuk memboyong Sergio Aguero dari Manchester City musim depan.</p>
+							<p>Berita terkini mengungkap adanya potensi hengkang Aguero dari Man City. Pasalnya, Pep Guardiola mencadangkannya dalam dua laga terkini dan malah memainkan Gabriel Jesus.</p>
+							<p>Penampilan apik dari Jesus tersebut seakan menajadi <em>"lonceng kematian"</em> bagi akhir karier Aguero. Banyak kalangan menganggap Jesus akan menjadi andalan City pada sisa musim ini.</p>
+							<div class="baca-juga clearfix">
+								<h3 class="w-50">Baca Juga</h3>
+								<li><a href="#">Man City Kembali Dekati Laporte</a></li>
+								<li><a href="#">Guardiola Bakal Terus Andalkan Jesus</a></li>
+								<li><a href="#">Agen: Harga Verratti Selangit!</a></li>
+							</div>
+							<p>Aguero pun mengaku pasrah dengan apapun keputusan klub soal masa depannya. Kontrak penyerang berusia 28 tahun tersebut akan brakhir pada 30 Juni 2019.</p>
+							<p>"Dalam tiga bulan ini saya ingin membantu klub. Kemudian mereka yang akan memutuskan apakah saya memiliki tempat di sini atau tidak," kata Aguero.</p>
+							<p>Aguero sendiri mengaku belum memikirkan masa depannya di <a href="http://www.mancity.com/" target"blank">Man City</a> karena kontraknya baru akan berakhir pada 2020.</p>
+							<p>Berita terkini mengungkap adanya potensi hengkang Aguero dari Man City. Pasalnya, Pep Guardiola mencadangkannya dalam dua laga terkini dan malah memainkan Gabriel Jesus.</p>
+							<figure>
+								<a href="images/78.jpg">
+									<img src="images/78.jpg" data-original-src="images/78.jpg" alt="pasangin deskripsi gambar">
+								</a>
+								<figcaption>
+									<p>Aguero saat digantinkan pada menit 66 saat melawan PSG.</p>
+								</figcaption>
+							</figure>
+							<p>Ketidakpastian ini membuka peluang bagi Les Parisiens untuk mendatangkan striker kelas dunia itu musim depan.</p>
+							<ul>
+								<li>Manchester City</li>
+								<li>Paris Saint Germain</li>
+								<li>AC Milan</li>
+								<li>Juventus</li>
+								<li>Real Madrid</li>
+							</ul>
+							<ol>
+								<li>Zlatan Ibrahimovic</li>
+								<li>Lionel Messi</li>
+								<li>Gianluigi Donnarumma</li>
+								<li>Bonucci</li>
+								<li>De Sciglio</li>
+							</ol>
+						</article>
+					</div>
 				</div> <!-- end col-70 -->
 				<div class="col w-30">
 					<div class="ads rectangle">
@@ -177,7 +239,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Setahun Terakhir, Penduduk Depok Bertambah 47 Ribu</h2>
-											<span class="col">1 jam yang lalu</span>
+											<span class="col time">1 jam yang lalu</span>
 										</a>
 									</div>
 								</div>
@@ -190,7 +252,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Setahun Terakhir, Penduduk Depok Bertambah 47 Ribu</h2>
-											<span class="col">1 jam yang lalu</span>
+											<span class="col time">1 jam yang lalu</span>
 										</a>
 									</div>
 								</div>
@@ -203,7 +265,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Setahun Terakhir, Penduduk Depok Bertambah 47 Ribu</h2>
-											<span class="col">1 jam yang lalu</span>
+											<span class="col time">1 jam yang lalu</span>
 										</a>
 									</div>
 								</div>
@@ -216,7 +278,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Setahun Terakhir, Penduduk Depok Bertambah 47 Ribu</h2>
-											<span class="col">1 jam yang lalu</span>
+											<span class="col time">1 jam yang lalu</span>
 										</a>
 									</div>
 								</div>
@@ -230,7 +292,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Setahun Terakhir, Penduduk Depok Bertambah 47 Ribu</h2>
-											<span class="col">1 jam yang lalu</span>
+											<span class="col time">1 jam yang lalu</span>
 										</a>
 									</div>
 								</div>
@@ -244,7 +306,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Setahun Terakhir, Penduduk Depok Bertambah 47 Ribu</h2>
-											<span class="col">1 jam yang lalu</span>
+											<span class="col time">1 jam yang lalu</span>
 										</a>
 									</div>
 								</div>
@@ -257,7 +319,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Setahun Terakhir, Penduduk Depok Bertambah 47 Ribu</h2>
-											<span class="col">1 jam yang lalu</span>
+											<span class="col time">1 jam yang lalu</span>
 										</a>
 									</div>
 								</div>
@@ -270,7 +332,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Setahun Terakhir, Penduduk Depok Bertambah 47 Ribu</h2>
-											<span class="col">1 jam yang lalu</span>
+											<span class="col time">1 jam yang lalu</span>
 										</a>
 									</div>
 								</div>
@@ -284,7 +346,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Kapal Induk Nuklir Prancis Jalani Perbaikan Selama 18 Bulan</h2>
-											<span class="col">1 jam yang lalu</span>
+											<span class="col time">1 jam yang lalu</span>
 										</a>
 									</div>
 								</div>
@@ -298,7 +360,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Setahun Terakhir, Penduduk Depok Bertambah 47 Ribu</h2>
-											<span class="col">1 jam yang lalu</span>
+											<span class="col time">1 jam yang lalu</span>
 										</a>
 									</div>
 								</div>
@@ -368,7 +430,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Google Targetkan Penggunaan 100 Persen Energi Terbarukan</h2>
-											<span class="col">Senin, 05 Desember 2016</span>
+											<span class="col time">Senin, 05 Desember 2016</span>
 											</a>
 									</div>
 								</div>
@@ -381,7 +443,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Sentimen Positif, Rupiah Berpeluang Menguat</h2>
-											<span class="col">Senin, 05 Desember 2016</span>
+											<span class="col time">Senin, 05 Desember 2016</span>
 										</a>
 									</div>
 								</div>
@@ -394,7 +456,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Amazon Buka Supermarket Fisik Tanpa Kasir</h2>
-											<span class="col">Senin, 05 Desember 2016</span>
+											<span class="col time">Senin, 05 Desember 2016</span>
 										</a>
 									</div>
 								</div>
@@ -407,7 +469,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Kediri Kenalkan e-Tilang, Aplikasi Bayar Tilang di Tempat</h2>
-											<span class="col">Senin, 05 Desember 2016</span>
+											<span class="col time">Senin, 05 Desember 2016</span>
 										</a>
 									</div>
 								</div>
@@ -438,7 +500,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Xiaomi Sebut Tak Pakai Layar Datar untuk Mi Note 2</h2>
-											<span class="col">Senin, 05 Desember 2016</span>
+											<span class="col time">Senin, 05 Desember 2016</span>
 										</a>
 									</div>
 								</div>
@@ -451,7 +513,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Ini 10 Tagar Twitter Terpopuler di Indonesia 2016</h2>
-											<span class="col">Senin, 05 Desember 2016</span>
+											<span class="col time">Senin, 05 Desember 2016</span>
 										</a>
 									</div>
 								</div>
@@ -464,7 +526,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Amazon Buka Supermarket Fisik Tanpa Kasir</h2>
-											<span class="col">Senin, 05 Desember 2016</span>
+											<span class="col time">Senin, 05 Desember 2016</span>
 										</a>
 									</div>
 								</div>
@@ -477,7 +539,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Kediri Kenalkan e-Tilang, Aplikasi Bayar Tilang di Tempat</h2>
-											<span class="col">Senin, 05 Desember 2016</span>
+											<span class="col time">Senin, 05 Desember 2016</span>
 										</a>
 									</div>
 								</div>
@@ -508,7 +570,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Xiaomi Sebut Tak Pakai Layar Datar untuk Mi Note 2</h2>
-											<span class="col">Senin, 05 Desember 2016</span>
+											<span class="col time">Senin, 05 Desember 2016</span>
 										</a>
 									</div>
 								</div>
@@ -521,7 +583,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Ini 10 Tagar Twitter Terpopuler di Indonesia 2016</h2>
-											<span class="col">Senin, 05 Desember 2016</span>
+											<span class="col time">Senin, 05 Desember 2016</span>
 										</a>
 									</div>
 								</div>
@@ -534,7 +596,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Amazon Buka Supermarket Fisik Tanpa Kasir</h2>
-											<span class="col">Senin, 05 Desember 2016</span>
+											<span class="col time">Senin, 05 Desember 2016</span>
 										</a>
 									</div>
 								</div>
@@ -547,7 +609,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Kediri Kenalkan e-Tilang, Aplikasi Bayar Tilang di Tempat</h2>
-											<span class="col">Senin, 05 Desember 2016</span>
+											<span class="col time">Senin, 05 Desember 2016</span>
 										</a>
 									</div>
 								</div>
@@ -572,7 +634,7 @@
 								<figcaption>
 									<a class="col" href="#">
 										<h2 class="title">Kapal Induk Nuklir Prancis Jalani Perbaikan Selama 18 Bulan</h2>
-										<span class="col">1 jam yang lalu</span>
+										<span class="col time">1 jam yang lalu</span>
 									</a>
 								</figcaption>
 							</div>
@@ -587,7 +649,7 @@
 								<figcaption>
 									<a class="col" href="#">
 										<h2 class="title">Pantauan dari Udara Kondisi Demo Hari Buruh di Bundaran HI</h2>
-										<span class="col">1 jam yang lalu</span>
+										<span class="col time">1 jam yang lalu</span>
 									</a>
 								</figcaption>
 							</div>
@@ -602,7 +664,7 @@
 								<figcaption>
 									<a class="col" href="#">
 										<h2 class="title">BMW Mottorad Perkenalkan Motor Muran G 310R</h2>
-										<span class="col">1 jam yang lalu</span>
+										<span class="col time">1 jam yang lalu</span>
 									</a>
 								</figcaption>
 							</div>
@@ -617,7 +679,7 @@
 								<figcaption>
 									<a class="col" href="#">
 										<h2 class="title">Persiapan Petugas Kepolisian Jelang Hari Buruh</h2>
-										<span class="col">1 jam yang lalu</span>
+										<span class="col time">1 jam yang lalu</span>
 									</a>
 								</figcaption>
 							</div>
@@ -632,7 +694,7 @@
 								<figcaption>
 									<a class="col" href="#">
 										<h2 class="title">Begini Nasib Akhir Karangan Bunga Ahok-Djarot di Hari Buruh</h2>
-										<span class="col">1 jam yang lalu</span>
+										<span class="col time">1 jam yang lalu</span>
 									</a>
 								</figcaption>
 							</div>
@@ -647,7 +709,7 @@
 								<figcaption>
 									<a class="col" href="#">
 										<h2 class="title">Kapal Induk Nuklir Prancis Jalani Perbaikan Selama 18 Bulan</h2>
-										<span class="col">1 jam yang lalu</span>
+										<span class="col time">1 jam yang lalu</span>
 									</a>
 								</figcaption>
 							</div>
@@ -662,7 +724,7 @@
 								<figcaption>
 									<a class="col" href="#">
 										<h2 class="title">Pantauan dari Udara Kondisi Demo Hari Buruh di Bundaran HI</h2>
-										<span class="col">1 jam yang lalu</span>
+										<span class="col time">1 jam yang lalu</span>
 									</a>
 								</figcaption>
 							</div>
@@ -677,7 +739,7 @@
 								<figcaption>
 									<a class="col" href="#">
 										<h2 class="title">BMW Mottorad Perkenalkan Motor Muran G 310R</h2>
-										<span class="col">1 jam yang lalu</span>
+										<span class="col time">1 jam yang lalu</span>
 									</a>
 								</figcaption>
 							</div>
@@ -692,7 +754,7 @@
 								<figcaption>
 									<a class="col" href="#">
 										<h2 class="title">Persiapan Petugas Kepolisian Jelang Hari Buruh</h2>
-										<span class="col">1 jam yang lalu</span>
+										<span class="col time">1 jam yang lalu</span>
 									</a>
 								</figcaption>
 							</div>
@@ -707,7 +769,7 @@
 								<figcaption>
 									<a class="col" href="#">
 										<h2 class="title">Begini Nasib Akhir Karangan Bunga Ahok-Djarot di Hari Buruh</h2>
-										<span class="col">1 jam yang lalu</span>
+										<span class="col time">1 jam yang lalu</span>
 									</a>
 								</figcaption>
 							</div>
@@ -754,7 +816,7 @@
 												<figcaption>
 													<a class="col" href="#">
 														<h2 class="title">Tahan Vietnam 2-2, Timnas Indonesia Lolos ke Final Piala AFF</h2>
-														<span class="col">1 jam yang lalu</span>
+														<span class="col time">1 jam yang lalu</span>
 													</a>
 												</figcaption>
 											</div>
@@ -768,7 +830,7 @@
 												</a>
 												<a class="col" href="#">
 													<h2 class="title">Xiaomi Sebut Tak Pakai Layar Datar untuk Mi Note 2</h2>
-													<span class="col">Senin, 05 Desember 2016</span>
+													<span class="col time">Senin, 05 Desember 2016</span>
 												</a>
 											</div>
 										</div>
@@ -781,7 +843,7 @@
 												</a>
 												<a class="col" href="#">
 													<h2 class="title">Ini 10 Tagar Twitter Terpopuler di Indonesia 2016</h2>
-													<span class="col">Senin, 05 Desember 2016</span>
+													<span class="col time">Senin, 05 Desember 2016</span>
 												</a>
 											</div>
 										</div>
@@ -794,7 +856,7 @@
 												</a>
 												<a class="col" href="#">
 													<h2 class="title">Amazon Buka Supermarket Fisik Tanpa Kasir</h2>
-													<span class="col">Senin, 05 Desember 2016</span>
+													<span class="col time">Senin, 05 Desember 2016</span>
 												</a>
 											</div>
 										</div>
@@ -807,7 +869,7 @@
 												</a>
 												<a class="col" href="#">
 													<h2 class="title">Kediri Kenalkan e-Tilang, Aplikasi Bayar Tilang di Tempat</h2>
-													<span class="col">Senin, 05 Desember 2016</span>
+													<span class="col time">Senin, 05 Desember 2016</span>
 												</a>
 											</div>
 										</div>
@@ -820,7 +882,7 @@
 												</a>
 												<a class="col" href="#">
 													<h2 class="title">Kemenkominfo Gencar Sosialisasikan Tanda Tangan Digital</h2>
-													<span class="col">Senin, 05 Desember 2016</span>
+													<span class="col time">Senin, 05 Desember 2016</span>
 												</a>
 											</div>
 										</div>
@@ -833,7 +895,7 @@
 												</a>
 												<a class="col" href="#">
 													<h2 class="title">Hari Belanja Online, Alfacart Tawarkan Diskon Jumbo</h2>
-													<span class="col">Senin, 05 Desember 2016</span>
+													<span class="col time">Senin, 05 Desember 2016</span>
 												</a>
 											</div>
 										</div>
@@ -915,7 +977,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Setahun Terakhir, Penduduk Depok Bertambah 47 Ribu</h2>
-											<span class="col">Muhammad Adam Firdaus</span>
+											<span class="col time">Muhammad Adam Firdaus</span>
 										</a>
 									</div>
 								</div>
@@ -928,7 +990,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Setahun Terakhir, Penduduk Depok Bertambah 47 Ribu</h2>
-											<span class="col">Muhammad Adam Firdaus</span>
+											<span class="col time">Muhammad Adam Firdaus</span>
 										</a>
 									</div>
 								</div>
@@ -941,7 +1003,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Setahun Terakhir, Penduduk Depok Bertambah 47 Ribu</h2>
-											<span class="col">Muhammad Adam Firdaus</span>
+											<span class="col time">Muhammad Adam Firdaus</span>
 										</a>
 									</div>
 								</div>
@@ -954,7 +1016,7 @@
 										</a>
 										<a class="col" href="#">
 											<h2 class="title">Setahun Terakhir, Penduduk Depok Bertambah 47 Ribu</h2>
-											<span class="col">Muhammad Adam Firdaus</span>
+											<span class="col time">Muhammad Adam Firdaus</span>
 										</a>
 									</div>
 								</div>

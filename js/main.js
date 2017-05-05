@@ -226,18 +226,20 @@ $(function(){
     	$('header').removeClass('sticky sticky-header');
 		}
 
-		if(scroll > jarakstickyrectangle3){
-			$('.r3').css('margin-top', '60px');
-			$('.r3').removeClass('lepas').addClass('sticky sticky-r3');
-		} else {
-			$('.r3').css('margin-top', 'inherit');
-			$('.r3').removeClass('sticky sticky-r3');
-		}
+		if($('.r3').length){
+			if(scroll > jarakstickyrectangle3){
+				$('.r3').css('margin-top', '60px');
+				$('.r3').removeClass('lepas').addClass('sticky sticky-r3');
+			} else {
+				$('.r3').css('margin-top', 'inherit');
+				$('.r3').removeClass('sticky sticky-r3');
+			}
 
-		if(scroll > overSection3){
-			// console.log('hi');
-			$('.r3').css('margin-top', 'inherit');
-			$('.r3').addClass('lepas').removeClass('sticky-r3');
+			if(scroll > overSection3){
+				// console.log('hi');
+				$('.r3').css('margin-top', 'inherit');
+				$('.r3').addClass('lepas').removeClass('sticky-r3');
+			}
 		}
 	}
 
@@ -253,7 +255,10 @@ $(function(){
   }
 
 	var fotoHome = new Swiper('.foto-home', {
-      pagination: '.swiper-pagination',
+			pagination: '.swiper-pagination',
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			paginationClickable: true,
       effect: 'coverflow',
       grabCursor: true,
       centeredSlides: true,
@@ -267,8 +272,21 @@ $(function(){
       }
   });
 
-	// Ads
+	// Photoswipe
 
+
+	if($('figure').length){
+		var slideSelector = 'img',
+    options     = {bgOpacity: 0.8},
+    events      = {
+        close: function () {
+            console.log('closed');
+        }
+    };
+		$('article').photoSwipe(slideSelector, options, events);
+	}
+
+	// Ads
 	// bottom ads
   if($('.bottom-banner').length){
     var bottomAdsCloseButton = $('.bottom-banner button');
@@ -281,24 +299,24 @@ $(function(){
   }
 
 	// premium head
-  if($('.premium-head').length){
-		var premiumHead = $('.premium-head');
-    var premiumSmall = $('.premium-head-small');
-    var premiumBig = $('.premium-head-big');
-    premiumHead.on('mouseenter', function(e){
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      // console.log('opening');
-	    premiumSmall.addClass('deactive');
-	    premiumBig.addClass('active');
-    });
-		premiumHead.on('mouseleave', function(e){
-			e.preventDefault();
-			e.stopImmediatePropagation();
-			premiumSmall.removeClass('deactive');
-			premiumBig.removeClass('active');
-		});
-  }
+  // if($('.premium-head').length){
+	// 	var premiumHead = $('.premium-head');
+  //   var premiumSmall = $('.premium-head-small');
+  //   var premiumBig = $('.premium-head-big');
+  //   premiumHead.on('mouseenter', function(e){
+  //     e.preventDefault();
+  //     e.stopImmediatePropagation();
+  //     // console.log('opening');
+	//     premiumSmall.addClass('deactive');
+	//     premiumBig.addClass('active');
+  //   });
+	// 	premiumHead.on('mouseleave', function(e){
+	// 		e.preventDefault();
+	// 		e.stopImmediatePropagation();
+	// 		premiumSmall.removeClass('deactive');
+	// 		premiumBig.removeClass('active');
+	// 	});
+  // }
 
 	// popup ads
 	// if($('.popup-ads').length){

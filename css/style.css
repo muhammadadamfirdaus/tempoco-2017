@@ -43,6 +43,7 @@ body, p {
 	font-family: 'RobotoDraft';
 	font-weight: 400;
 	letter-spacing: 0.01em;
+	text-rendering: optimizeSpeed;
 	-webkit-font-smoothing: subpixel-antialiased;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -75,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'RobotoDraft', Helvetica, Arial;
 	font-weight: 500;
 	letter-spacing: 0.01em;
+	text-rendering: optimizeSpeed;
 	-webkit-font-smoothing: subpixel-antialiased;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -367,12 +369,17 @@ header {
   height: 30px;
 }
 
-.header-top span {
+.header-top span.date {
+	line-height: 30px;
+}
+
+span.date,
+span.time {
   font-family: 'RobotoDraft', Helvetica, Arial;
   font-size: 10px;
 	font-weight: 300;
-  line-height: 28px;
-  letter-spacing: 0.10em;
+  line-height: 12px;
+  letter-spacing: 0.01em;
 }
 
 .header-main {
@@ -1761,32 +1768,149 @@ a.button {
 
 /* article */
 
-article .wrapper {
+#article .w-70 .wrapper {
 	padding: 0;
 }
 
-article nav:nth-of-type(1) li {
+#article nav:nth-of-type(1) li {
 	display: inline-block;
+	margin: 0 10px;
 	position: relative;
 }
 
-article nav:nth-of-type(1) li a:after {
+#article nav:nth-of-type(1) li:first-child {
+	margin-left: 0;
+}
+
+#article nav:nth-of-type(1) li a:after {
 	content: '';
 	background-size: 8px 8px;
 	width: 8px;
 	height: 8px;
 	position: absolute;
-	right: 0;
+	right: -5px;
 	top: 5px;
 }
 
-article nav:nth-of-type(1) li a {
+#article nav:nth-of-type(1) li:last-child a:after {
+	content: none;
+}
+
+#article nav:nth-of-type(1) li a {
 	color: #000;
 	display: block;
-	font-family: 'HelveticaNeueW01-55Roman', 'Roboto-Light', Helvetica, Arial;
+	font-family: 'RobotoDraft', Helvetica, Arial;
+	font-size: 12px;
+	line-height: 17px;
 	position: relative;
-	padding-right: 16px;
+	padding-right: 20px;
 	text-transform: uppercase;
+}
+
+article h1 {
+	display: inline-block;
+	font-weight: 500;
+	margin: 2% 0 1%;
+}
+
+article .sub-head {
+	margin: 10px 0;
+}
+
+article .sub-head .author *,
+article .sub-head span {
+	display: inline-block;
+}
+
+.author h4 {
+	margin-left: 5px;
+	font-size: 14px;
+	color: #e53935;
+}
+
+.author p {
+	font-size: 12px;
+}
+
+article > figure:nth-of-type(1) a:nth-of-type(1) {
+	display: block;
+	width: 720px;
+	height: 405px;
+	overflow: hidden;
+}
+
+article figure figcaption {
+	margin: 10px 0;
+}
+
+article figure figcaption p {
+	color: #777;
+	font-size: 11px;
+	font-style: italic;
+}
+
+article > p a {
+	color: #00b0ff;
+}
+
+article > p {
+	color: #333;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.01em;
+	line-height: 22px;
+	margin: 1em 0;
+}
+
+article > strong {
+	font-weight: 500;
+}
+
+article > p em {
+	font-style: italic;
+	margin-right: 2px;
+}
+
+article > ol,
+article > ul {
+	margin: 1em 1em 1em 2em;
+}
+
+article > ul li {
+	list-style: disc;
+}
+
+article > ol li {
+	list-style: decimal;
+}
+
+.baca-juga {
+	border: 1px solid #e53935;
+	float: right;
+	margin: 1em;
+	padding: 1em;
+	position: relative;
+}
+
+.baca-juga h3 {
+	background: #fbfbfb;
+	display: block;
+	font-size: 18px;
+	margin: -28px auto 0;
+	padding: 0 5px;
+	text-align: center;
+}
+
+.baca-juga li {
+	margin: 1em 0;
+}
+
+.baca-juga li:last-child {
+	margin: 0;
+}
+
+.baca-juga li a {
+	color: #e53935;
 }
 
 /* end article */
