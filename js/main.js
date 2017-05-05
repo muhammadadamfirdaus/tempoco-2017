@@ -301,21 +301,21 @@ $(function(){
   }
 
 	// popup ads
-	if($('.popup-ads').length){
-		var popupAdsCloseButton = $('.popup-ads button');
-		setTimeout(function(){
-			$('.popup-ads').addClass('active');
-		}, 3000);
-		setTimeout(function(){
-			$('.popup-ads').addClass('popup-ads-closed');
-		}, 15000);
-		popupAdsCloseButton.on('click', function(e){
-			e.preventDefault();
-			e.stopImmediatePropagation();
-			// console.log('closing');
-			$('.popup-ads').addClass('popup-ads-closed');
-		});
-	}
+	// if($('.popup-ads').length){
+	// 	var popupAdsCloseButton = $('.popup-ads button');
+	// 	setTimeout(function(){
+	// 		$('.popup-ads').addClass('active');
+	// 	}, 3000);
+	// 	setTimeout(function(){
+	// 		$('.popup-ads').addClass('popup-ads-closed');
+	// 	}, 15000);
+	// 	popupAdsCloseButton.on('click', function(e){
+	// 		e.preventDefault();
+	// 		e.stopImmediatePropagation();
+	// 		// console.log('closing');
+	// 		$('.popup-ads').addClass('popup-ads-closed');
+	// 	});
+	// }
 
 
 
