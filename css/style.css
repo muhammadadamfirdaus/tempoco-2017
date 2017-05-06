@@ -39,18 +39,14 @@ html, body {
 	height: 100%;
 }
 
-body, p {
-	font-family: 'RobotoDraft';
+body, p, span {
+	font-family: 'RobotoDraft', 'HelveticaNeueW01-45Light', Helvetica, Arial;
 	font-weight: 400;
 	letter-spacing: 0.01em;
 	text-rendering: optimizeSpeed;
 	-webkit-font-smoothing: subpixel-antialiased;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-body {
-	background-color: #fbfbfb;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -73,13 +69,13 @@ q:before, q:after {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'RobotoDraft', Helvetica, Arial;
+	font-family: 'RobotoDraft', 'HelveticaNeueW01-55Roman', Helvetica, Arial;
 	font-weight: 500;
 	letter-spacing: 0.01em;
-	text-rendering: optimizeSpeed;
+	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: subpixel-antialiased;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
@@ -301,6 +297,30 @@ footer {
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: 'SanFranciscoText-Light';
+  src: 	url('fonts/SanFranciscoText-Light.eot?#iefix') format('embedded-opentype'),
+				url('fonts/SanFranciscoText-Light.otf')  format('opentype'),
+	     	url('fonts/SanFranciscoText-Light.woff') format('woff'),
+				url('fonts/SanFranciscoText-Light.ttf')  format('truetype'),
+				url('fonts/SanFranciscoText-Light.svg#SanFranciscoText-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SanFranciscoDisplay-Medium';
+  src: 	url('fonts/SanFranciscoDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+				url('fonts/SanFranciscoDisplay-Medium.otf')  format('opentype'),
+	     	url('fonts/SanFranciscoDisplay-Medium.woff') format('woff'),
+			 	url('fonts/SanFranciscoDisplay-Medium.ttf')  format('truetype'),
+			 	url('fonts/SanFranciscoDisplay-Medium.svg#SanFranciscoDisplay-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /* colors */
 .red-500 {
 	background-color: rgba(244,67,54,1);
@@ -375,7 +395,7 @@ header {
 
 span.date,
 span.time {
-  font-family: 'RobotoDraft', Helvetica, Arial;
+  font-family: 'SanFranciscoText-Light', Helvetica, Arial;
   font-size: 10px;
 	font-weight: 300;
   line-height: 12px;
@@ -709,10 +729,6 @@ main .navigation {
 	height: 90px;
 }
 
-.ads.rectangle {
-	height: 250px;
-}
-
 .ads.rectangle.r3 {
 	background: none;
 }
@@ -883,10 +899,16 @@ section li {
 	height: 34px;
 	line-height: 34px;
 	letter-spacing: 0.2em;
-	display: inline-block;
+	display: block;
 	font-size: 11px;
 	text-align: center;
 	text-transform: uppercase;
+}
+
+.selengkapnya {
+	border: 1px solid rgba(244,67,54,1);
+	color: rgba(244,67,54,1);
+	margin: 0 auto;
 }
 /* title box */
 
@@ -955,8 +977,13 @@ section li {
 .billboard,
 .rectangle,
 #section-2,
-#berita-pilihan {
+#berita-pilihan,
+.w-30 .terpopuler {
 	margin-bottom: 30px;
+}
+
+main {
+	padding-bottom: 30%;
 }
 
 main section > .w-70,
@@ -1120,9 +1147,11 @@ main section > .w-30 .wrapper .wrapper {
 .tab .tab-content-slide li:nth-of-type(1) a:nth-of-type(1) img,
 .tab.tab-type-2 .tab-content-slide li:nth-of-type(2) a:nth-of-type(1) img,
 #section-3 .col li:nth-of-type(1) a:nth-of-type(1) img,
-.video.tab-type-2 .tab-content-slide li:nth-of-type(2) img {
+.video.tab-type-2 .tab-content-slide li:nth-of-type(2) img,
+.list.list-type-2 .card-type-1 a:nth-of-type(1) img {
 	width: 100%;
 	position: static;
+	height: auto;
 }
 
 .tab-content li a:nth-of-type(2) * {
@@ -1232,7 +1261,7 @@ main section > .w-30 .wrapper .wrapper {
 }
 
 .video.tab-type-2 .tab-content {
-	min-height: 1800px;
+	min-height: 1400px;
 }
 
 .tab-type-2 .tab-content li:nth-of-type(2) a:nth-of-type(2) *,
@@ -1462,7 +1491,7 @@ a.button {
 
 .list.list-type-2 li a:nth-of-type(1) {
 	width: 100%;
-	height: 90px;
+	height: 80px;
 	overflow: hidden;
 }
 
@@ -1502,6 +1531,10 @@ a.button {
 	height: 65px;
 	overflow: hidden;
 	margin-bottom: 5px;
+}
+
+.list.list-type-2 li a:nth-of-type(2) h2.title {
+	height: auto;
 }
 
 .list li a:nth-of-type(2) h2.title,
@@ -1744,6 +1777,42 @@ a.button {
 	border-top: 1px solid #e53935;
 }
 
+/* terpopuler */
+.terpopuler.list .card-type-1 a:nth-of-type(2) {
+	width: 75%;
+}
+
+.terpopuler.list li a:nth-of-type(2) h2.title {
+	height: 50px;
+}
+
+.terpopuler .card-type-1 a:nth-of-type(2) * {
+	padding-left: 5%;
+}
+
+.terpopuler.list .card-type-1 a:nth-of-type(1) {
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	width: 64px;
+	height: 64px;
+	border: 1px solid #e53935;
+	color: #e53935;
+	font-size: 35px;
+	text-align: center;
+	line-height: 64px;
+	margin-top: 3px;
+}
+
+.terpopuler .card-type-1 a:nth-of-type(2) h2.title {
+	color: #555;
+}
+
+.terpopuler.list .card-type-1 a:nth-of-type(2) span {
+	color: #aaa;
+	margin-top: 2%;
+}
+/* end terpopuler */
+
 /* widget */
 .widget-article .wrapper a:nth-of-type(1) {
 	display: block;
@@ -1807,6 +1876,10 @@ a.button {
 	text-transform: uppercase;
 }
 
+#article hr {
+	margin: 5% auto;
+}
+
 article h1 {
 	display: inline-block;
 	font-weight: 500;
@@ -1822,6 +1895,10 @@ article .sub-head span {
 	display: inline-block;
 }
 
+.w-70 .author:nth-of-type(2) {
+	padding: 1em 0;
+}
+
 .author h4 {
 	margin-left: 5px;
 	font-size: 14px;
@@ -1830,6 +1907,18 @@ article .sub-head span {
 
 .author p {
 	font-size: 12px;
+}
+
+.author li,
+.author li a {
+	display: inline-block;
+}
+
+.author li a {
+	width: 48px;
+	height: 48px;
+	overflow: hidden;
+	border-radius: 50%;
 }
 
 article > figure:nth-of-type(1) a:nth-of-type(1) {
@@ -1884,6 +1973,22 @@ article > ol li {
 	list-style: decimal;
 }
 
+article > h2,
+article > h3,
+article > h4,
+article > h5,
+article > h6 {
+	display: block;
+	margin: 1em 0;
+}
+
+article p iframe,
+article iframe.instagram-media,
+article twitterwidget {
+	display: block;
+	margin: auto !important;
+}
+
 .baca-juga {
 	border: 1px solid #e53935;
 	float: right;
@@ -1912,6 +2017,34 @@ article > ol li {
 .baca-juga li a {
 	color: #e53935;
 }
+
+/* tags */
+.tags li {
+	display: inline-block;
+}
+
+.tags li a {
+	background: #00b0ff;
+	color: #fff;
+	display: block;
+	font-size: 12px;
+	line-height: 12px;
+	padding: 10px 20px;
+}
+/* end tags */
+
+/* comments */
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget span iframe[style] {
+  min-width: 100% !important;
+  width: 100% !important;
+}
+
+.comments-count * {
+	display: inline-block;
+}
+/* end comments */
 
 /* end article */
 
