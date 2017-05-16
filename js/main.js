@@ -253,6 +253,7 @@ $(function(){
 	function getCurrentScroll() {
     return window.pageYOffset || document.documentElement.scrollTop;
   }
+	/* end onscroll */
 
 	var fotoHome = new Swiper('.foto-home', {
 			pagination: '.swiper-pagination',
@@ -353,14 +354,14 @@ $(function(){
 	    }
 	}
 
-   // Social Plugin Button po.st
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = ('https:' == document.location.protocol ? 'https://s' : 'http://i')
-    + '.po.st/static/v4/post-widget.js#publisherKey=g2s58c5cupgtrsulvrd0';
-  var x = document.getElementsByTagName('script')[0];
-  x.parentNode.insertBefore(s, x);
+	// Social Plugin Button po.st
+	var s = document.createElement('script');
+	s.type = 'text/javascript';
+	s.async = true;
+	s.src = ('https:' == document.location.protocol ? 'https://s' : 'http://i')
+	+ '.po.st/static/v4/post-widget.js#publisherKey=g2s58c5cupgtrsulvrd0';
+	var x = document.getElementsByTagName('script')[0];
+	x.parentNode.insertBefore(s, x);
 
 
 	// Google Analytics

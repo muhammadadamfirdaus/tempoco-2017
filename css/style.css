@@ -371,7 +371,7 @@ header {
 
 span.date,
 span.time {
-  font-family: 'SanFranciscoText-Light', Helvetica, Arial;
+  font-family: 'RobotoDraft', Helvetica, Arial;
   font-size: 10px;
 	font-weight: 300;
   line-height: 12px;
@@ -993,7 +993,7 @@ main section > .w-30 .wrapper .wrapper {
 }
 
 .tab .tab-pagination {
-	height: 35px;
+	height: 32px;
 	border-bottom: 1px solid;
 	margin-bottom: 10px;
 }
@@ -1239,6 +1239,10 @@ main section > .w-30 .wrapper .wrapper {
 	margin: 5% 0;
 }
 
+#article #section-3 li:nth-of-type(1) .card h2.title {
+	margin: 0;
+}
+
 /* tab type 2 */
 .tab-type-2 .tab-content {
 	min-height: 680px;
@@ -1249,7 +1253,8 @@ main section > .w-30 .wrapper .wrapper {
 }
 
 .tab-type-2 .tab-content li:nth-of-type(2) a:nth-of-type(2) *,
-#section-3 li:nth-of-type(1) .card a:nth-of-type(2) * {
+#section-3 li:nth-of-type(1) .card a:nth-of-type(2) *,
+.video.tab-type-2 .tab-content-slide li:nth-of-type(1) a:nth-of-type(2) h2 {
 	margin-left: 0;
 }
 
@@ -1265,10 +1270,6 @@ main section > .w-30 .wrapper .wrapper {
 
 .video.tab-type-2 .tab-content-slide li {
 	float: left;
-}
-
-.video.tab-type-2 .tab-content-slide li:nth-of-type(1) a:nth-of-type(2) h2 {
-	margin-left: 0;
 }
 
 .video.tab-type-2 li:nth-of-type(2n+1) .wrapper {
@@ -1412,7 +1413,7 @@ a.button {
 }
 
 #headline.swiper-container.headline-mobile-terbaru .swiper-slide h3 {
-	font-size: 8px;
+	font-size: 11px;
 	font-weight: 400;
 	padding: 4px 10px;
 }
@@ -1422,7 +1423,7 @@ a.button {
 }
 
 #headline.swiper-container.headline-mobile-terbaru .swiper-slide:nth-of-type(1) h3 {
-	font-size: 12px;
+	font-size: 13px;
 }
 
 #headline .swiper-pagination {
@@ -1656,7 +1657,7 @@ a.button {
 }
 
 #section-4 .foto-home.swiper-container .card-type-5 figcaption a h2.title {
-	font-size: 14px;
+	font-size: 16px;
 	margin: 10% 0;
 }
 
@@ -1773,7 +1774,7 @@ a.button {
 	height: 50px;
 }
 
-.terpopuler .card-type-1 a:nth-of-type(2) * {
+.terpopuler.list .card-type-1 a:nth-of-type(2) * {
 	padding-left: 5%;
 }
 
@@ -1888,6 +1889,10 @@ article .sub-head:nth-of-type(1) a..pw-widget.__pw-padding-true.__pw-layout-hori
 
 .w-70 .author:nth-of-type(2) {
 	padding: 1em 0;
+}
+
+.author:last-child {
+	margin: 10px 0;
 }
 
 .author h4 {
