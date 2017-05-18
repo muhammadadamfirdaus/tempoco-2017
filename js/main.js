@@ -273,9 +273,14 @@ $(function(){
       }
   });
 
+	//detail foto
+	if($('#foto').length){
+		console.log('foto');
+	}
+
 	// Photoswipe
 	if($('figure').length){
-		var slideSelector = 'img',
+		var slideSelector = 'figure img',
     options     = {bgOpacity: 0.8},
     events      = {
         close: function () {
