@@ -1842,17 +1842,17 @@ a.button {
 	padding: 0;
 }
 
-section nav:nth-of-type(1) li {
+section#article nav:nth-of-type(1) li {
 	display: inline-block;
 	margin: 0 10px;
 	position: relative;
 }
 
-section nav:nth-of-type(1) li:first-child {
+section#article nav:nth-of-type(1) li:first-child {
 	margin-left: 0;
 }
 
-section nav:nth-of-type(1) li a:after {
+section#article nav:nth-of-type(1) li a:after {
 	content: '';
 	background-size: 8px 8px;
 	width: 8px;
@@ -1862,11 +1862,11 @@ section nav:nth-of-type(1) li a:after {
 	top: 5px;
 }
 
-section nav:nth-of-type(1) li:last-child a:after {
+section#article nav:nth-of-type(1) li:last-child a:after {
 	content: none;
 }
 
-section nav:nth-of-type(1) li a {
+section#article nav:nth-of-type(1) li a {
 	color: #000;
 	display: block;
 	font-family: 'RobotoDraft', Helvetica, Arial;
