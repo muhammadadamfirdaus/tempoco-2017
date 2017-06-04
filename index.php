@@ -1,7 +1,7 @@
 <!doctype html>
 <html id="tempoco-2017" lang="en">
 <head>
-<title>Prototype 8.3 - Home</title>
+<title>Prototype 8.2 - Home</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="original-source" href="https://www.tempo.co/" />
@@ -1976,11 +1976,11 @@
 					<figure class="swiper-slide">
 						<div class="card card-type-5">
 							<div class="wrapper clearfix">
-								<a class="col" href="detail-foto.html">
+								<a class="col" href="#">
 									<img src="images/foto-home-1.jpg">
 								</a>
 								<figcaption>
-									<a href="detail-foto.html">
+									<a class="col" href="#">
 										<h2 class="title">Kapal Induk Nuklir Prancis Jalani Perbaikan Selama 18 Bulan</h2>
 										<span class="col time">1 jam yang lalu</span>
 									</a>
@@ -1991,11 +1991,11 @@
 					<figure class="swiper-slide">
 						<div class="card card-type-5">
 							<div class="wrapper clearfix">
-								<a class="col" href="detail-foto.html">
+								<a class="col" href="#">
 									<img src="images/foto-home-2.jpg">
 								</a>
 								<figcaption>
-									<a href="#">
+									<a class="col" href="#">
 										<h2 class="title">Pantauan dari Udara Kondisi Demo Hari Buruh di Bundaran HI</h2>
 										<span class="col time">1 jam yang lalu</span>
 									</a>
@@ -2006,11 +2006,11 @@
 					<figure class="swiper-slide">
 						<div class="card card-type-5">
 							<div class="wrapper clearfix">
-								<a class="col" href="detail-foto.html">
+								<a class="col" href="#">
 									<img src="images/foto-home-3.jpg">
 								</a>
 								<figcaption>
-									<a href="#">
+									<a class="col" href="#">
 										<h2 class="title">BMW Mottorad Perkenalkan Motor Muran G 310R</h2>
 										<span class="col time">1 jam yang lalu</span>
 									</a>
@@ -2021,11 +2021,11 @@
 					<figure class="swiper-slide">
 						<div class="card card-type-5">
 							<div class="wrapper clearfix">
-								<a class="col" href="detail-foto.html">
+								<a class="col" href="#">
 									<img src="images/foto-home-4.jpg">
 								</a>
 								<figcaption>
-									<a href="#">
+									<a class="col" href="#">
 										<h2 class="title">Persiapan Petugas Kepolisian Jelang Hari Buruh</h2>
 										<span class="col time">1 jam yang lalu</span>
 									</a>
@@ -2036,11 +2036,11 @@
 					<figure class="swiper-slide">
 						<div class="card card-type-5">
 							<div class="wrapper clearfix">
-								<a class="col" href="detail-foto.html">
+								<a class="col" href="#">
 									<img src="images/foto-home-5.jpg">
 								</a>
 								<figcaption>
-									<a href="#">
+									<a class="col" href="#">
 										<h2 class="title">Begini Nasib Akhir Karangan Bunga Ahok-Djarot di Hari Buruh</h2>
 										<span class="col time">1 jam yang lalu</span>
 									</a>
@@ -2051,11 +2051,11 @@
 					<figure class="swiper-slide">
 						<div class="card card-type-5">
 							<div class="wrapper clearfix">
-								<a class="col" href="detail-foto.html">
+								<a class="col" href="#">
 									<img src="images/foto-home-1.jpg">
 								</a>
 								<figcaption>
-									<a href="#">
+									<a class="col" href="#">
 										<h2 class="title">Kapal Induk Nuklir Prancis Jalani Perbaikan Selama 18 Bulan</h2>
 										<span class="col time">1 jam yang lalu</span>
 									</a>
@@ -2066,11 +2066,11 @@
 					<figure class="swiper-slide">
 						<div class="card card-type-5">
 							<div class="wrapper clearfix">
-								<a class="col" href="detail-foto.html">
+								<a class="col" href="#">
 									<img src="images/foto-home-2.jpg">
 								</a>
 								<figcaption>
-									<a href="#">
+									<a class="col" href="#">
 										<h2 class="title">Pantauan dari Udara Kondisi Demo Hari Buruh di Bundaran HI</h2>
 										<span class="col time">1 jam yang lalu</span>
 									</a>
@@ -2081,11 +2081,11 @@
 					<figure class="swiper-slide">
 						<div class="card card-type-5">
 							<div class="wrapper clearfix">
-								<a class="col" href="detail-foto.html">
+								<a class="col" href="#">
 									<img src="images/foto-home-3.jpg">
 								</a>
 								<figcaption>
-									<a href="#">
+									<a class="col" href="#">
 										<h2 class="title">BMW Mottorad Perkenalkan Motor Muran G 310R</h2>
 										<span class="col time">1 jam yang lalu</span>
 									</a>
@@ -2096,11 +2096,11 @@
 					<figure class="swiper-slide">
 						<div class="card card-type-5">
 							<div class="wrapper clearfix">
-								<a class="col" href="detail-foto.html">
+								<a class="col" href="#">
 									<img src="images/foto-home-4.jpg">
 								</a>
 								<figcaption>
-									<a href="#">
+									<a class="col" href="#">
 										<h2 class="title">Persiapan Petugas Kepolisian Jelang Hari Buruh</h2>
 										<span class="col time">1 jam yang lalu</span>
 									</a>
@@ -2111,11 +2111,11 @@
 					<figure class="swiper-slide">
 						<div class="card card-type-5">
 							<div class="wrapper clearfix">
-								<a class="col" href="detail-foto.html">
+								<a class="col" href="#">
 									<img src="images/foto-home-5.jpg">
 								</a>
 								<figcaption>
-									<a href="#">
+									<a class="col" href="#">
 										<h2 class="title">Begini Nasib Akhir Karangan Bunga Ahok-Djarot di Hari Buruh</h2>
 										<span class="col time">1 jam yang lalu</span>
 									</a>

@@ -274,8 +274,28 @@ $(function(){
   });
 
 	//detail foto
-	if($('#foto').length){
+	var fotoDetail = new Swiper('#detail-foto .foto-home', {
+			pagination: '.swiper-pagination',
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			paginationClickable: true,
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflow: {
+        rotate: 30,
+        stretch: 0,
+        depth: 120,
+        modifier: 1,
+        slideShadows : true
+      }
+  });
+
+	if($('#detail-foto').length){
 		console.log('foto');
+		var fotoDetail = '.foto-home img'
+		$('.foto-home').photoSwipe();
 	}
 
 	// Photoswipe

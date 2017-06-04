@@ -940,6 +940,10 @@ section li {
 	width: 100%;
 }
 
+#section-4 .foto-home.swiper-container .swiper-slide figcaption {
+	height: 40%;
+}
+
 #headline figcaption a {
 	display: block;
 	color: #fff;
@@ -977,7 +981,7 @@ main section > .w-30 {
 	width: 344px;
 }
 
-main section > .w-30 .wrapper {
+main section .w-30 .wrapper {
 	padding: 0 0 0 44px;
 }
 
@@ -1036,7 +1040,7 @@ main section > .w-30 .wrapper .wrapper {
 	font-size: 12px;
 	font-weight: 400;
 	letter-spacing: 0.01em;
-	line-height: 34px;
+	line-height: 32px;
 	margin: 0 10px;
 	text-align: center;
 	text-decoration: none;
@@ -1070,7 +1074,7 @@ main section > .w-30 .wrapper .wrapper {
 }
 
 .tab .tab-pagination .sub-tab:before {
-	top: 6px;
+	top: 5px;
 	right: -3px;
 }
 
@@ -1239,7 +1243,8 @@ main section > .w-30 .wrapper .wrapper {
 
 .tab .tab-content-slide li:nth-of-type(1) h2.title,
 .tekno.tab-type-2 .tab-content-slide li:nth-of-type(2) h2.title,
-#article #section-3 li:nth-of-type(1) .card h2.title {
+#article #section-3 li:nth-of-type(1) .card h2.title,
+#section-3 li:nth-of-type(1) a:nth-of-type(2) h2.title {
 	margin: 5% 0;
 }
 
@@ -1610,6 +1615,10 @@ a.button {
 	background: #000;
 }
 
+#gallery #section-4 .foto-home.swiper-container {
+	padding-top: 20px;
+}
+
 #section-4 .foto-home.swiper-container .container-desktop > h2:nth-of-type(1) {
 	color: #fff;
 	font-family: 'Poppins-Light', Helvetica, Arial;
@@ -1648,7 +1657,8 @@ a.button {
 	position: relative;
 }
 
-#section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1) {
+#section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col {
+	display: block;
 	width: 300px;
 	height: 300px;
 	overflow: hidden;
@@ -1656,27 +1666,35 @@ a.button {
 	position: relative;
 }
 
-#section-4 .foto-home.swiper-container .card-type-5 figcaption a {
-	position: absolute;
-	color: #fff;
-	bottom: 10px;
-}
-
 #section-4 .foto-home.swiper-container .card-type-5 figcaption a * {
-	position: absolute;
-	bottom: 0;
 	display: block;
 	padding: 0 10px;
 }
 
-#section-4 .foto-home.swiper-container .card-type-5 figcaption a h2.title {
+#section-4 .foto-home.swiper-container .card-type-5 figcaption h2.title {
+	color: #fff;
 	font-size: 16px;
-	margin: 10% 0;
+	position: absolute;
+	bottom: 30px;
 }
 
-#section-4 .foto-home.swiper-container .card-type-5 figcaption a span {
+#section-4 .foto-home.swiper-container .card-type-5 figcaption span {
 	font-size: 10px;
-	margin-bottom: 10px;
+	/*margin: 10% 0;*/
+	color: #fff;
+	position: absolute;
+	bottom: 10px;
+}
+
+.pswp h2.title {
+	color: #fff;
+	display: block;
+	line-height: 36px;
+	padding-bottom: 5%;
+}
+
+#detail-foto .pswp__caption__center {
+	max-width: 720px;
 }
 
 /* video */
@@ -1773,6 +1791,66 @@ a.button {
 	margin: 2% 0;
 }
 
+#gallery section#section-4 {
+	margin: 10px 0 20px;
+}
+
+#gallery section .foto-home h1 {
+	color: #fff;
+}
+
+#gallery section .foto-home .container-desktop {
+	margin-bottom: 30px;
+}
+
+/*main section#gallery {
+	background: #000;
+	margin: 10px 0 20px;
+}
+
+main section#gallery div.wrapper {
+	padding: 20px;
+	position: relative;
+	display: block;
+}
+
+main section#gallery {
+	margin: 0;
+}
+
+main section#gallery .brightcove video {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	margin: 0 auto;
+}*/
+
+#gallery #section-4 .brightcove.wrapper {
+	padding: 0;
+	margin-top: 30px;
+	width: 720px;
+	height: 405px;
+	position: relative;
+}
+
+#gallery #section-4 .w-30 {
+	margin-top: 30px;
+}
+
+#gallery #section-4 .sub-head .w-30 {
+	margin: 0;
+}
+
+.bc-player-HJWXWi5XxW_default,
+.brightcove iframe {
+	width: 720px;
+	height: 405px;
+}
+
 .r3 .rectangle,
 .widget .wrapper {
 	border-top: 1px solid #e53935;
@@ -1842,17 +1920,17 @@ a.button {
 	padding: 0;
 }
 
-section#article nav:nth-of-type(1) li {
+nav.breadcrumbs li {
 	display: inline-block;
 	margin: 0 10px;
 	position: relative;
 }
 
-section#article nav:nth-of-type(1) li:first-child {
+nav.breadcrumbs li:first-child {
 	margin-left: 0;
 }
 
-section#article nav:nth-of-type(1) li a:after {
+nav.breadcrumbs li a:after {
 	content: '';
 	background-size: 8px 8px;
 	width: 8px;
@@ -1862,11 +1940,11 @@ section#article nav:nth-of-type(1) li a:after {
 	top: 5px;
 }
 
-section#article nav:nth-of-type(1) li:last-child a:after {
+nav.breadcrumbs li:last-child a:after {
 	content: none;
 }
 
-section#article nav:nth-of-type(1) li a {
+nav.breadcrumbs li a {
 	color: #000;
 	display: block;
 	font-family: 'RobotoDraft', Helvetica, Arial;
