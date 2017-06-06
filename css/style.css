@@ -1686,6 +1686,14 @@ a.button {
 	bottom: 10px;
 }
 
+#category section {
+	margin: 30px 0;
+}
+
+#category section:nth-of-type(1) {
+	margin-top: 0;
+}
+
 .pswp h2.title {
 	color: #fff;
 	display: block;
@@ -1705,6 +1713,7 @@ a.button {
 
 .video li {
 	box-sizing: border-box;
+	list-style: none;
 }
 
 .video.tab .tab-content-slide li a {
@@ -1744,11 +1753,11 @@ a.button {
 	padding: 0 10px;
 }
 
-.video .card-type-5 a.play {
+.video .card a.play {
 	position: relative;
 }
 
-.video .card-type-5 a.play:before {
+.video .card a.play:before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -1759,12 +1768,14 @@ a.button {
 	z-index: 1;
 }
 
-.video .card-type-5 a.play:after {
+.video .card a.play:after {
 	content: '';
 	display: block;
 	position: absolute;
 	top: 30%;
-	left: 155px;
+	left: 50%;
+	margin-left: -11.5%;
+	/*transform: translate3d(-50%, -50%, 0);*/
 	width: 64px;
 	height: 64px;
 	background: url(../images/sprites.png) no-repeat;
@@ -1773,18 +1784,61 @@ a.button {
 	z-index: 2;
 }
 
-.video li:nth-of-type(1) .card-type-5 a.play:after {
+.video .card.card-type-1 a.play:after {
+	width: 32px;
+	height: 32px;
+	background-size: 485px;
+	background-position: -2.5px -43px;
+}
+
+.features.video li:nth-of-type(1) .card-type-5 a.play:after {
 	width: 140px;
 	height: 140px;
-	background-size: 2000px;
+	background-size: 1940px;
 	background-position: -5px -170px;
-	top: 30%;
-	left: 310px;
 }
 
 .video figcaption a * {
 	padding: 10px;
 	box-sizing: border-box;
+}
+
+.card-type-5 figcaption * {
+	color: #333;
+}
+
+#category h1 {
+	font-size: 36px;
+	margin-bottom: 2.5%;
+}
+
+#category .card-type-5 .wrapper {
+	padding: 0 5px;
+}
+
+#category .w-50:nth-of-type(1) .wrapper {
+	padding-left: 0;
+}
+
+#category .w-50:nth-of-type(2) .wrapper {
+	padding-right: 0;
+}
+
+#category .card-type-5 h2 {
+	font-size: 16px;
+	line-height: 22px;
+	height: 70px;
+	overflow: hidden;
+}
+
+#category section:nth-of-type(1) .card-type-5 h2 {
+	font-size: 20px;
+	line-height: 26px;
+	height: 82px;
+}
+
+#category section .row {
+	margin-bottom: 10px;
 }
 
 .tab.video figcaption a h2.title {
@@ -1802,32 +1856,6 @@ a.button {
 #gallery section .foto-home .container-desktop {
 	margin-bottom: 30px;
 }
-
-/*main section#gallery {
-	background: #000;
-	margin: 10px 0 20px;
-}
-
-main section#gallery div.wrapper {
-	padding: 20px;
-	position: relative;
-	display: block;
-}
-
-main section#gallery {
-	margin: 0;
-}
-
-main section#gallery .brightcove video {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	right: 0px;
-	left: 0px;
-	margin: 0 auto;
-}*/
 
 #gallery #section-4 .brightcove.wrapper {
 	padding: 0;
