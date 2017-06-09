@@ -372,6 +372,18 @@ $(function(){
 	// 	});
 	// }
 
+	// Ads Zoom
+
+	// if($('.xzoom').length){
+	// 	$(".xzoom").xzoom({
+	// 		tint: '#333',
+	// 		position: '#ads-screen',
+	// 		smoothLensMove: 1,
+	// 		defaultScale: 2,
+	// 		zoomWidth: 200
+	// 	});
+	// }
+
 
 
 	function windowopen(url, title, w, h) {

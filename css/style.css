@@ -825,6 +825,44 @@ main .navigation {
 	background: #e53935;
 	border: 1px solid #e53935;
 }
+
+/* ads zoom */
+figure#ads-zoom a {
+	width: auto;
+	height: auto;
+}
+
+.ads.r-600 {
+	margin-bottom: 30px;
+	height: 600px;
+}
+
+.ads.r-600 a {
+	display: block;
+}
+
+.ads.r-600 #ads-zoom {
+	background: url(../images/ads-zoom/bg-oppo.jpg) no-repeat;
+	display: table;
+	width: 100%;
+	height: 600px;
+}
+
+#zoom-area.zoom-area {
+	background: url(../images/ads-zoom/oppo.png) no-repeat;
+	background-position: center;
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+}
+
+#ads-screen {
+	width: 166px;
+	height: 284px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
 /* end ads */
 
 /* features */
