@@ -1829,7 +1829,7 @@ a.button {
 	background-position: -2.5px -43px;
 }
 
-.features.video li:nth-of-type(1) .card-type-5 a.play:after {
+.video .features li:nth-of-type(1) .card-type-5 a.play:after {
 	width: 140px;
 	height: 140px;
 	background-size: 1940px;
