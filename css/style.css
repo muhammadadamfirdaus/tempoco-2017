@@ -439,6 +439,19 @@ span.time {
   background: #f9f8f7;
 }
 
+input.search {
+	background: none;
+	border: 0;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	line-height: 15px;
+	padding-top: 5px;
+}
+
+input.search:focus {
+	outline: none;
+}
+
 /* begin MENU */
 nav {
 	box-sizing: border-box;
