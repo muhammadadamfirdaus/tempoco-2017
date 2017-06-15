@@ -292,10 +292,20 @@ $(function(){
       }
   });
 
-	if($('#detail-foto').length){
+	if($('#gallery').length){
 		console.log('foto');
 		var fotoDetail = '.foto-home img'
 		$('.foto-home').photoSwipe();
+
+		if($('.pswp--open').length){
+			$('#gallery .foto-home figcaption').css({
+				'display':'block'
+			});
+		} else {
+			$('#gallery .foto-home figcaption').css({
+				'display':'none'
+			});
+		}
 	}
 
 	// Photoswipe
