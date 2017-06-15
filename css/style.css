@@ -1750,7 +1750,12 @@ a.button {
 	color: #fff;
 	display: block;
 	line-height: 36px;
-	padding-bottom: 5%;
+	padding-bottom: 2%;
+}
+
+.pswp span.time {
+	color: #fff;
+	padding-bottom: 10%;
 }
 
 #gallery #section-4 {
