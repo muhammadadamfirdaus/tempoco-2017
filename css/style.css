@@ -1753,8 +1753,16 @@ a.button {
 	padding-bottom: 5%;
 }
 
+#gallery #section-4 {
+	margin-top: 1em;
+}
+
 #gallery .pswp__caption__center {
 	max-width: 720px;
+}
+
+#gallery .foto-home .container-desktop {
+	margin-bottom: 5%;
 }
 
 /* video */
