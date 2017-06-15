@@ -1445,7 +1445,7 @@ a.button {
 
 #headline.swiper-container.headline-mobile-terbaru .swiper-slide:nth-of-type(1) {
 	width: 50%;
-	height: 300px;
+	height: 290px;
 }
 
 #headline.swiper-container.headline-mobile-terbaru .swiper-slide:nth-of-type(1) .wrapper {
@@ -1454,11 +1454,12 @@ a.button {
 
 #headline.swiper-container.headline-mobile-terbaru .swiper-slide {
 	width: 25%;
-	height: 150px;
-	float: left;
+	height: 145px;
 	border-right: 1px solid #fff;
 	border-bottom: 1px solid #fff;
 	box-sizing: border-box;
+	float: left;
+	overflow: hidden;
 }
 
 #headline.swiper-container.headline-mobile-terbaru .swiper-slide h2 {
