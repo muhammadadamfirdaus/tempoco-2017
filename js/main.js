@@ -226,7 +226,7 @@ $(function(){
     	$('header').removeClass('sticky sticky-header');
 		}
 
-		if($('#home .r3').length){
+		if($('.r3').length){
 			if(scroll > jarakstickyrectangle3){
 				$('.r3').css('margin-top', '60px');
 				$('.r3').removeClass('lepas').addClass('sticky sticky-r3');
