@@ -298,11 +298,11 @@ $(function(){
 		$('.foto-home').photoSwipe();
 
 		if($('.pswp--open').length){
-			$('#gallery .foto-home figcaption').css({
+			$('.foto-home figcaption').css({
 				'display':'block'
 			});
 		} else {
-			$('#gallery .foto-home figcaption').css({
+			$('.foto-home figcaption').css({
 				'display':'none'
 			});
 		}

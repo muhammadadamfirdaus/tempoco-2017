@@ -310,11 +310,11 @@ footer {
 
 .red-sky {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d32f2f+0,5674b9+100 */
-background: rgb(211,47,47); /* Old browsers */
-background: -moz-linear-gradient(45deg,  rgba(211,47,47,1) 0%, rgba(86,116,185,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(45deg,  rgba(211,47,47,1) 0%,rgba(86,116,185,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(45deg,  rgba(211,47,47,1) 0%,rgba(86,116,185,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d32f2f', endColorstr='#5674b9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background: rgb(211,47,47); /* Old browsers */
+	background: -moz-linear-gradient(45deg,  rgba(211,47,47,1) 0%, rgba(86,116,185,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg,  rgba(211,47,47,1) 0%,rgba(86,116,185,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg,  rgba(211,47,47,1) 0%,rgba(86,116,185,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d32f2f', endColorstr='#5674b9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	color: #fff;
 }
 
@@ -1753,7 +1753,7 @@ a.button {
 	padding-bottom: 5%;
 }
 
-#detail-foto .pswp__caption__center {
+#gallery .pswp__caption__center {
 	max-width: 720px;
 }
 
@@ -1901,7 +1901,8 @@ a.button {
 	margin: 10px 0 20px;
 }
 
-#category section .foto-home h1 {
+#category section .foto-home h1,
+#gallery section .foto-home h1 {
 	color: #fff;
 }
 
