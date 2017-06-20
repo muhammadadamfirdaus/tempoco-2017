@@ -45,11 +45,20 @@
 <div class="container">
 	<header>
     <div class="header-top">
-      <div class="container-desktop date">
-        <span class="date">
-          Selasa, 07 Februari 2017
-        </span>
-				<input class="search" type="text" name="country" id="autocomplete"/>
+      <div class="container-desktop date clearfix">
+				<div class="col w-50">
+	        <span class="date">
+	          Selasa, 07 Februari 2017
+	        </span>
+				</div>
+				<div id="search" class="col w-50">
+					<form action="/search" method="post">
+						<div class="search">
+							<a href="#"></a>
+							<input type="search" value="Cari konten menarik?" onfocus="this.value = this.value=='Cari konten menarik?'?'':this.value;" onblur="this.value = this.value==''?'Cari konten menarik?':this.value;" name="val">
+						</div>
+					</form>
+      	</div>
       </div>
     </div>
     <div class="container-desktop header-main">
@@ -141,7 +150,7 @@
 		</div>
 	</div>
 	<!-- end top banner -->
-	<main>
+	<main id="home">
 		<div class="container-desktop">
 			<section id="headline" class="swiper-container pic-zoom headline-mobile-terbaru">
 				<div class="swiper-wrapper">

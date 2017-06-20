@@ -1,0 +1,6 @@
+penambahan search:
+- col w-50 di span date dan search
+- update sprites.png
+
+general:
+- update main.js
