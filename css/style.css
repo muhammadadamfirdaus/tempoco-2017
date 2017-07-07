@@ -1743,6 +1743,8 @@ a.button {
 
 .list.list-type-2 li a:nth-of-type(2) h2.title {
 	margin: 5% 0;
+	height: 55px;
+	overflow: hidden;
 }
 
 .tab-content-slide li span,
