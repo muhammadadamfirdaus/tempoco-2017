@@ -182,7 +182,7 @@ $(function(){
 	});
 
 	/* tab */
-	$('.tab .tab-pagination a').on('click', function(e) {
+	$('.tab .tab-pagination li a').on('click', function(e) {
     var $tabs = $(this).closest('.tab');
     $tabs.find('.tab-pagination a.current').removeClass('current');
     $(this).addClass('current');
@@ -192,6 +192,10 @@ $(function(){
 
     e.preventDefault();
   });
+
+	$('.tab .tab-pagination li:last-child a').on('click', function(e){
+		window.location.href = $(this).attr("href");
+	});
 
 	var subTab = $(this).find('.sub-tab ul');
 	$('.tab-pagination li.sub-tab').on('mouseenter', function(e){
