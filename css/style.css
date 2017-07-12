@@ -1043,6 +1043,22 @@ section li {
 }
 /* title box */
 
+.bbc-indonesia .box-title {
+	background: url(../images/logo-bbc-indonesia.png) no-repeat;
+}
+
+.list.list-type-1.bbc-indonesia li:nth-of-type(1) {
+	border-top: 1px solid #9a0000;
+}
+
+.australia-plus .box-title {
+	background: url(../images/logo-australia-plus.png) no-repeat;
+}
+
+.list.list-type-1.australia-plus li:nth-of-type(1) {
+	border-top: 1px solid #269218;
+}
+
 .list .card-type-1 a:nth-of-type(1) img,
 .tab .tab-content-slide a:nth-of-type(1) img,
 .card-type-3 a:nth-of-type(1) img,
@@ -1956,7 +1972,8 @@ a.button {
 }
 
 #category .card-type-5 figcaption a,
-.video.tab .tab-content-slide li a:nth-of-type(2) {
+.video.tab .tab-content-slide li a:nth-of-type(2),
+.video.tab .tab-content-slide li:nth-of-type(1) figcaption a {
 	border-top: 1px solid rgba(150, 150, 150, 0.1);
 	border-right: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
@@ -1968,9 +1985,15 @@ a.button {
 	width: 100%;
 }
 
-.video.tab .tab-content-slide li a:nth-of-type(2) * {
+.video.tab .tab-content-slide li a:nth-of-type(2) *,
+.video.tab .tab-content-slide li:nth-of-type(1) figcaption a {
 	margin: 0;
 	padding: 0 10px;
+}
+
+
+.video.tab .tab-content-slide li:nth-of-type(1) figcaption a * {
+	margin: 2.5% 0;
 }
 
 .video .card a.play {
@@ -2006,6 +2029,15 @@ a.button {
 	z-index: 2;
 }
 
+.video li:nth-of-type(1) a.play:after {
+	width: 125px;
+	height: 125px;
+	background-size: 1640px;
+	background-position: 0px -135px;
+	top: 35%;
+	margin-left: -9.5%;
+}
+
 .video .card.card-type-1 a.play:after {
 	width: 32px;
 	height: 32px;
@@ -2034,9 +2066,17 @@ a.button {
 	color: #333;
 }
 
-#category h1 {
+#category > h1 {
 	font-size: 36px;
 	margin: 1.5% 0;
+}
+
+#category .tags h1 {
+	margin: 0 0 1.5%;
+}
+
+#category .tags h3 {
+	font-size: 12px;
 }
 
 #category .card-type-5 .wrapper {
@@ -2118,6 +2158,25 @@ a.button {
 
 #category #section-4 .sub-head .w-30 {
 	margin: 0;
+}
+
+#category .swiper-button-white {
+	background-color: rgba(0,0,0,0.5);
+	padding: 1.5% 0;
+}
+
+#category .swiper-button-next.swiper-button-white {
+	padding-left: 3em;
+	right: 2%;
+}
+
+#category .swiper-button-prev.swiper-button-white {
+	padding-right: 3em;
+	left: 2%;
+}
+
+#category.index h1 {
+	margin: 0.5em 0 1em;
 }
 
 .bc-player-HJWXWi5XxW_default,
@@ -2249,7 +2308,7 @@ article .sub-head span {
 	display: inline-block;
 }
 
-article .sub-head:nth-of-type(1) a..pw-widget.__pw-padding-true.__pw-layout-horizontal .pw-button:last-child {
+article .sub-head:nth-of-type(1) a.pw-widget.__pw-padding-true.__pw-layout-horizontal .pw-button:last-child {
 	padding-right: 0;
 }
 
@@ -2385,12 +2444,12 @@ article twitterwidget {
 	margin: 1em 0;
 }
 
-.tags li {
+.tags > li {
 	display: inline-block;
 	margin-bottom: 4px;
 }
 
-.tags li a {
+.tags > li a {
 	background: #00b0ff;
 	color: #fff;
 	display: block;
