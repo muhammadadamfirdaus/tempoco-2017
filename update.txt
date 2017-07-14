@@ -1,1 +1,3 @@
 card hover ala milan official
+
+- ambil tags/topik terpopuler di bawah category title
