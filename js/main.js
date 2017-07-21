@@ -213,15 +213,9 @@ $(function(){
 
 	/* onscroll */
 	var stickyheader = $('.premium-head');
-	var stickyrectangle3 = $('.r3');
 	var section3 = $('.kanal-pilihan');
 	var jarakheader = stickyheader.offset().top;
-	var jarakstickyrectangle3 = stickyrectangle3.offset().top;
-	var overSection3 = stickyrectangle3.offset().top + 380;
 
-	var navigationHeader = $('.tab-pagination');
-	var jaraknavigationHeader = navigationHeader.offset().top - 0;
-	var listkategoripertama = $('#category .tab-content li:nth-of-type(1)');
 
 	// var headerTop = $('.header-top');
 	var searchPindah = $('#search');
@@ -248,6 +242,9 @@ $(function(){
 		}
 
 		if($('#home .r3').length){
+			var stickyrectangle3 = $('.r3');
+			var jarakstickyrectangle3 = stickyrectangle3.offset().top;
+			var overSection3 = stickyrectangle3.offset().top + 380;
 			if(scroll > jarakstickyrectangle3){
 				$('.r3').css('margin-top', '60px');
 				$('.r3').removeClass('lepas').addClass('sticky sticky-r3');
@@ -264,6 +261,9 @@ $(function(){
 		}
 
 		if($('#category').length){
+			var navigationHeader = $('.tab-pagination');
+			var jaraknavigationHeader = navigationHeader.offset().top - 0;
+			var listkategoripertama = $('#category .tab-content li:nth-of-type(1)');
 			if(scroll > jaraknavigationHeader){
 				console.log('hi');
 				navigationHeader.addClass('sticky');
