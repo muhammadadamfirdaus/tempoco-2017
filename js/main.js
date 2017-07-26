@@ -216,6 +216,11 @@ $(function(){
 	var section3 = $('.kanal-pilihan');
 	var jarakheader = stickyheader.offset().top;
 
+	var stickyrectangle3 = $('.r3');
+	var jarakstickyrectangle3 = stickyrectangle3.offset().top;
+	var overSection3 = stickyrectangle3.offset().top + 380;
+
+	var navigationHeader = $('.tab-pagination');
 
 	// var headerTop = $('.header-top');
 	var searchPindah = $('#search');
@@ -242,9 +247,6 @@ $(function(){
 		}
 
 		if($('#home .r3').length){
-			var stickyrectangle3 = $('.r3');
-			var jarakstickyrectangle3 = stickyrectangle3.offset().top;
-			var overSection3 = stickyrectangle3.offset().top + 380;
 			if(scroll > jarakstickyrectangle3){
 				$('.r3').css('margin-top', '60px');
 				$('.r3').removeClass('lepas').addClass('sticky sticky-r3');
@@ -260,19 +262,19 @@ $(function(){
 			}
 		}
 
-		if($('#category').length){
-			var navigationHeader = $('.tab-pagination');
-			var jaraknavigationHeader = navigationHeader.offset().top - 0;
-			var listkategoripertama = $('#category .tab-content li:nth-of-type(1)');
-			if(scroll > jaraknavigationHeader){
-				console.log('hi');
-				navigationHeader.addClass('sticky');
-				listkategoripertama.css('margin-top', '40px');
-			} else {
-				navigationHeader.removeClass('sticky');
-				listkategoripertama.css('margin-top', 0);
-			}
-		}
+		// if($('#category').length){
+
+		// 	var jaraknavigationHeader = navigationHeader.offset().top - 0;
+		// 	var listkategoripertama = $('#category .tab-content li:nth-of-type(1)');
+		// 	if(scroll > jaraknavigationHeader){
+		// 		console.log('hi');
+		// 		navigationHeader.addClass('sticky');
+		// 		listkategoripertama.css('margin-top', '40px');
+		// 	} else {
+		// 		navigationHeader.removeClass('sticky');
+		// 		listkategoripertama.css('margin-top', 0);
+		// 	}
+		// }
 	}
 
   $(window).on('load scroll', function(){
@@ -288,16 +290,16 @@ $(function(){
 	/* end onscroll */
 
 	var fotoHome = new Swiper('.foto-home', {
-			pagination: '.swiper-pagination',
-			nextButton: '.swiper-button-next',
-			prevButton: '.swiper-button-prev',
-			paginationClickable: true,
+		pagination: '.swiper-pagination',
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev',
+		paginationClickable: true,
       effect: 'coverflow',
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: 'auto',
       coverflow: {
-        rotate: 30,
+        rotate: 10,
         stretch: 0,
         depth: 120,
         modifier: 1,
@@ -312,19 +314,21 @@ $(function(){
 		paginationClickable: true,
 		grabCursor: true,
 		centeredSlides: true,
+		loop: true,
 		slidesPerView: 4,
 		spaceBetween: 25
 	});
 
 	//detail foto
 	var fotoDetail = new Swiper('#detail-foto .foto-home', {
-			pagination: '.swiper-pagination',
-			nextButton: '.swiper-button-next',
-			prevButton: '.swiper-button-prev',
-			paginationClickable: true,
+		pagination: '.swiper-pagination',
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev',
+		paginationClickable: true,
       effect: 'coverflow',
       grabCursor: true,
       centeredSlides: true,
+      loop: true,
       slidesPerView: 'auto',
       coverflow: {
         rotate: 30,
@@ -354,8 +358,8 @@ $(function(){
 	// Photoswipe
 	if($('figure').length){
 		var slideSelector = 'figure img',
-    options     = {bgOpacity: 0.8},
-    events      = {
+		options     = {bgOpacity: 0.8},
+   	events      = {
         close: function () {
             console.log('closed');
         }
