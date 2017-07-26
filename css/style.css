@@ -654,6 +654,10 @@ main .navigation {
 	background: #fff;
 }
 
+.sticky-header .search {
+	display: none;
+}
+
 .sticky-r3 {
 	width: 344px;
 	-webkit-animation: bounce-down 0.5s forwards;

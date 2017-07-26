@@ -231,7 +231,7 @@ $(function(){
     	if(scroll > jarakheader){
 			$('.premium-head').css('margin-top', '195px');
 			$('header').addClass('sticky sticky-header');
-			searchPindah.detach().appendTo('#menu .container-desktop');
+			// searchPindah.detach().appendTo('#menu .container-desktop');
 			$('.search a').on('click', function(e){
 				e.preventDefault();
 				if($('header').hasClass('sticky-search')){
@@ -243,7 +243,7 @@ $(function(){
     	} else {
 			$('.premium-head').css('margin-top', '10px');
     		$('header').removeClass('sticky sticky-header');
-			searchPindah.detach().appendTo('.header-top .container-desktop');
+			// searchPindah.detach().appendTo('.header-top .container-desktop');
 		}
 
 		if($('#home .r3').length){
