@@ -341,6 +341,7 @@ $(function(){
 
 	if($('#gallery').length){
 		console.log('foto');
+		$('body').attr('id', 'gallery');
 		var fotoDetail = '.foto-home img'
 		$('.foto-home').photoSwipe();
 
@@ -440,8 +441,6 @@ $(function(){
 	// 		zoomWidth: 200
 	// 	});
 	// }
-
-
 
 	function windowopen(url, title, w, h) {
 	    // Fixes dual-screen position Most browsers Firefox
