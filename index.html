@@ -664,6 +664,46 @@
 							</div>
 						</div>
 					</section>
+					<section id="indikator" class="indikator">
+						<a href="#" class="box-title red-500">
+							Indikator
+						</a>
+						<div class="row clearfix indikator">
+							<form action="/submitIndikator" method="POST">
+								<h2 class="title">
+									Menurut Anda, seriuskah Pemerintah menangani kasus pelanggaran hak asasi manusia (HAM)?
+								</h4>
+								<input type="hidden" name="id" value="1034">
+									<ul>
+										<li>
+											<input value="1" type="radio" name="indikator" id="radio1" checked="checked">
+											<label for="radio1" class="css-label">
+												<p class="jawab-indikator">Ya</p>
+											</label>
+											<div class="check"></div>
+										</li>
+										<li>
+											<input value="2" type="radio" name="indikator" id="radio2">
+											<label for="radio2" class="css-label">
+												<p class="jawab-indikator">Tidak</p>
+											</label>
+											<div class="check"></div>
+										</li>
+										<li>
+											<input value="3" type="radio" name="indikator" id="radio3">
+											<label for="radio3" class="css-label">
+												<p class="jawab-indikator">Tidak Tahu</p>
+											</label>
+											<div class="check"></div>
+										</li>
+									</ul>
+								<button class="red-500">Pilih</button>
+								<a href="/indikator">
+									<button type="button" class="indikator fade">Hasil</button>
+								</a>
+							</form>
+						</div>
+					</section>
 					<section id="berita-pilihan" class="berita-pilihan pic-zoom">
 						<a href="#" class="box-title red-500">
 							Berita Pilihan
