@@ -2135,6 +2135,10 @@ a.button {
 	overflow: hidden;
 }
 
+#category .features .card-type-5 a:nth-of-type(1) {
+	height: 260px;
+}
+
 #category .card-type-5 figcaption a {
 	height: auto !important;
 }
