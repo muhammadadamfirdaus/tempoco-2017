@@ -523,7 +523,11 @@ nav {
 	position:relative;
 	line-height: 35px;
 	height:40px;
-	padding:0 10px;
+	padding:0 8px;
+}
+
+.menu li:last-child {
+	padding-right: 0;
 }
 
 .menu li:nth-of-type(1),
