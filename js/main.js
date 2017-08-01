@@ -21,6 +21,9 @@ $(function(){
   //   }, 8000);
 	// };
 
+	// survey front-end
+	$('.container').append('<div class="sticky survey-front"><a href="#"><h4>Kami ingin mendengar dari Anda</h4><p>Berikan penilaian seputar tampilan baru TEMPO.CO</p></a><center><a class="button" href="#">Klik Di Sini</a></center></div>');
+
 	var tempo2017forthefirsttime = new Swiper('.tempo-2017-tutorial', {
 		pagination: '.swiper-pagination',
 		paginationClickable: true
@@ -218,9 +221,10 @@ $(function(){
 
 	var stickyrectangle3 = $('.r3');
 	var jarakstickyrectangle3 = stickyrectangle3.offset().top;
-	var overSection3 = stickyrectangle3.offset().top + 380;
+	var overSection3 = stickyrectangle3.offset().top + 220;
 
 	var navigationHeader = $('.tab-pagination');
+	var hasScrolled = $('.header-top').offset().top + 1000;
 
 	// var headerTop = $('.header-top');
 	var searchPindah = $('#search');
@@ -248,7 +252,7 @@ $(function(){
 
 		if($('#home .r3').length){
 			if(scroll > jarakstickyrectangle3){
-				$('.r3').css('margin-top', '60px');
+				$('.r3').css('margin-top', '80px');
 				$('.r3').removeClass('lepas').addClass('sticky sticky-r3');
 			} else {
 				$('.r3').css('margin-top', 'inherit');
@@ -259,6 +263,15 @@ $(function(){
 				// console.log('hi');
 				$('.r3').css('margin-top', 'inherit');
 				$('.r3').addClass('lepas').removeClass('sticky-r3');
+			}
+		}
+
+		if($('#home').length){
+			if(scroll > hasScrolled){
+				console.log('udah 800 nih');
+				$('.survey-front').addClass('active');
+			} else {
+				$('.survey-front').removeClass('active');
 			}
 		}
 
@@ -367,19 +380,6 @@ $(function(){
     };
 		$('article').photoSwipe(slideSelector, options, events);
 	}
-
-	var countries = [
-    { value: 'Andorra', data: 'AD' },
-    // ...
-    { value: 'Zimbabwe', data: 'ZZ' }
-	];
-
-	$('#autocomplete').autocomplete({
-	    lookup: countries,
-	    onSelect: function (suggestion) {
-	        alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
-	    }
-	});
 
 	// Ads
 	// bottom ads
