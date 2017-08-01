@@ -775,6 +775,7 @@ main .navigation {
 }
 
 .survey-front a {
+	display: inline-block;
 	padding: 10px 0;
 }
 
@@ -786,6 +787,10 @@ main .navigation {
 .survey-front h4 {
 	font-size: 16px;
 	margin-bottom: 10px;
+}
+
+.survey-front p {
+	font-size: 12px;
 }
 
 /* end survey front container */
@@ -1251,6 +1256,10 @@ main#category section > .w-30 {
 
 main section .w-30 .wrapper {
 	padding: 0 0 0 44px;
+}
+
+main section .w-30 .wrapper {
+	padding: 0 0 0 20px;
 }
 
 main section > .w-30 .wrapper .wrapper {
