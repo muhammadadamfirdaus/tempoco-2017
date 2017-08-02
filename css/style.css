@@ -132,7 +132,7 @@ table {
 }
 
 .w-70 {
-	width: 66.7%;
+	width: 70%;
 }
 
 .h-50 {
@@ -1250,20 +1250,8 @@ main section > .w-30 {
 	width: 336px;
 }
 
-main#category section > .w-70 {
-	width: 70%;
-}
-
-main#category section > .w-30 {
-	width: 30%;
-}
-
 main section .w-30 .wrapper {
 	padding: 0 0 0 34px;
-}
-
-main#category section .w-30 .wrapper {
-	padding: 0 0 0 18px;
 }
 
 main section > .w-30 .wrapper .wrapper {
@@ -2204,7 +2192,8 @@ a.button {
 
 /* video */
 
-#category h1 {
+#category h1,
+#home h1 {
 	margin-bottom: 15px;
 }
 
