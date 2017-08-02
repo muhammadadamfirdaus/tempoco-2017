@@ -1256,6 +1256,17 @@ main#category section .w-30 {
 	width: 336px;
 }
 
+main section .sub-head .w-30 {
+	margin: 0;
+	width: 200px;
+}
+
+main section .sub-head .w-70 {
+	margin: 0;
+	width: 528px;
+}
+
+
 main section .w-30 .wrapper {
 	padding: 0 0 0 34px;
 }
@@ -2448,11 +2459,6 @@ a.button {
 
 #category #section-4 .w-30 {
 	margin-top: 30px;
-}
-
-#category #section-4 .sub-head .w-30 {
-	margin: 0;
-	width: 200px;
 }
 
 #category .swiper-button-white {
