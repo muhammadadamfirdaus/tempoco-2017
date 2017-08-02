@@ -1242,11 +1242,13 @@ main {
 }
 
 main section > .w-70,
+main#category section > .w-70,
 main article {
 	width: 728px;
 }
 
-main section > .w-30 {
+main section > .w-30,
+main#category section > .w-30 {
 	width: 336px;
 }
 
