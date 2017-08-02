@@ -22,7 +22,7 @@ $(function(){
 	// };
 
 	// survey front-end
-	$('.container').append('<div class="sticky survey-front"><a href="#"><h4>Kami ingin mendengar dari Anda</h4><p>Berikan penilaian seputar tampilan baru TEMPO.CO</p></a><center><a class="button" href="#">Klik Di Sini</a></center></div>');
+	$('.container').append('<div class="sticky survey-front"><a href="https://goo.gl/forms/zmBQRN3CJIGI4qog1" target="blank"><h4>Kami ingin mendengar dari Anda</h4><p>Berikan penilaian seputar tampilan baru TEMPO.CO</p></a><center><a class="button" href="https://goo.gl/forms/zmBQRN3CJIGI4qog1" target="blank">Klik Di Sini</a></center></div>');
 
 	var tempo2017forthefirsttime = new Swiper('.tempo-2017-tutorial', {
 		pagination: '.swiper-pagination',

@@ -1159,7 +1159,7 @@ section li {
 .list .card-type-1 a:nth-of-type(1) img,
 .tab .tab-content-slide a:nth-of-type(1) img,
 .card-type-3 a:nth-of-type(1) img,
-.widget-article img,
+/*.widget-article img,*/
 #section-3 .col li img,
 #article #section-3 .col li img,
 #section-4 .foto-home.swiper-container .card-type-5 img,
@@ -1258,7 +1258,7 @@ main section .w-30 .wrapper {
 	padding: 0 0 0 44px;
 }
 
-main section .w-30 .wrapper {
+main#category section .w-30 .wrapper {
 	padding: 0 0 0 20px;
 }
 
@@ -2064,6 +2064,7 @@ a.button {
 	padding: 0 7.5px;
 }
 
+#article #section-3 .col:last-child > .wrapper:nth-of-type(1),
 #section-3 .col:first-child .wrapper {
 	padding: 0 15px 0 0;
 }
@@ -2174,7 +2175,8 @@ a.button {
 .pswp h2.title {
 	color: #fff;
 	display: block;
-	line-height: 36px;
+	font-size: 16px;
+	line-height: 22px;
 	padding-bottom: 2%;
 }
 
@@ -2525,16 +2527,17 @@ a.button {
 /* widget */
 .widget-article .wrapper a:nth-of-type(1) {
 	display: block;
-	height: 250px;
+	height: 210px; /* default 250px */
 	overflow: hidden;
 	margin-top: 10px;
 	position: relative;
 }
 
 .widget-article h2 {
+	color: #333;
 	display: inline-block;
-	font-size: 14px;
-	margin: 10px 0;
+	font-size: 16px;
+	margin: 5px 0 10px;
 }
 
 .widget-article p {
