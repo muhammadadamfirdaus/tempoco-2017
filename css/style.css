@@ -1978,6 +1978,7 @@ a.button {
 .tab .tab-content-slide li h2.title,
 .list.list-type-2 li a:nth-of-type(2) h2.title,
 #section-3 li .card h2.title,
+.terpopuler.list li a:nth-of-type(2) h2.title,
 .tab.tab-type-3 .tab-content .tab-content-slide li h2.title {
 	display: inline-block;
 	color: #333;
@@ -2495,10 +2496,6 @@ a.button {
 /* terpopuler */
 .terpopuler.list .card-type-1 a:nth-of-type(2) {
 	width: 75%;
-}
-
-.terpopuler.list li a:nth-of-type(2) h2.title {
-	height: 42px;
 }
 
 .terpopuler.list .card-type-1 a:nth-of-type(2) * {

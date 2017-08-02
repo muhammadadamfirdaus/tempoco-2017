@@ -382,6 +382,12 @@ $(function(){
 	}
 
 	// Ads
+	// check if ads are empty
+	// if($('').length == 0){
+	//
+	// }
+
+
 	// bottom ads
   if($('.bottom-banner').length){
     var bottomAdsCloseButton = $('.bottom-banner button');
