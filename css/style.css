@@ -1243,7 +1243,7 @@ main {
 
 main section > .w-70,
 main article {
-	width: 720px;
+	width: 728px;
 }
 
 main section > .w-30 {
@@ -2194,7 +2194,7 @@ a.button {
 }
 
 #gallery .pswp__caption__center {
-	max-width: 720px;
+	max-width: 728px;
 }
 
 #gallery .foto-home .container-desktop {
@@ -2445,7 +2445,7 @@ a.button {
 #category #section-4 .brightcove.wrapper {
 	padding: 0;
 	margin-top: 30px;
-	width: 720px;
+	width: 728px;
 	height: 405px;
 	position: relative;
 }
@@ -2483,7 +2483,7 @@ a.button {
 
 .bc-player-HJWXWi5XxW_default,
 .brightcove iframe {
-	width: 720px;
+	width: 728px;
 	height: 405px;
 }
 
@@ -2652,7 +2652,7 @@ article > .author {
 
 article > figure:nth-of-type(1) a:nth-of-type(1) {
 	display: block;
-	width: 720px;
+	width: 728px;
 	height: 405px;
 	overflow: hidden;
 }
