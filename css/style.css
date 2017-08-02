@@ -535,7 +535,7 @@ nav {
 	position:relative;
 	line-height: 35px;
 	height:40px;
-	padding:0 6px;
+	padding:0 3px;
 }
 
 .menu li:last-child {
@@ -1241,10 +1241,6 @@ main {
 	padding-bottom: 30%;
 }
 
-main section .w-70 .sub-head:nth-of-type(2) .w-70 {
-	width: auto;
-}
-
 main section > .w-70,
 main#category section .w-70,
 main article {
@@ -1256,12 +1252,12 @@ main#category section .w-30 {
 	width: 336px;
 }
 
-main section .sub-head .w-30 {
+main section .sub-head:last-child .w-30 {
 	margin: 0;
 	width: 200px;
 }
 
-main section .sub-head .w-70 {
+main section .sub-head:last-child .w-70 {
 	margin: 0;
 	width: 528px;
 }
