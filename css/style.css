@@ -908,7 +908,6 @@ main .navigation {
 /* billboard */
 .ads.billboard {
 	width: 728px;
-	height: 90px;
 }
 
 .ads.rectangle.r3 {
@@ -1252,14 +1251,14 @@ main#category section .w-30 {
 	width: 336px;
 }
 
-main section .sub-head:last-child .w-30 {
-	margin: 0;
-	width: 200px;
+main section .sub-head .w-30 {
+	margin: 0 !important;
+	width: 200px !important;
 }
 
-main section .sub-head:last-child .w-70 {
-	margin: 0;
-	width: 528px;
+main section .sub-head .w-70 {
+	margin: 0 !important;
+	width: 528px !important;
 }
 
 
