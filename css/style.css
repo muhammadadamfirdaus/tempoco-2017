@@ -1241,14 +1241,18 @@ main {
 	padding-bottom: 30%;
 }
 
+main section .w-70 .sub-head:nth-of-type(2) .w-70 {
+	width: auto;
+}
+
 main section > .w-70,
-main#category section > .w-70,
+main#category section .w-70,
 main article {
 	width: 728px;
 }
 
 main section > .w-30,
-main#category section > .w-30 {
+main#category section .w-30 {
 	width: 336px;
 }
 
