@@ -851,6 +851,10 @@ main .navigation {
 	/*background-color: #ccc;*/
 }
 
+.ads .wrapper {
+	padding: 0;
+}
+
 /* premium head */
 .ads.premium-head {
 	width: 970px;
@@ -903,7 +907,7 @@ main .navigation {
 
 /* billboard */
 .ads.billboard {
-	width: 720px;
+	width: 728px;
 	height: 90px;
 }
 
