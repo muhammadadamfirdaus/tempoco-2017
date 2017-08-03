@@ -132,13 +132,13 @@ $(function(){
       e.stopImmediatePropagation();
 
 			if($('.night-mode-button-active').length){
-				console.log('night mode off');
+				// console.log('night mode off');
 				$('.night-mode-button').removeClass('night-mode-button-active');
 				// setTimeout(function(){
 					$('.container').removeClass('night-mode');
 				// }, 2200);
 			} else {
-				console.log('night mode activated');
+				// console.log('night mode activated');
 				$('.night-mode-button').addClass('night-mode-button-active');
 				// setTimeout(function(){
 					$('.container').addClass('night-mode');
@@ -268,7 +268,7 @@ $(function(){
 
 		if($('#home').length){
 			if(scroll > hasScrolled){
-				console.log('udah 800 nih');
+				// console.log('udah 800 nih');
 				$('.survey-front').addClass('active');
 			} else {
 				$('.survey-front').removeClass('active');
@@ -353,7 +353,7 @@ $(function(){
   });
 
 	if($('#gallery').length){
-		console.log('foto');
+		// console.log('foto');
 		$('body').attr('id', 'gallery');
 		var fotoDetail = '.foto-home img'
 		$('.foto-home').photoSwipe();
@@ -375,7 +375,7 @@ $(function(){
 		options     = {bgOpacity: 0.8},
    	events      = {
         close: function () {
-            console.log('closed');
+            // console.log('closed');
         }
     };
 		$('article').photoSwipe(slideSelector, options, events);
