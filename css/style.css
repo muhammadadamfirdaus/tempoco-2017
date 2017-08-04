@@ -2898,7 +2898,7 @@ footer .social-media {
 	background-position: -222px -34px;
 }
 
-@media screen and (min-width: 801px) and (max-width: 1064px){
+@media screen and (min-width: 801px) and (max-width: 980px){
 	.container-desktop,
 	.ads.billboard {
 		width: 100%;
