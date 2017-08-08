@@ -598,7 +598,7 @@ nav {
 
 .menu li.sub:before {
 	top: 8px;
-	right: 4px;
+	right: 0px;
 }
 
 .menu ul li {

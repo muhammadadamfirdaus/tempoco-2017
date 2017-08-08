@@ -24,17 +24,16 @@ $(function(){
 	// survey front-end
 	$('.container').append('<div class="sticky survey-front"><a class="survey" href="https://goo.gl/forms/zmBQRN3CJIGI4qog1?utm_source=Close&utm_medium=Survey&utm_campaign=ButtonSurveyClose" target="blank"><h4>Kami ingin mendengar dari Anda</h4><p>Berikan penilaian seputar tampilan baru TEMPO.CO</p></a><center><a class="survey button" href="https://goo.gl/forms/zmBQRN3CJIGI4qog1?utm_source=Close&utm_medium=Survey&utm_campaign=ButtonSurveyClose" target="blank">Klik Di Sini</a></center><span>* kami jamin tidak akan lama</span><a href="#" class="close">x</a></div>');
 	$('.survey-front a.close').on('click', function(e){
-		console.log('hi');
 		e.preventDefault();
     e.stopImmediatePropagation();
     $('.survey-front').removeClass('active').addClass('survey-closed');
     $('.survey-front a.close').attr('data-click', 'clicked');
 		
 		if($('.survey-closed').length || $('.survey-front a.close[data-click]').length){
-			console.log('ada close');
+			// console.log('ada close');
 			setTimeout(function(){
 				$('.survey-front').detach();
-			}, 3000);
+			}, 300);
 		}
 	});
 	
@@ -203,7 +202,6 @@ $(function(){
 	$('.menu li.sub').on('mouseenter', function(e){
 		e.preventDefault();
 		e.stopImmediatePropagation();
-		// console.log('ox');
 		$(this).not(submenuDesktop).addClass('sub-menu-active');
 		$(this).siblings(submenuDesktop).removeClass('sub-menu-active');
 	}).on('mouseleave', function(e){
@@ -232,7 +230,6 @@ $(function(){
 	$('.tab-pagination li.sub-tab').on('mouseenter', function(e){
 		e.preventDefault();
 		e.stopImmediatePropagation();
-		// console.log('ox');
 		$(this).not(subTab).addClass('sub-tab-active');
 		$(this).siblings(subTab).removeClass('sub-tab-active');
 	}).on('mouseleave', function(e){
@@ -296,7 +293,6 @@ $(function(){
 
 		if($('#home').length){
 			if(scroll > hasScrolled){
-				// console.log('udah 800 nih');
 				$('.survey-front').addClass('active');
 			} else {
 				$('.survey-front').removeClass('active');
