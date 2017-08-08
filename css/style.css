@@ -775,8 +775,12 @@ main .navigation {
 }
 
 .survey-front a {
-	display: inline-block;
 	padding: 10px 0;
+}
+
+.survey-front a.close {
+	line-height: 28px;
+	padding: inherit;
 }
 
 .survey-front a * {
@@ -791,6 +795,13 @@ main .navigation {
 
 .survey-front p {
 	font-size: 12px;
+}
+
+.survey-front span {
+	font-size: 10px;
+	font-style: italic;
+	color: #555;
+	text-align: center;
 }
 
 /* end survey front container */
@@ -931,14 +942,15 @@ main .navigation {
 	position: relative;
 }
 
-.bottom-banner .container-desktop button {
+.bottom-banner .container-desktop button,
+a.close,
+.survey-front a.close {
 	width: 28px;
 	height: 28px;
 	background: #e53935;
 	color: #fff;
 	font-size: 16px;
-	line-height: 16px;
-	padding-bottom: 5px;
+	line-height: 28px;
 	position: absolute;
 	right: 0;
 	top: -28px;
