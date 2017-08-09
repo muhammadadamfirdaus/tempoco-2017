@@ -2673,11 +2673,11 @@ article figure figcaption p {
 	font-style: italic;
 }
 
-article > p a {
+article p a {
 	color: #00b0ff;
 }
 
-article > p {
+article p {
 	color: #333;
 	font-size: 16px;
 	font-weight: 400;
@@ -2686,33 +2686,33 @@ article > p {
 	margin: 1em 0;
 }
 
-article > strong {
+article strong {
 	font-weight: 500;
 }
 
-article > p em {
+article p em {
 	font-style: italic;
 	margin-right: 2px;
 }
 
-article > ol,
-article > ul {
+article ol,
+article ul {
 	margin: 1em 1em 1em 2em;
 }
 
-article > ul li {
+article ul li {
 	list-style: disc;
 }
 
-article > ol li {
+article ol li {
 	list-style: decimal;
 }
 
-article > h2,
-article > h3,
-article > h4,
-article > h5,
-article > h6 {
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
 	display: block;
 	margin: 1em 0;
 }
