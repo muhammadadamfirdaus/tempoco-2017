@@ -495,30 +495,31 @@ $(function(){
 	s.type = 'text/javascript';
 	s.async = true;
 	s.src = ('https:' == document.location.protocol ? 'https://s' : 'http://i')
-	+ '.po.st/static/v4/post-widget.js#publisherKey=g2s58c5cupgtrsulvrd0';
+	+ '.po.st/static/v4/post-widget.js#publisherKey=jdvfeh4402p01kh9odq2';
 	var x = document.getElementsByTagName('script')[0];
 	x.parentNode.insertBefore(s, x);
 
-
 	// Google Analytics
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	// })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	// 
+	// ga('create', 'UA-57161828-3', 'auto', {'allowAnchor': true});
+	// ga('set', {
+	// 	page: '/#terbaru'
+	// });
+	// 
+	// ga('send', 'pageview', {
+	// 	'page': location.pathname + location.search + location.hash
+	// });
+	// 
+	// // Google Tag Manager
+	// (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  // new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  // j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  // 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  // })(window,document,'script','dataLayer','GTM-TVGQF5T');
 
-	ga('create', 'UA-57161828-3', 'auto', {'allowAnchor': true});
-	ga('set', {
-		page: '/#terbaru'
-	});
-
-	ga('send', 'pageview', {
-		'page': location.pathname + location.search + location.hash
-	});
-
-	// Google Tag Manager
-	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-TVGQF5T');
+	
 });
