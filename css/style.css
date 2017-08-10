@@ -1098,28 +1098,30 @@ figure#ads-zoom a {
 
 @-webkit-keyframes live {
 	0% {
-		background-color: rgba(229, 57, 53, 1);
+		/*background-color: rgba(229, 57, 53, 1);*/
+		background-color: rgba(255, 255, 255, 1);
 	}
 
 	100% {
-		background-color: rgba(229, 57, 53, 0);
+		background-color: rgba(255, 255, 255, 0);
 	}
 }
 
 @keyframes live {
 	0% {
-		background-color: rgba(229, 57, 53, 1);
+		background-color: rgba(255, 255, 255, 1);
 	}
 
 	100% {
-		background-color: rgba(229, 57, 53, 0);
+		background-color: rgba(255, 255, 255, 0);
 	}
 }
 
 #headline.headline-mobile-terbaru .swiper-slide a.live h3 {
 	padding-left: 20px;
 	border: 1px solid #e53935;
-	color: #e53935;
+	color: #fff;
+	background: #e53935;
 }
 
 /* end features */
@@ -1563,6 +1565,10 @@ main section > .w-30 .wrapper .wrapper {
 .tab-type-1 .tab-content,
 #section-3 li:nth-of-type(1) {
 	min-height: 400px;
+}
+
+#section-3.kanal-pilihan li:nth-of-type(1) {
+	min-height: 340px;
 }
 
 #article #section-3 li:nth-of-type(1) {
