@@ -132,7 +132,7 @@ table {
 }
 
 .w-70 {
-	width: 70%;
+	width: 66.7%;
 }
 
 .h-50 {
@@ -535,7 +535,7 @@ nav {
 	position:relative;
 	line-height: 35px;
 	height:40px;
-	padding:0 2px;
+	padding:0 3px;
 }
 
 .menu li:last-child {
@@ -598,7 +598,7 @@ nav {
 
 .menu li.sub:before {
 	top: 8px;
-	right: 0px;
+	right: 4px;
 }
 
 .menu ul li {
@@ -775,12 +775,8 @@ main .navigation {
 }
 
 .survey-front a {
+	display: inline-block;
 	padding: 10px 0;
-}
-
-.survey-front a.close {
-	line-height: 28px;
-	padding: inherit;
 }
 
 .survey-front a * {
@@ -795,13 +791,6 @@ main .navigation {
 
 .survey-front p {
 	font-size: 12px;
-}
-
-.survey-front span {
-	font-size: 10px;
-	font-style: italic;
-	color: #555;
-	text-align: center;
 }
 
 /* end survey front container */
@@ -862,10 +851,6 @@ main .navigation {
 	/*background-color: #ccc;*/
 }
 
-.ads .wrapper {
-	padding: 0;
-}
-
 /* premium head */
 .ads.premium-head {
 	width: 970px;
@@ -918,7 +903,8 @@ main .navigation {
 
 /* billboard */
 .ads.billboard {
-	width: 728px;
+	width: 720px;
+	height: 90px;
 }
 
 .ads.rectangle.r3 {
@@ -942,15 +928,14 @@ main .navigation {
 	position: relative;
 }
 
-.bottom-banner .container-desktop button,
-a.close,
-.survey-front a.close {
+.bottom-banner .container-desktop button {
 	width: 28px;
 	height: 28px;
 	background: #e53935;
 	color: #fff;
 	font-size: 16px;
-	line-height: 28px;
+	line-height: 16px;
+	padding-bottom: 5px;
 	position: absolute;
 	right: 0;
 	top: -28px;
@@ -1253,29 +1238,28 @@ main {
 }
 
 main section > .w-70,
-main#category section .w-70,
 main article {
-	width: 728px;
+	width: 720px;
 }
 
-main section > .w-30,
-main#category section .w-30 {
-	width: 336px;
+main section > .w-30 {
+	width: 344px;
 }
 
-main section .sub-head .w-30 {
-	margin: 0 !important;
-	width: 200px !important;
+main#category section > .w-70 {
+	width: 70%;
 }
 
-main section .sub-head .w-70 {
-	margin: 0 !important;
-	width: 528px !important;
+main#category section > .w-30 {
+	width: 30%;
 }
-
 
 main section .w-30 .wrapper {
-	padding: 0 0 0 34px;
+	padding: 0 0 0 44px;
+}
+
+main#category section .w-30 .wrapper {
+	padding: 0 0 0 20px;
 }
 
 main section > .w-30 .wrapper .wrapper {
@@ -1990,7 +1974,6 @@ a.button {
 .tab .tab-content-slide li h2.title,
 .list.list-type-2 li a:nth-of-type(2) h2.title,
 #section-3 li .card h2.title,
-.terpopuler.list li a:nth-of-type(2) h2.title,
 .tab.tab-type-3 .tab-content .tab-content-slide li h2.title {
 	display: inline-block;
 	color: #333;
@@ -2207,7 +2190,7 @@ a.button {
 }
 
 #gallery .pswp__caption__center {
-	max-width: 728px;
+	max-width: 720px;
 }
 
 #gallery .foto-home .container-desktop {
@@ -2216,8 +2199,7 @@ a.button {
 
 /* video */
 
-#category h1,
-#home h1 {
+#category h1 {
 	margin-bottom: 15px;
 }
 
@@ -2242,8 +2224,7 @@ a.button {
 .tekno.tab-type-2 .tab-content-slide li:nth-of-type(2) a:nth-of-type(1),
 .video.tab .tab-content-slide li a:nth-of-type(1),
 #category .video.tab-type-2 .tab-content-slide li:nth-of-type(1) a:nth-of-type(1),
-#category .card-type-5 a:nth-of-type(1),
-#section-3.kanal-pilihan .col li:nth-of-type(1) a:nth-of-type(1) {
+#category .card-type-5 a:nth-of-type(1) {
 	height: 180px;
 	overflow: hidden;
 }
@@ -2460,13 +2441,17 @@ a.button {
 #category #section-4 .brightcove.wrapper {
 	padding: 0;
 	margin-top: 30px;
-	width: 728px;
+	width: 720px;
 	height: 405px;
 	position: relative;
 }
 
 #category #section-4 .w-30 {
 	margin-top: 30px;
+}
+
+#category #section-4 .sub-head .w-30 {
+	margin: 0;
 }
 
 #category .swiper-button-white {
@@ -2494,7 +2479,7 @@ a.button {
 
 .bc-player-HJWXWi5XxW_default,
 .brightcove iframe {
-	width: 728px;
+	width: 720px;
 	height: 405px;
 }
 
@@ -2506,6 +2491,10 @@ a.button {
 /* terpopuler */
 .terpopuler.list .card-type-1 a:nth-of-type(2) {
 	width: 75%;
+}
+
+.terpopuler.list li a:nth-of-type(2) h2.title {
+	height: 42px;
 }
 
 .terpopuler.list .card-type-1 a:nth-of-type(2) * {
@@ -2659,7 +2648,7 @@ article > .author {
 
 article > figure:nth-of-type(1) a:nth-of-type(1) {
 	display: block;
-	width: 728px;
+	width: 720px;
 	height: 405px;
 	overflow: hidden;
 }
@@ -2674,11 +2663,11 @@ article figure figcaption p {
 	font-style: italic;
 }
 
-article p a {
+article > p a {
 	color: #00b0ff;
 }
 
-article p {
+article > p {
 	color: #333;
 	font-size: 16px;
 	font-weight: 400;
@@ -2687,33 +2676,33 @@ article p {
 	margin: 1em 0;
 }
 
-article strong {
+article > strong {
 	font-weight: 500;
 }
 
-article p em {
+article > p em {
 	font-style: italic;
 	margin-right: 2px;
 }
 
-article ol,
-article ul {
+article > ol,
+article > ul {
 	margin: 1em 1em 1em 2em;
 }
 
-article ul li {
+article > ul li {
 	list-style: disc;
 }
 
-article ol li {
+article > ol li {
 	list-style: decimal;
 }
 
-article h2,
-article h3,
-article h4,
-article h5,
-article h6 {
+article > h2,
+article > h3,
+article > h4,
+article > h5,
+article > h6 {
 	display: block;
 	margin: 1em 0;
 }
@@ -2911,7 +2900,7 @@ footer .social-media {
 	background-position: -222px -34px;
 }
 
-@media screen and (min-width: 801px) and (max-width: 980px){
+@media screen and (min-width: 801px) and (max-width: 1064px){
 	.container-desktop,
 	.ads.billboard {
 		width: 100%;
