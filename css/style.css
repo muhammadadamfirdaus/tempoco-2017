@@ -1560,19 +1560,22 @@ main section > .w-30 .wrapper .wrapper {
 	padding:0 10px 0 0;
 }
 
+.tab-type-1 .tab-content,
+#section-3 li:nth-of-type(1) {
+	min-height: 400px;
+}
+
 #article #section-3 li:nth-of-type(1) {
 	min-height: auto;
 }
 
-.tab-type-1 .tab-content,
 .tab-type-1 .tab-content-slide li:first-child {
 	float: left;
 	min-height: 400px;
 }
 
 .tab-type-2 .tab-content-slide li:nth-of-type(1),
-.tab-type-2 .tab-content-slide li:nth-of-type(2),
-#section-3.kanal-pilihan li:nth-of-type(1) {
+.tab-type-2 .tab-content-slide li:nth-of-type(2) {
 	float: left;
 	min-height: 360px;
 }
