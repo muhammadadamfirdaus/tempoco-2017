@@ -1161,6 +1161,10 @@ section li {
 	border-bottom: none;
 }
 
+#majalah.extra li:nth-of-type(1) {
+	border-top: 1px solid #e53935;
+}
+
 .list.list-type-1.bbc-indonesia li:nth-of-type(1) {
 	border-top: 1px solid #9a0000;
 }
@@ -1778,8 +1782,6 @@ input[type=radio]:checked ~ .check::before{
 input[type=radio]:checked ~ label{
   color: #e53935;
 }
-
-.indikator
 
 /* berita pilihan */
 #berita-pilihan .row {
@@ -2562,6 +2564,62 @@ a.button {
 	font-weight: 300;
 	line-height: 18px;
 	margin: 10px 0;
+}
+
+.swiper-container.majalah .swiper-slide {
+	height: 300px;
+}
+
+.swiper-container.majalah .swiper-slide img {
+	width: 50%;
+	margin: 10% auto;
+}
+
+.swiper-container.majalah .swiper-button-next,
+.swiper-container.majalah .swiper-button-prev {
+	top: 45%;
+}
+		
+.extra {
+	margin-bottom: 30px;
+}
+
+.kolom-konten {
+  height: 260px;
+  width: 100%;
+}
+
+.kolom-navigation {
+  height: 40px;
+  box-sizing: border-box;
+	background: #eee;
+}
+
+.kolom-navigation .swiper-slide {
+  width: 30%;
+  height: 100%;
+  opacity: 0.4;
+	background: #ccc;
+}
+
+.kolom-navigation .swiper-slide-active {
+  opacity: 1;
+}
+
+.kolom-navigation .swiper-slide h4 {
+	font-size: 12px;
+	text-align: center;
+	line-height: 40px;
+}
+
+.kolom-konten .swiper-slide li {
+	margin: 15px 0;
+}
+
+.kolom-konten .swiper-slide li a {
+	font-size: 16px;
+	color: #000;
+	text-decoration: none;
 }
 
 /* article */

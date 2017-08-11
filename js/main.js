@@ -331,17 +331,17 @@ $(function(){
 		nextButton: '.swiper-button-next',
 		prevButton: '.swiper-button-prev',
 		paginationClickable: true,
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflow: {
-        rotate: 10,
-        stretch: 0,
-        depth: 120,
-        modifier: 1,
-        slideShadows : true
-      }
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflow: {
+      rotate: 10,
+      stretch: 0,
+      depth: 120,
+      modifier: 1,
+      slideShadows : true
+    }
   });
 
 	var categoryHeadline = new Swiper('.category-headline', {
@@ -362,19 +362,71 @@ $(function(){
 		nextButton: '.swiper-button-next',
 		prevButton: '.swiper-button-prev',
 		paginationClickable: true,
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      loop: true,
-      slidesPerView: 'auto',
-      coverflow: {
-        rotate: 30,
-        stretch: 0,
-        depth: 120,
-        modifier: 1,
-        slideShadows : true
-      }
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 'auto',
+    coverflow: {
+      rotate: 30,
+      stretch: 0,
+      depth: 120,
+      modifier: 1,
+      slideShadows : true
+    }
   });
+	
+	// var kolomKonten = new Swiper('.kolom-konten', {
+	// 		 nextButton: '.swiper-button-next',
+	// 		 prevButton: '.swiper-button-prev',
+	// 		 spaceBetween: 10,
+	//  });
+	//  var kolomNavigation = new Swiper('.kolom-navigation', {
+	// 		 spaceBetween: 10,
+	// 		 centeredSlides: true,
+	// 		 slidesPerView: 'auto',
+	// 		 touchRatio: 0.2,
+	// 		 slideToClickedSlide: true
+	//  });
+	//  kolomKonten.params.control = kolomNavigation;
+	//  kolomNavigation.params.control = kolomKonten;
+	//  
+	//  $('.kolom-navigation').on('mouseenter', function(){
+	// 		kolomNavigation.startAutoplay();
+	//  });
+	
+	var kolomKonten = new Swiper('.kolom-konten', {
+      spaceBetween: 10,
+			centeredSlides: true,
+  });
+	
+  var kolomNavigation = new Swiper('.kolom-navigation', {
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      touchRatio: 0.2,
+      slideToClickedSlide: true,
+			freeMode: true,
+  });
+	
+  kolomKonten.params.control = kolomNavigation;
+  kolomNavigation.params.control = kolomKonten;
+	
+	$('.swiper-container.kolom-navigation').on('mouseenter', function(e){
+		e.preventDefault();
+		kolomNavigation.startAutoplay();
+	});
+	
+	var majalahSlide = new Swiper('.majalah', {
+		autoplay: 5000,
+		pagination: '.swiper-pagination',
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    slidesPerView: 1,
+    paginationClickable: true,
+    spaceBetween: 30,
+    loop: true,
+		effect: 'fade'
+	});
 
 	if($('#gallery').length){
 		// console.log('foto');
