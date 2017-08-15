@@ -2042,9 +2042,8 @@ a.button {
 	display: inline-block;
 	color: #333;
 	width: 100%;
-	height: 65px;
+	height: 70px;
 	overflow: hidden;
-	/*margin-bottom: 5px;*/
 }
 
 .terpopuler.list li a:nth-of-type(2) h2.title {
