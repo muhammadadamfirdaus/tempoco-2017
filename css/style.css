@@ -2168,7 +2168,7 @@ a.button {
 	background: #000;
 }
 
-#section-4 .foto-home.swiper-container .container-desktop > h2:nth-of-type(1) {
+#section-4 .foto-home.swiper-container .container-desktop > a:nth-of-type(1) h2 {
 	color: #fff;
 	font-family: 'Poppins-Light', Helvetica, Arial;
 	font-size: 12px;
@@ -2178,7 +2178,7 @@ a.button {
 	position: relative;
 }
 
-#section-4 .foto-home.swiper-container .container-desktop > h2:nth-of-type(1):after {
+#section-4 .foto-home.swiper-container .container-desktop > a:nth-of-type(1) h2:after {
 	border: 0;
 	content: '';
 	position: absolute;
