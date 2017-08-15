@@ -535,7 +535,7 @@ nav {
 	position:relative;
 	line-height: 35px;
 	height:40px;
-	padding:0 2px;
+	padding:0 5px;
 }
 
 .menu li:last-child {
@@ -2294,6 +2294,7 @@ a.button {
 #category .video.tab-type-2 .tab-content-slide li:nth-of-type(1) a:nth-of-type(1),
 #category .card-type-5 a:nth-of-type(1),
 #section-3.kanal-pilihan .col li:nth-of-type(1) a:nth-of-type(1) {
+	background: #ddd;
 	height: 180px;
 	overflow: hidden;
 }
