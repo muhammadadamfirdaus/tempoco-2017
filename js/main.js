@@ -406,6 +406,8 @@ $(function(){
       touchRatio: 0.2,
       slideToClickedSlide: true,
 			freeMode: true,
+	    nextButton: '.swiper-button-next',
+	    prevButton: '.swiper-button-prev',
   });
 	
   kolomKonten.params.control = kolomNavigation;
@@ -419,13 +421,11 @@ $(function(){
 	var majalahSlide = new Swiper('.majalah', {
 		autoplay: 5000,
 		pagination: '.swiper-pagination',
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
     slidesPerView: 1,
     paginationClickable: true,
     spaceBetween: 30,
     loop: true,
-		effect: 'fade'
+		effect: 'flip'
 	});
 
 	if($('#gallery').length){
