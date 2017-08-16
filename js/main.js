@@ -469,41 +469,41 @@ $(function(){
   }
 
 	// premium head
-  if($('.premium-head').length){
-		var premiumHead = $('.premium-head');
-    var premiumSmall = $('.premium-head-small');
-    var premiumBig = $('.premium-head-big');
-    premiumHead.on('mouseenter', function(e){
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      // console.log('opening');
-	    premiumSmall.addClass('deactive');
-	    premiumBig.addClass('active');
-    });
-		premiumHead.on('mouseleave', function(e){
-			e.preventDefault();
-			e.stopImmediatePropagation();
-			premiumSmall.removeClass('deactive');
-			premiumBig.removeClass('active');
-		});
-  }
+  // if($('.premium-head').length){
+	// 	var premiumHead = $('.premium-head');
+  //   var premiumSmall = $('.premium-head-small');
+  //   var premiumBig = $('.premium-head-big');
+  //   premiumHead.on('mouseenter', function(e){
+  //     e.preventDefault();
+  //     e.stopImmediatePropagation();
+  //     // console.log('opening');
+	//     premiumSmall.addClass('deactive');
+	//     premiumBig.addClass('active');
+  //   });
+	// 	premiumHead.on('mouseleave', function(e){
+	// 		e.preventDefault();
+	// 		e.stopImmediatePropagation();
+	// 		premiumSmall.removeClass('deactive');
+	// 		premiumBig.removeClass('active');
+	// 	});
+  // }
 
 	// popup ads
-	if($('.popup-ads').length){
-		var popupAdsCloseButton = $('.popup-ads button');
-		setTimeout(function(){
-			$('.popup-ads').addClass('active');
-		}, 3000);
-		setTimeout(function(){
-			$('.popup-ads').addClass('popup-ads-closed');
-		}, 15000);
-		popupAdsCloseButton.on('click', function(e){
-			e.preventDefault();
-			e.stopImmediatePropagation();
-			// console.log('closing');
-			$('.popup-ads').addClass('popup-ads-closed');
-		});
-	}
+	// if($('.popup-ads').length){
+	// 	var popupAdsCloseButton = $('.popup-ads button');
+	// 	setTimeout(function(){
+	// 		$('.popup-ads').addClass('active');
+	// 	}, 3000);
+	// 	setTimeout(function(){
+	// 		$('.popup-ads').addClass('popup-ads-closed');
+	// 	}, 15000);
+	// 	popupAdsCloseButton.on('click', function(e){
+	// 		e.preventDefault();
+	// 		e.stopImmediatePropagation();
+	// 		// console.log('closing');
+	// 		$('.popup-ads').addClass('popup-ads-closed');
+	// 	});
+	// }
 
 	// Ads Zoom
 
