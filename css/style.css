@@ -328,6 +328,16 @@ footer {
 	color: #fff;
 }
 
+.blue-diagonal-75 {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,1e88e5+50 */
+	background: rgb(30,87,153); /* Old browsers */
+	background: -moz-linear-gradient(45deg, rgba(30,87,153,1) 0%, rgba(30,136,229,1) 50%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, rgba(30,87,153,1) 0%,rgba(30,136,229,1) 50%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, rgba(30,87,153,1) 0%,rgba(30,136,229,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#1e88e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	color: #fff;
+}
+
 hr {
 	border: 0;
   height: 1px;
@@ -1147,17 +1157,21 @@ section li {
 	color: rgba(244,67,54,1);
 	margin: 0 auto;
 }
-/* title box */
 
+/* title box */
 .bbc-indonesia .box-title {
 	background: url(../images/logo-bbc-indonesia.png) no-repeat;
 }
 
-#category .tab-pagination {
+.tab .tab-pagination {
 	border-bottom: 1px solid #e53935;
 }
 
-#category .tab-pagination.pagination {
+.tab.tab-type-2 .tab-pagination {
+	border-bottom: 1px solid #006064;
+}
+
+.tab .tab-pagination.pagination {
 	border-bottom: none;
 }
 
@@ -1246,11 +1260,11 @@ section li {
 .tab .tab-content,
 #update,
 .billboard,
-.rectangle,
 #section-2,
 #berita-pilihan,
 .w-30 .terpopuler,
-#article #section-3 {
+#article #section-3,
+.rectangle #rectangle-ads {
 	margin-bottom: 30px;
 }
 
@@ -1309,6 +1323,10 @@ main section > .w-30 .wrapper .wrapper {
 .terpopuler .tab-pagination,
 .bola .tab-pagination {
 	border-color: rgba(229,57,53,1);
+}
+
+.tab.tab-type-2.travel .tab-pagination {
+	border-bottom: 1px solid #1e88e5;
 }
 
 /*.tekno .tab-pagination {
@@ -1478,45 +1496,44 @@ main section > .w-30 .wrapper .wrapper {
 	height: auto;
 }
 
-.tab .tab-content li a h2,
-.tab .tab-content li a p,
-.tab .tab-content li a span,
-.list li a h2,
-.list li a span,
-#section-3 li a h2,
-#section-3 li a span {
-	padding-left: 10px;
+.tab .tab-content li a,
+.list li a,
+#section-3 li a:nth-of-type(2),
+#section-3 li span {
+	margin-left: 10px;
 	-webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.tab .tab-content li:nth-of-type(1) a h2,
-.tab .tab-content li:nth-of-type(1) a p,
-.tab .tab-content li:nth-of-type(1) a span,
-.tab.tab-type-2 .tab-content li:nth-of-type(2) a h2,
-.tab.tab-type-2 .tab-content li:nth-of-type(2) a p,
-.tab.tab-type-2 .tab-content li:nth-of-type(2) a span,
-.list.list-type-2 li a h2,
-.list.list-type-2 li a span,
-#section-3 li:nth-of-type(1) a h2,
-#section-3 li:nth-of-type(1) a span {
-	padding-left: 0;
+.tab .tab-content li a:nth-of-type(1),
+.tab .tab-content li:first-child a,
+.tab.tab-type-2 .tab-content li:first-child a,
+.tab.tab-type-2 .tab-content li:nth-of-type(2) a,
+.list li a:nth-of-type(1),
+.list.list-type-2 li a,
+#section-3 li:nth-of-type(1) a,
+.tab.video .tab-content li a {
+	margin-left: 0;
 }
 
-.tab.video .tab-content li a h2,
-.tab.video .tab-content li:first-child a h2,
-.tab.video .tab-content li:nth-of-type(2) a h2 {
+.tab.video .tab-content li:first-child a:nth-of-type(2) {
 	padding: 0 10px;
 }
 
 .tab.video .tab-content li a span,
 .tab.video .tab-content li:nth-of-type(2) a span {
-	padding: 10px;
+	margin: 10px;
 }
 
 .tab.video .tab-content li a:first-child {
-	padding: 0;
+	margin: 0;
+}
+
+.video.tab .tab-content-slide li a:nth-of-type(2),
+#category .video.tab-type-2 .tab-content-slide li a:nth-of-type(2),
+#category li figcaption a {
+	padding: 10px;
 }
 
 /*#category .tab-content li a:nth-of-type(2) * {
@@ -1574,7 +1591,7 @@ main section > .w-30 .wrapper .wrapper {
 }
 
 .tab .tab-content-slide li:nth-of-type(1) a:nth-of-type(2),
-.tekno.tab.tab-type-2 .tab-content-slide li:nth-of-type(2) a:nth-of-type(2),
+.tab.tab-type-2 .tab-content-slide li:nth-of-type(2) a:nth-of-type(2),
 #section-3 li:nth-of-type(1) .card a:nth-of-type(2) {
 	width: 100%;
 }
@@ -1632,13 +1649,14 @@ main section > .w-30 .wrapper .wrapper {
 
 .tab-type-1 .tab-content-slide li:nth-of-type(1) a:nth-of-type(1),
 .video.tab-type-2 .tab-content-slide li:nth-of-type(1) a:nth-of-type(1),
-#section-3 .col li:nth-of-type(1) a:nth-of-type(1) {
+#section-3 .col li:nth-of-type(1) a:nth-of-type(1),
+.tab.video > .wrapper {
 	width: 100%;
 	height: 100%;
 }
 
 .tab .tab-content-slide li:nth-of-type(1) h2.title,
-.tekno.tab-type-2 .tab-content-slide li:nth-of-type(2) h2.title,
+.tab-type-2 .tab-content-slide li:nth-of-type(2) h2.title,
 #article #section-3 li:nth-of-type(1) .card h2.title,
 #section-3 li:nth-of-type(1) a:nth-of-type(2) h2.title {
 	padding: 5% 0;
@@ -1650,7 +1668,7 @@ main section > .w-30 .wrapper .wrapper {
 }
 
 .video.tab-type-2 .tab-content {
-	min-height: 1480px;
+	min-height: 1550px;
 }
 
 #category .video.tab-type-2 .tab-content {
@@ -1688,7 +1706,8 @@ main section > .w-30 .wrapper .wrapper {
 .video.tab-type-2 li:nth-of-type(1) .wrapper,
 .video.tab-type-2 li:nth-of-type(2n) .wrapper,
 #category .video.tab-type-2 li:nth-of-type(2n+1) .wrapper,
-.tab.tab-type-3 .wrapper {
+.tab.tab-type-3 .wrapper,
+.tab-type-2.video .tab-content-slide li:nth-of-type(2) h2.title {
 	padding: 0;
 }
 
@@ -1699,7 +1718,7 @@ main section > .w-30 .wrapper .wrapper {
 /* end tab */
 
 .tab .tab-content-slide li:nth-of-type(1) h2.title,
-.tekno.tab-type-2 .tab-content-slide li:nth-of-type(2) h2.title,
+.tab.tab-type-2 .tab-content-slide li:nth-of-type(2) h2.title,
 #section-3 li:nth-of-type(1) a:nth-of-type(2) h2.title,
 .video.tab-type-2 .tab-content-slide li h2.title {
 	font-size: 16px;
@@ -1709,7 +1728,8 @@ main section > .w-30 .wrapper .wrapper {
 }
 
 .tab.tab-type-3 .tab-content-slide li:nth-of-type(1) a:nth-of-type(2) h2.title,
-.tab.tab-type-3 .tab-content-slide li a h2.title {
+.tab.tab-type-3 .tab-content-slide li a h2.title,
+.video.tab-type-2 .tab-content-slide li:first-child h2.title {
 	font-size: 20px;
 	line-height: 26px;
 }
@@ -2281,15 +2301,15 @@ a.button {
 	margin-bottom: 30px;
 }
 
-.tekno.tab-type-2 .tab-content-slide li:nth-of-type(1) a:nth-of-type(1),
-.tekno.tab-type-2 .tab-content-slide li:nth-of-type(2) a:nth-of-type(1),
+.tab-type-2 .tab-content-slide li:nth-of-type(1) a:nth-of-type(1),
+.tab-type-2 .tab-content-slide li:nth-of-type(2) a:nth-of-type(1),
 .video.tab .tab-content-slide li a,
 #category .card-type-5 figcaption a {
 	width: 100%;
 }
 
-.tekno.tab-type-2 .tab-content-slide li:nth-of-type(1) a:nth-of-type(1),
-.tekno.tab-type-2 .tab-content-slide li:nth-of-type(2) a:nth-of-type(1),
+.tab-type-2 .tab-content-slide li:nth-of-type(1) a:nth-of-type(1),
+.tab-type-2 .tab-content-slide li:nth-of-type(2) a:nth-of-type(1),
 .video.tab .tab-content-slide li a:nth-of-type(1),
 #category .video.tab-type-2 .tab-content-slide li:nth-of-type(1) a:nth-of-type(1),
 #category .card-type-5 a:nth-of-type(1),
@@ -2310,12 +2330,6 @@ a.button {
 .video.tab .tab-content-slide li a:nth-of-type(1) img {
 	display: block;
 	width: 100%;
-}
-
-.video.tab .tab-content-slide li a:nth-of-type(2),
-#category .video.tab-type-2 .tab-content-slide li a:nth-of-type(2),
-#category li figcaption a {
-	padding: 10px 0;
 }
 
 .video.tab .tab-content-slide li a {
@@ -2345,8 +2359,8 @@ a.button {
 }
 
 
-.video.tab .tab-content-slide li:nth-of-type(1) figcaption a * {
-	margin: 2.5% 0;
+.video.tab .tab-content-slide li:nth-of-type(1) h2 {
+	padding: 2.5% 0;
 }
 
 
