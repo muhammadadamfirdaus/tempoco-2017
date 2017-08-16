@@ -1163,7 +1163,8 @@ section li {
 	background: url(../images/logo-bbc-indonesia.png) no-repeat;
 }
 
-.tab .tab-pagination {
+.tab .tab-pagination,
+.tab.video .tab-pagination {
 	border-bottom: 1px solid #e53935;
 }
 
