@@ -2043,10 +2043,10 @@ a.button {
 }
 
 /*.list.list-type-1 li a:nth-of-type(2) *,
-#section-3 li .card a:nth-of-type(2) *,*/
+#section-3 li .card a:nth-of-type(2) *,
 #article #section-3 li .card a:nth-of-type(2) * {
 	margin-left: 10px;
-}
+}*/
 
 #article #section-3 li:nth-of-type(1) .card h2.title {
 	margin: 0 0 0 10px;
