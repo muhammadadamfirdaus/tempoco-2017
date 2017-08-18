@@ -1274,7 +1274,8 @@ main {
 }
 
 main section > .w-70,
-main article {
+main article,
+main#category .w-70 {
 	width: 728px;
 }
 
