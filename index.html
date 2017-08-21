@@ -40,6 +40,7 @@
 <!-- <script src="https://cdn.tmpo.co/js/slide.min.js"></script> -->
 <script src="js/core.js"></script>
 <script defer src="js/main.js"></script>
+<script defer src="js/date.js"></script>
 </head>
 <body>
 <div class="container">
@@ -96,7 +97,7 @@
     </div>
 		<div class="header-bottom">
 			<nav id="menu" class="menu clearfix">
-      	<div class="container-desktop scroll-container">
+      	<div class="container-desktop scroll-container clearfix">
 	        <li><a id="home" href="https://www.tempo.co/">Home</a></li>
 	        <li><a id="nasional" href="https://nasional.tempo.co/">Nasional</a>
 						<ul>
@@ -110,7 +111,7 @@
 					</li>
 	        <li><a id="metro" href="https://metro.tempo.co/">Metro</a></li>
 	        <li><a id="dunia" href="#">Dunia</a></li>
-	        <li class="submenu">
+	        <li class="sub">
 						<a id="bola" href="#">Bola</a>
 						<ul>
 							<li><a href="#">Keuangan</a></li>
@@ -129,9 +130,31 @@
 	        <li><a id="foto" href="#">Foto</a></li>
 	        <li><a id="video" href="#">Video</a></li>
 	        <li><a id="grafis" href="#">Grafis</a></li>
-	        <!-- <li><a id="kolom" href="#">Kolom</a></li>
-	        <li><a id="investigasi" href="#">Investigasi</a></li> -->
 	        <li><a id="video" href="#">Indeks</a></li>
+	        <li><a id="video" href="#">Bekraf</a></li>
+	        <li><a id="search" class="search-button" href="#"></a>
+					</li>
+					<div id="extension" class="sticky-search clearfix">
+						<div class="wrapper clearfix">
+							<div id="sticky-search" class="col">
+								<form action="/search" class="clearfix" method="post">
+									<div class="search clearfix">
+										<a class="col" href="#"></a>
+										<input class="col" type="search" value="Cari konten menarik?" onfocus="this.value = this.value=='Cari konten menarik?'?'':this.value;" onblur="this.value = this.value==''?'Cari konten menarik?':this.value;" name="val">
+									</div>
+								</form>
+							</div>
+							<p class="col">atau cari berdasarkan hari</p>
+							<div id="datepicker" class="col">
+								<div class="wrapper">
+							    <input type="text" id="tanggal">
+								</div>
+							</div>
+							<a id="back" class="button red-500" href="#">
+								Kembali
+							</a>
+						</div>
+					</div>
 	      </div>
     	</nav>
 		</div>

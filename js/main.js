@@ -20,6 +20,26 @@ $(function(){
   //     localStorage.setItem('viewed','yes');
   //   }, 8000);
 	// };
+	
+	//sticky-search notification
+	if(!localStorage.getItem('saya mengerti')){
+		var contentTooltipHeaderBottom = $('<div class="tooltip red-500"><div class="wrapper"><div class="arrow-up"></div><p>Manfaatkan kemudahan pencarian artikel TEMPO.CO</p><div class="wrapper"><a class="white" href="#">Saya mengerti</a></div></div></div>');
+		$('.header-bottom li a.search-button').append(contentTooltipHeaderBottom);
+		setTimeout(function(){
+			var tooltipHeaderBottom = $('.header-bottom .tooltip');
+			tooltipHeaderBottom.addClass('active');
+			tooltipHeaderBottom.add('a .white').on('click', function(e){
+				e.preventDefault();
+				e.stopImmediatePropagation();
+				tooltipHeaderBottom.removeClass('active');
+				setTimeout(function(){
+					contentTooltipHeaderBottom.detach();
+				}, 800);
+				localStorage.setItem('saya mengerti','yes');
+			});
+		}, 2500);
+	}
+	
 
 	// survey front-end
 	$('.container').append('<div class="sticky survey-front"><a class="survey" href="https://goo.gl/forms/zmBQRN3CJIGI4qog1?utm_source=Close&utm_medium=Survey&utm_campaign=ButtonSurveyClose" target="blank"><h4>Kami ingin mendengar dari Anda</h4><p>Berikan penilaian seputar tampilan baru TEMPO.CO</p></a><center><a class="survey button" href="https://goo.gl/forms/zmBQRN3CJIGI4qog1?utm_source=Close&utm_medium=Survey&utm_campaign=ButtonSurveyClose" target="blank">Klik Di Sini</a></center><span>* kami jamin tidak akan lama</span><a href="#" class="close">x</a></div>');
@@ -57,7 +77,8 @@ $(function(){
 	});
 
 	// Go To
-	$('a[href^="#"].scroll').on('click', function(){
+	$('a[href^="#"].scroll').on('click', function(e){
+		e.preventDefault();
 		$('html,body').animate({
 			scrollTop: $(this.hash).offset().top
 		}, 2000);
@@ -84,8 +105,6 @@ $(function(){
 	/* end head focus */
 
 	/* desktop menu */
-
-
 	var submenuDesktop = $(this).find('.sub ul');
 	$('.menu li.sub').on('mouseenter', function(){
 		// console.log('ox');
@@ -255,23 +274,50 @@ $(function(){
 	var searchPindah = $('#search');
 
 	var timer;
+	var headerBottom = $('.header-bottom');
+	var stickySearch = $('.search-button');
+	var extension = $('#extension');
+	stickySearch.on('click', function(e){
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		headerBottom.addClass('sticky-search-active');
+		extension.add('.sticky-search').addClass('active');
+	});
+	
+	var inputSearch = $('.search input');
+	inputSearch.on('click', function(e){
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		inputSearch.addClass('active');
+	});
+	
+	$('#back.button').on('click', function(e){
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		headerBottom.removeClass('sticky-search-active');
+		extension.add('.sticky-search').removeClass('active');
+	});
+	
 	function sticky(){
 		var scroll = getCurrentScroll();
-    	if(scroll > jarakheader){
-			$('.premium-head').css('margin-top', '195px');
+		
+  	if(scroll > jarakheader){
+			$('.premium-head').css('margin-top', '180px');
 			$('header').addClass('sticky sticky-header');
 			// searchPindah.detach().appendTo('#menu .container-desktop');
-			$('.search a').on('click', function(e){
-				e.preventDefault();
-				if($('header').hasClass('sticky-search')){
-					$('header').removeClass('sticky-search');
-				} else {
-					$('header').addClass('sticky-search');
-				}
-			});
-    	} else {
+			// $('.search a').on('click', function(e){
+			// 	e.preventDefault();
+			// 	if($('header').hasClass('sticky-search')){
+			// 		$('header').removeClass('sticky-search');
+			// 	} else {
+			// 		$('header').addClass('sticky-search');
+			// 	}
+			// });
+  	} else {
 			$('.premium-head').css('margin-top', '10px');
-    		$('header').removeClass('sticky sticky-header');
+			headerBottom.removeClass('sticky-search-active');
+			extension.add('.sticky-search').removeClass('active');
+  		$('header').removeClass('sticky sticky-header');
 			// searchPindah.detach().appendTo('.header-top .container-desktop');
 		}
 
@@ -325,6 +371,17 @@ $(function(){
     return window.pageYOffset || document.documentElement.scrollTop;
   }
 	/* end onscroll */
+	
+	/* datepicker */
+	var picker = new Pikaday(
+		{
+			field: document.getElementById('tanggal'),
+			firstDay: 0,
+			minDate: new Date(2011, 11, 31),
+			maxDate: new Date(2020, 12, 31),
+			yearRange: [2000,2020],
+			container: document.getElementById('datepicker')
+		});
 
 	var fotoHome = new Swiper('.foto-home', {
 		pagination: '.swiper-pagination',
@@ -375,25 +432,6 @@ $(function(){
       slideShadows : true
     }
   });
-	
-	// var kolomKonten = new Swiper('.kolom-konten', {
-	// 		 nextButton: '.swiper-button-next',
-	// 		 prevButton: '.swiper-button-prev',
-	// 		 spaceBetween: 10,
-	//  });
-	//  var kolomNavigation = new Swiper('.kolom-navigation', {
-	// 		 spaceBetween: 10,
-	// 		 centeredSlides: true,
-	// 		 slidesPerView: 'auto',
-	// 		 touchRatio: 0.2,
-	// 		 slideToClickedSlide: true
-	//  });
-	//  kolomKonten.params.control = kolomNavigation;
-	//  kolomNavigation.params.control = kolomKonten;
-	//  
-	//  $('.kolom-navigation').on('mouseenter', function(){
-	// 		kolomNavigation.startAutoplay();
-	//  });
 	
 	var kolomKonten = new Swiper('.kolom-konten', {
       spaceBetween: 10,
