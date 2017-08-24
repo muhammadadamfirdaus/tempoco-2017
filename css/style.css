@@ -184,7 +184,7 @@ footer {
 }
 
 /* fonts */
-@font-face {
+/*@font-face {
   font-family: 'Helvetica';
 	src:	url('https://cdn.tmpo.co/css/fonts/Helvetica.eot?#iefix') format('embedded-opentype'),
 				url('https://cdn.tmpo.co/css/fonts/Helvetica.otf')  format('opentype'),
@@ -243,7 +243,7 @@ footer {
 				url('https://cdn.tmpo.co/css/fonts/Poppins-Light.svg#Poppins-Light') format('svg');
   font-weight: normal;
   font-style: normal;
-}
+}*/
 
 @font-face {
   font-family: 'RobotoDraft';
@@ -476,7 +476,7 @@ span.time {
 .search a {
 	content:'';
 	background: url(../images/sprites.png) no-repeat;
-	background-position: 0 -30px;
+	background-position: 0 -45px;
 	background-size: 195px;
 	display: inline-block;
 	width: 16px;
@@ -656,13 +656,15 @@ main .navigation {
 
 .header-bottom li a#search {
 	background: url(../images/sprites.png) no-repeat;
-	background-position: -6px -24px;
+	background-position: -15px -52px;
 	background-size: 220px;
 	display: none;
-	width: 32px;
+	width: 20px;
 	height: 20px;
 	line-height: 20px;
+	padding: 0;
 	position: absolute;
+	top: 10px;
 }
 
 .header-bottom.sticky-search-active li {
@@ -673,7 +675,8 @@ main .navigation {
 	display: block;
 }
 
-.header-bottom li {
+.header-bottom li,
+#extension #sticky-search #trending li {
 	animation: menu-fade-in 0.2s ease-out forwards;
 }
 
@@ -686,7 +689,7 @@ main .navigation {
 }
 
 .header-bottom .search a.col {
-	background-position: -15px -30px;
+	background-position: -15px -46px;
 	width: 16px;
 	z-index: 1;
 	top: 12px;
@@ -725,6 +728,7 @@ main .navigation {
 
 .header-bottom #datepicker input {
 	line-height: 40px;
+	width: 130px;
 	height: 25px;
 	margin: 8px 0;
 	padding-left: 10px;
@@ -738,7 +742,7 @@ main .navigation {
 }
 
 .header-bottom .col:nth-child(2) {
-	width: 28%;
+	width: 25%;
 }
 
 .header-bottom .col:nth-child(3) {
@@ -790,6 +794,72 @@ main .navigation {
 	transform: translate3d(0, 0, 0);
 }
 
+#extension #sticky-search #trending {
+	width: 350px;
+	background: #fff;
+	box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+	position: absolute;
+	top: 38px;
+}
+
+#extension #sticky-search #trending li:nth-of-type(1):before {
+	content: '';
+	background-color: initial;
+}
+
+#extension #sticky-search #trending li {
+	background: none;
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+#extension #sticky-search #trending li:last-child {
+	margin-bottom: 20px;
+}
+
+#extension #sticky-search #trending li:before {
+	content: '';
+	width: 13px;
+	height: 20px;
+	background-image: url(../images/sprites.png);
+	background-position: -55px -160px;
+	background-size: 224px;
+	position: absolute;
+	top: 0;
+}
+
+#extension #sticky-search #trending a {
+	line-height: 11px;
+	padding: 0;
+	margin-left: 20px;
+	text-transform: none;
+}
+
+#extension #sticky-search #trending span {
+	font-size: 11px;
+	color: #aaa;
+	margin: 20px 0;
+}
+
+#extension #sticky-search #trending {
+	opacity: 0;
+	visibility: hidden;
+	transform: translate3d(0, 100px, 0);
+}
+
+#extension #sticky-search #trending.active {
+	opacity: 1;
+	visibility: visible;
+	transform: translate3d(0, 0, 0);
+	transition: opacity 0.2s ease-in;
+}
+
+#extension #sticky-search #trending input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
 /*.header-bottom .col:last-child div {
 	padding-left: 10px;
 }*/
@@ -802,7 +872,7 @@ main .navigation {
 
 	100% {
 		opacity: 0;
-		display: none;
+		visibility: hidden;
 		transform: translate3d(-100px, 0, 0);
 	}
 }
@@ -918,6 +988,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   position: absolute;
   box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
 	width: 256px;
+	margin-top: -2px;
 }
 
 .pika-lendar {
@@ -1987,6 +2058,10 @@ main section > .w-30 .wrapper .wrapper {
   box-sizing: border-box;
 }
 
+#home #section-3 li a:nth-of-type(2) {
+	margin-top: 20px;
+}
+
 .tab .tab-content li a:nth-of-type(1),
 .tab .tab-content li:first-child a,
 .tab.tab-type-2 .tab-content li:first-child a,
@@ -2136,9 +2211,12 @@ main section > .w-30 .wrapper .wrapper {
 	height: 100%;
 }
 
+.tab-type-1 .tab-content-slide li:nth-of-type(1) a:nth-of-type(1) {
+	height: 180px;
+}
+
 .tab .tab-content-slide li:nth-of-type(1) h2.title,
-.tab-type-2 .tab-content-slide li:nth-of-type(2) h2.title,
-#article #section-3 li:nth-of-type(1) .card h2.title {
+.tab-type-2 .tab-content-slide li:nth-of-type(2) h2.title {
 	padding: 5% 0;
 }
 
@@ -2563,8 +2641,8 @@ a.button {
 .list.list-type-2 li a:nth-of-type(2) h2.title,
 #section-3 li .card h2.title,
 #article #section-3 li .card h2.title {
-	font-size: 13px;
-	line-height: 18px;
+	font-size: 15px; /* default 13px */
+	line-height: 20px;
 }
 
 .list.terpopuler li a:nth-of-type(2) h2.title {
@@ -2593,7 +2671,7 @@ a.button {
 
 .list-type-3 li:nth-of-type(1):before {
 	content: '';
-	background: #e53935;
+	background-color: #e53935;
 	width: 100%;
 	height: 1px;
 	position: absolute;
@@ -3239,6 +3317,15 @@ article .sub-head:nth-of-type(1) a.pw-widget.__pw-padding-true.__pw-layout-horiz
 article > .author {
 	margin: 10px 0;
 	padding: 2% 0 3%;
+}
+
+article img {
+	max-width: 728px;
+	margin: 0 auto;
+}
+
+figure a {
+	display: block;
 }
 
 #gallery .author {

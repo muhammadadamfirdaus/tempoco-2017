@@ -277,6 +277,7 @@ $(function(){
 	var headerBottom = $('.header-bottom');
 	var stickySearch = $('.search-button');
 	var extension = $('#extension');
+	var trendingList = $('#trending.list');
 	stickySearch.on('click', function(e){
 		e.preventDefault();
 		e.stopImmediatePropagation();
@@ -284,11 +285,11 @@ $(function(){
 		extension.add('.sticky-search').addClass('active');
 	});
 	
-	var inputSearch = $('.search input');
+	var inputSearch = $('#sticky-search.col input');
 	inputSearch.on('click', function(e){
 		e.preventDefault();
 		e.stopImmediatePropagation();
-		inputSearch.addClass('active');
+		extension.add(trendingList).addClass('active');
 	});
 	
 	$('#back.button').on('click', function(e){
@@ -296,7 +297,24 @@ $(function(){
 		e.stopImmediatePropagation();
 		headerBottom.removeClass('sticky-search-active');
 		extension.add('.sticky-search').removeClass('active');
+		extension.add(trendingList).removeClass('active');
 	});
+	
+	$(document).on('click', function(e){
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		trendingList.removeClass('active');
+	});
+	
+	// inputSearch.on('click', function(e){
+	// 	e.preventDefault();
+	// 	e.stopImmediatePropagation();
+	// 	extension.add('#trending.list').addClass('active');
+	// });
+	
+	if($('.pika-single').find('.is-bound').length){
+		consolo.log('hadir');
+	}
 	
 	function sticky(){
 		var scroll = getCurrentScroll();
@@ -378,9 +396,26 @@ $(function(){
 			field: document.getElementById('tanggal'),
 			firstDay: 0,
 			minDate: new Date(2011, 11, 31),
-			maxDate: new Date(2020, 12, 31),
-			yearRange: [2000,2020],
-			container: document.getElementById('datepicker')
+			maxDate: new Date,
+			yearRange: [2000],
+			container: document.getElementById('datepicker'),
+			format: 'D/M/YYYY',
+	    toString(date, format) {
+        // you should do formatting based on the passed format,
+        // but we will just return 'D/M/YYYY' for simplicity
+        const day = date.getDate();
+        const month = date.getMonth() + 1;
+        const year = date.getFullYear();
+        return `${day}/${month}/${year}`;
+	    },
+	    parse(dateString, format) {
+        // dateString is the result of `toString` method
+        const parts = dateString.split('/');
+        const day = parseInt(parts[0], 10);
+        const month = parseInt(parts[1] - 1, 10);
+        const year = parseInt(parts[1], 10);
+        return new Date(year, month, day);
+	    }
 		});
 
 	var fotoHome = new Swiper('.foto-home', {
@@ -507,44 +542,43 @@ $(function(){
   }
 
 	// premium head
-  // if($('.premium-head').length){
-	// 	var premiumHead = $('.premium-head');
-  //   var premiumSmall = $('.premium-head-small');
-  //   var premiumBig = $('.premium-head-big');
-  //   premiumHead.on('mouseenter', function(e){
-  //     e.preventDefault();
-  //     e.stopImmediatePropagation();
-  //     // console.log('opening');
-	//     premiumSmall.addClass('deactive');
-	//     premiumBig.addClass('active');
-  //   });
-	// 	premiumHead.on('mouseleave', function(e){
-	// 		e.preventDefault();
-	// 		e.stopImmediatePropagation();
-	// 		premiumSmall.removeClass('deactive');
-	// 		premiumBig.removeClass('active');
-	// 	});
-  // }
+  if($('.premium-head').length){
+		var premiumHead = $('.premium-head');
+    var premiumSmall = $('.premium-head-small');
+    var premiumBig = $('.premium-head-big');
+    premiumHead.on('mouseenter', function(e){
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      // console.log('opening');
+	    premiumSmall.addClass('deactive');
+	    premiumBig.addClass('active');
+    });
+		premiumHead.on('mouseleave', function(e){
+			e.preventDefault();
+			e.stopImmediatePropagation();
+			premiumSmall.removeClass('deactive');
+			premiumBig.removeClass('active');
+		});
+  }
 
 	// popup ads
-	// if($('.popup-ads').length){
-	// 	var popupAdsCloseButton = $('.popup-ads button');
-	// 	setTimeout(function(){
-	// 		$('.popup-ads').addClass('active');
-	// 	}, 3000);
-	// 	setTimeout(function(){
-	// 		$('.popup-ads').addClass('popup-ads-closed');
-	// 	}, 15000);
-	// 	popupAdsCloseButton.on('click', function(e){
-	// 		e.preventDefault();
-	// 		e.stopImmediatePropagation();
-	// 		// console.log('closing');
-	// 		$('.popup-ads').addClass('popup-ads-closed');
-	// 	});
-	// }
+	if($('.popup-ads').length){
+		var popupAdsCloseButton = $('.popup-ads button');
+		setTimeout(function(){
+			$('.popup-ads').addClass('active');
+		}, 3000);
+		setTimeout(function(){
+			$('.popup-ads').addClass('popup-ads-closed');
+		}, 15000);
+		popupAdsCloseButton.on('click', function(e){
+			e.preventDefault();
+			e.stopImmediatePropagation();
+			// console.log('closing');
+			$('.popup-ads').addClass('popup-ads-closed');
+		});
+	}
 
 	// Ads Zoom
-
 	if($('.xzoom').length){
 		$(".xzoom").xzoom({
 			tint: '#333',
