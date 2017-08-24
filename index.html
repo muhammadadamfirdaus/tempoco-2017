@@ -36,7 +36,7 @@
 <!--[if lte IE 9]>
 <link rel="stylesheet" type="text/css" href="css/ie7-lower.css">
 <![endif]-->
-<script defer src="https://cdn.tmpo.co/js/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.tmpo.co/js/jquery-3.1.1.min.js"></script>
 <script defer src="js/core.js"></script>
 <script defer src="js/main.js"></script>
 </head>
@@ -3028,7 +3028,7 @@
 							<!-- end terbaru -->
 						</div>
 					</section>
-					
+
 					<div class="ads rectangle">
 						<div class="wrapper">
 							<!-- cukup ganti dari bawah ini -->
@@ -4120,6 +4120,18 @@
 		</a>
 	</footer>
 	<!-- sticky bottom banner -->
+
+	<script type="text/javascript">
+		$('input#tanggal').on('change', function(e) {
+			e.preventDefault();
+			var tanggal = $('#tanggal').val();
+			console.log('tes :'+tanggal);
+
+			// location.reload('https://www.tempo.co/indeks/'+tanggal);
+		});
+
+	</script>
+
 	<div id="ads" class="ads bottom-banner h-50">
 		<div class="container-desktop">
 			<button>
@@ -4132,14 +4144,14 @@
 	</div>
 	<!-- end sticky bottom banner -->
 	<!-- popup ads -->
-	<div id="ads" class="ads popup-ads">
+	<!-- <div id="ads" class="ads popup-ads">
 		<button>
 			x
 		</button>
 		<a class="close-button" href="https://www.tempo.co/" target="_blank">
 			<iframe width="100%" height="100%" src="images/popup-ads/popup-ads/index.html"></iframe>
 		</a>
-	</div>
+	</div> -->
 	<!-- end popup ads -->
 </div>
 <!-- Google Tag Manager (noscript) -->
