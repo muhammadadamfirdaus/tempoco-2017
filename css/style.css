@@ -2624,7 +2624,8 @@ a.button {
 	overflow: hidden;
 }
 
-.terpopuler.list li a:nth-of-type(2) h2.title {
+.terpopuler.list li a:nth-of-type(2) h2.title,
+.terpopuler.list li:nth-of-type(2) {
 	margin-bottom: 0;
 }
 
