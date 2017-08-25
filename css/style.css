@@ -2641,8 +2641,8 @@ a.button {
 .list.list-type-2 li a:nth-of-type(2) h2.title,
 #section-3 li .card h2.title,
 #article #section-3 li .card h2.title {
-	font-size: 15px; /* default 13px */
-	line-height: 20px;
+	font-size: 14px; /* default 13px */
+	line-height: 19px;
 }
 
 .list.terpopuler li a:nth-of-type(2) h2.title {
