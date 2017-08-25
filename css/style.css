@@ -2058,7 +2058,7 @@ main section > .w-30 .wrapper .wrapper {
   box-sizing: border-box;
 }
 
-#home #section-3 li a:nth-of-type(2) {
+#home #section-3.kanal-pilihan li:nth-of-type(1) a:nth-of-type(2) {
 	margin-top: 20px;
 }
 
