@@ -249,7 +249,7 @@ footer {
   font-family: 'RobotoDraft';
   font-style: normal;
   font-weight: 100;
-  src: local('RobotoDraft Thin'), local('RobotoDraft-Thin'), url(fonts/RobotoDraft-100.woff2) format('woff2');
+  src: local('RobotoDraft Thin'), local('RobotoDraft-Thin'), url('https://cdn.tmpo.co/css/fonts/RobotoDraft-100.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
@@ -257,7 +257,7 @@ footer {
   font-family: 'RobotoDraft';
   font-style: normal;
   font-weight: 300;
-  src: local('RobotoDraft Light'), local('RobotoDraft-Light'), url(fonts/RobotoDraft-300.woff2) format('woff2');
+  src: local('RobotoDraft Light'), local('RobotoDraft-Light'), url('https://cdn.tmpo.co/css/fonts/RobotoDraft-300.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
@@ -265,7 +265,7 @@ footer {
   font-family: 'RobotoDraft';
   font-style: normal;
   font-weight: 400;
-  src: local('RobotoDraft'), local('RobotoDraft-Regular'), url(fonts/RobotoDraft-400.woff2) format('woff2');
+  src: local('RobotoDraft'), local('RobotoDraft-Regular'), url('https://cdn.tmpo.co/css/fonts/RobotoDraft-400.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
@@ -273,7 +273,7 @@ footer {
   font-family: 'RobotoDraft';
   font-style: normal;
   font-weight: 500;
-  src: local('RobotoDraft Medium'), local('RobotoDraft-Medium'), url(fonts/RobotoDraft-500.woff2) format('woff2');
+  src: local('RobotoDraft Medium'), local('RobotoDraft-Medium'), url('https://cdn.tmpo.co/css/fonts/RobotoDraft-500.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 

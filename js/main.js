@@ -399,7 +399,7 @@ $(function(){
 			maxDate: new Date,
 			yearRange: [2000],
 			container: document.getElementById('datepicker'),
-			format: 'D/M/YYYY',
+			format: 'DD/MM/YYYY',
 	    toString(date, format) {
         // you should do formatting based on the passed format,
         // but we will just return 'D/M/YYYY' for simplicity
