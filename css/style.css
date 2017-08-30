@@ -2654,7 +2654,7 @@ a.button {
 }
 
 .terpopuler.list li a:nth-of-type(2) h2.title,
-.terpopuler.list li:nth-of-type(2) {
+.terpopuler.list li .info-tempo {
 	margin-bottom: 0;
 }
 
