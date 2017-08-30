@@ -534,7 +534,6 @@ nav {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 	list-style: none;
-	height: 40px;
 }
 
 .menu div:before {
@@ -1241,19 +1240,18 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 	display: none;
 }*/
 
-.sticky-r3 {
+.r3.sticky {
 	width: 344px;
+	opacity: 1;
+	top: 60px;
 	-webkit-animation: bounce-down 0.5s forwards;
 	animation: bounce-down 0.5s forwards;
 }
 
-.sticky.lepas {
-	width: 344px;
+.r3.lepas {
 	opacity: 0;
-	-webkit-transform: translate3d(0, -200px, 0);
-	transform: translate3d(0, -200px, 0);
-	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease;
+	-webkit-animation: bounce-up 0.5s forwards;
+	animation: bounce-up 0.5s forwards;
 }
 
 .sticky.tab-pagination {
@@ -1867,7 +1865,8 @@ main section > .w-30 .wrapper .wrapper {
 	margin-bottom: 10px;
 }
 
-.video .tab-pagination {
+.video .tab-pagination,
+.tab.tab-type-2.video .tab-pagination {
 	border-color: #5674B9;
 }
 
@@ -2319,14 +2318,18 @@ main section > .w-30 .wrapper .wrapper {
 .indikator ul {
 	display: block;
 	margin: 0 auto;
-	text-align: center;
+	text-align: left;
 }
 
 .indikator ul li{
   color: #AAAAAA;
   position: relative;
-  display: inline-block;
-	margin-right: 5em;
+	float: left;
+	width: 33.3%;
+}
+
+.indikator ul li:last-child {
+	margin-right: 0;
 }
 
 .indikator ul li input[type=radio]{
@@ -2339,10 +2342,9 @@ main section > .w-30 .wrapper .wrapper {
   position: relative;
   font-weight: 300;
   font-size: 1.35em;
-  margin: 15px auto 10px;
-	padding-left: 50px;
+	padding-left: 25px;
   height: 30px;
-  z-index: 1;
+  z-index: 0;
   cursor: pointer;
   -webkit-transition: all 0.25s linear;
 }
@@ -2354,20 +2356,20 @@ main section > .w-30 .wrapper .wrapper {
 .indikator ul li .check{
   display: block;
   position: absolute;
-  border: 5px solid #e53935;
+  border: 2px solid #e53935;
   border-radius: 50%;
-  height: 25px;
-  width: 25px;
-  top: 10px;
+  height: 16px;
+  width: 16px;
+  top: 5px;
   left: 0;
-	z-index: 1;
+	z-index: -1;
 	transition: border 0.25s linear;
 	-webkit-transition: border 0.25s linear;
 }
 
 .indikator ul li:hover .check {
-  border: 5px solid #e53935;
-	box-shadow: 0px 0px 25px #e53935;
+  border: 2px solid #e53935;
+	box-shadow: 0px 0px 16px #e53935;
 	transition: all 0.25s linear;
 	-webkit-transition: all 0.25s linear;
 }
@@ -2377,26 +2379,53 @@ main section > .w-30 .wrapper .wrapper {
   position: absolute;
 	content: '';
   border-radius: 100%;
-  height: 15px;
-  width: 15px;
-  top: 5px;
-	left: 5px;
+  height: 16px;
+  width: 16px;
+  top: 0;
+	left: 0;
   margin: auto;
 	transition: background 0.25s linear;
 	-webkit-transition: background 0.25s linear;
 }
 
-input[type=radio]:checked ~ .check {
-  border: 5px solid #e53935;
+.indikator p.jawab-indikator {
+	font-size: 15px;
+	line-height: 30px;
+	margin: 0;
+}
+
+.indikator input[type=radio]:checked ~ .check {
+  border: 2px solid #e53935;
 	background: #e53935;
 }
 
-input[type=radio]:checked ~ .check::before{
+.indikator input[type=radio]:checked ~ .check::before{
   background: #e53935;
 }
 
-input[type=radio]:checked ~ label{
+.indikator input[type=radio]:checked ~ label{
   color: #e53935;
+}
+
+.indikator  div.clearfix {
+	display: block;
+	margin: 10px auto 0;
+	width: 33.3%;
+}
+
+.indikator  button {
+	outline: 0;
+	border: 0;
+	padding: 6px 12px;
+	line-height: 12px;
+	color: #555;
+}
+
+.indikator button:hover {
+	background: rgba(244,67,54,1);
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.5s ease;
 }
 
 /* berita pilihan */
