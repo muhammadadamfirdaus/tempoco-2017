@@ -42,34 +42,34 @@ $(function(){
 	
 
 	// survey front-end
-	$('.container').append('<div class="sticky survey-front"><a class="survey" href="https://goo.gl/forms/zmBQRN3CJIGI4qog1?utm_source=Close&utm_medium=Survey&utm_campaign=ButtonSurveyClose" target="blank"><h4>Kami ingin mendengar dari Anda</h4><p>Berikan penilaian seputar tampilan baru TEMPO.CO</p></a><center><a class="survey button" href="https://goo.gl/forms/zmBQRN3CJIGI4qog1?utm_source=Close&utm_medium=Survey&utm_campaign=ButtonSurveyClose" target="blank">Klik Di Sini</a></center><span>* kami jamin tidak akan lama</span><a href="#" class="close">x</a></div>');
-	$('.survey-front a.close').on('click', function(e){
-		e.preventDefault();
-    e.stopImmediatePropagation();
-    $('.survey-front').removeClass('active').addClass('survey-closed');
-    $('.survey-front a.close').attr('data-click', 'clicked');
-		
-		if($('.survey-closed').length || $('.survey-front a.close[data-click]').length){
-			// console.log('ada close');
-			setTimeout(function(){
-				$('.survey-front').detach();
-			}, 300);
-		}
-	});
+	// $('.container').append('<div class="sticky survey-front"><a class="survey" href="https://goo.gl/forms/zmBQRN3CJIGI4qog1?utm_source=Close&utm_medium=Survey&utm_campaign=ButtonSurveyClose" target="blank"><h4>Kami ingin mendengar dari Anda</h4><p>Berikan penilaian seputar tampilan baru TEMPO.CO</p></a><center><a class="survey button" href="https://goo.gl/forms/zmBQRN3CJIGI4qog1?utm_source=Close&utm_medium=Survey&utm_campaign=ButtonSurveyClose" target="blank">Klik Di Sini</a></center><span>* kami jamin tidak akan lama</span><a href="#" class="close">x</a></div>');
+	// $('.survey-front a.close').on('click', function(e){
+	// 	e.preventDefault();
+  //   e.stopImmediatePropagation();
+  //   $('.survey-front').removeClass('active').addClass('survey-closed');
+  //   $('.survey-front a.close').attr('data-click', 'clicked');
+	// 	
+	// 	if($('.survey-closed').length || $('.survey-front a.close[data-click]').length){
+	// 		// console.log('ada close');
+	// 		setTimeout(function(){
+	// 			$('.survey-front').detach();
+	// 		}, 300);
+	// 	}
+	// });
 	
-	$('.survey-front a.survey').on('click', function(e){
-		// e.preventDefault();
-    e.stopImmediatePropagation();
-    // $('.survey-front').removeClass('active').addClass('survey-closed');
-    $('.survey-front a.survey').attr('data-click', 'clicked');
-		
-		if($('.survey-closed').length || $('.survey-front a.survey[data-click]').length){
-			console.log('ada close');
-			setTimeout(function(){
-				$('.survey-front').detach();
-			}, 3000);
-		}
-	});
+	// $('.survey-front a.survey').on('click', function(e){
+	// 	// e.preventDefault();
+  //   e.stopImmediatePropagation();
+  //   // $('.survey-front').removeClass('active').addClass('survey-closed');
+  //   $('.survey-front a.survey').attr('data-click', 'clicked');
+	// 	
+	// 	if($('.survey-closed').length || $('.survey-front a.survey[data-click]').length){
+	// 		console.log('ada close');
+	// 		setTimeout(function(){
+	// 			$('.survey-front').detach();
+	// 		}, 3000);
+	// 	}
+	// });
 
 	var tempo2017forthefirsttime = new Swiper('.tempo-2017-tutorial', {
 		pagination: '.swiper-pagination',
@@ -259,18 +259,16 @@ $(function(){
 	/* end tab */
 
 	/* onscroll */
-	var stickyheader = $('.premium-head');
-	var section3 = $('.kanal-pilihan');
-	var jarakheader = stickyheader.offset().top;
+	var stickyheader = $('.header-bottom');
+	var iklanTeratasDesktop = $('.ads.top-banner.premium-head');
+	var jarakheader = stickyheader.offset().top + 50;
 
 	var stickyrectangle3 = $('.r3');
 	var jarakstickyrectangle3 = stickyrectangle3.offset().top;
-	var overSection3 = stickyrectangle3.offset().top + 220;
 
 	var navigationHeader = $('.tab-pagination');
 	var hasScrolled = $('.header-top').offset().top + 1000;
-
-	// var headerTop = $('.header-top');
+	
 	var searchPindah = $('#search');
 
 	var timer;
@@ -285,7 +283,7 @@ $(function(){
 		extension.add('.sticky-search').addClass('active');
 	});
 	
-	var inputSearch = $('#sticky-search.col input');
+	var inputSearch = $('#sticky-search.col input.col');
 	inputSearch.on('click', function(e){
 		e.preventDefault();
 		e.stopImmediatePropagation();
@@ -301,65 +299,59 @@ $(function(){
 	});
 	
 	$(document).on('click', function(e){
-		e.preventDefault();
 		e.stopImmediatePropagation();
 		trendingList.removeClass('active');
 	});
-	
-	// inputSearch.on('click', function(e){
-	// 	e.preventDefault();
-	// 	e.stopImmediatePropagation();
-	// 	extension.add('#trending.list').addClass('active');
-	// });
-	
-	if($('.pika-single').find('.is-bound').length){
-		consolo.log('hadir');
-	}
 	
 	function sticky(){
 		var scroll = getCurrentScroll();
 		
   	if(scroll > jarakheader){
-			$('.premium-head').css('margin-top', '180px');
+			iklanTeratasDesktop.css('margin-top', jarakheader);
 			$('header').addClass('sticky sticky-header');
-			// searchPindah.detach().appendTo('#menu .container-desktop');
-			// $('.search a').on('click', function(e){
-			// 	e.preventDefault();
-			// 	if($('header').hasClass('sticky-search')){
-			// 		$('header').removeClass('sticky-search');
-			// 	} else {
-			// 		$('header').addClass('sticky-search');
-			// 	}
-			// });
   	} else {
-			$('.premium-head').css('margin-top', '10px');
+			iklanTeratasDesktop.css('margin-top', '10px');
 			headerBottom.removeClass('sticky-search-active');
 			extension.add('.sticky-search').removeClass('active');
   		$('header').removeClass('sticky sticky-header');
-			// searchPindah.detach().appendTo('.header-top .container-desktop');
 		}
 
-		// if($('#home .r3').length){
-		// 	if(scroll > jarakstickyrectangle3){
-		// 		$('.r3').css('margin-top', '80px');
-		// 		$('.r3').removeClass('lepas').addClass('sticky sticky-r3');
-		// 	} else {
-		// 		$('.r3').css('margin-top', 'inherit');
-		// 		$('.r3').removeClass('sticky sticky-r3');
-		// 	}
-		//
-		// 	if(scroll > overSection3){
-		// 		// console.log('hi');
-		// 		$('.r3').css('margin-top', 'inherit');
-		// 		$('.r3').addClass('lepas').removeClass('sticky-r3');
-		// 	}
-		// }
+		if($('#home .r3').length){
+			if(scroll > jarakstickyrectangle3){
+				$('.r3').removeClass('lepas').addClass('sticky');
+			} else {
+				$('.r3').removeClass('sticky');
+			}
+		
+			var section3 = $('.kanal-pilihan');
+			var overSection3 = section3.offset().top - 300;
+			if(scroll > overSection3){
+				$('.r3').addClass('lepas').removeClass('sticky');
+			}
+		}
 
 		if($('#home').length){
 			if(scroll > hasScrolled){
 				$('.survey-front').addClass('active');
 			} else {
 				$('.survey-front').removeClass('active');
+			}
+		}
+		
+		//indikator
+		var	indikatorLainnya = $('#list-indikator.indikator');
+		if($('#list-indikator.indikator').length){
+			var hasilSurveyContainer = $('.data-hasil');
+					indikatorLainnyaJarak = indikatorLainnya.offset().top - hasilSurveyContainer.offset().top;
+			
+			if(scroll < indikatorLainnyaJarak){
+				console.log('lepas');
+				hasilSurveyContainer.removeClass('sticky');
+				$('#list-indikator.indikator').css('margin-top', 'initial');
+			} else {
+				console.log('pasang');
+				hasilSurveyContainer.addClass('sticky');
+				$('#list-indikator.indikator').css('margin-top', '400px');
 			}
 		}
 
@@ -531,52 +523,52 @@ $(function(){
 	}
 
 	// bottom ads
-  if($('.bottom-banner').length){
-    var bottomAdsCloseButton = $('.bottom-banner button');
-    bottomAdsCloseButton.on('click', function(e){
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      // console.log('closing');
-      $('.bottom-banner').addClass('bottom-banner-closed');
-    });
-  }
+  // if($('.bottom-banner').length){
+  //   var bottomAdsCloseButton = $('.bottom-banner button');
+  //   bottomAdsCloseButton.on('click', function(e){
+  //     e.preventDefault();
+  //     e.stopImmediatePropagation();
+  //     // console.log('closing');
+  //     $('.bottom-banner').addClass('bottom-banner-closed');
+  //   });
+  // }
 
 	// premium head
-  if($('.premium-head').length){
-		var premiumHead = $('.premium-head');
-    var premiumSmall = $('.premium-head-small');
-    var premiumBig = $('.premium-head-big');
-    premiumHead.on('mouseenter', function(e){
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      // console.log('opening');
-	    premiumSmall.addClass('deactive');
-	    premiumBig.addClass('active');
-    });
-		premiumHead.on('mouseleave', function(e){
-			e.preventDefault();
-			e.stopImmediatePropagation();
-			premiumSmall.removeClass('deactive');
-			premiumBig.removeClass('active');
-		});
-  }
+  // if($('.premium-head').length){
+	// 	var premiumHead = $('.premium-head');
+  //   var premiumSmall = $('.premium-head-small');
+  //   var premiumBig = $('.premium-head-big');
+  //   premiumHead.on('mouseenter', function(e){
+  //     e.preventDefault();
+  //     e.stopImmediatePropagation();
+  //     // console.log('opening');
+	//     premiumSmall.addClass('deactive');
+	//     premiumBig.addClass('active');
+  //   });
+	// 	premiumHead.on('mouseleave', function(e){
+	// 		e.preventDefault();
+	// 		e.stopImmediatePropagation();
+	// 		premiumSmall.removeClass('deactive');
+	// 		premiumBig.removeClass('active');
+	// 	});
+  // }
 
 	// popup ads
-	if($('.popup-ads').length){
-		var popupAdsCloseButton = $('.popup-ads button');
-		setTimeout(function(){
-			$('.popup-ads').addClass('active');
-		}, 3000);
-		setTimeout(function(){
-			$('.popup-ads').addClass('popup-ads-closed');
-		}, 15000);
-		popupAdsCloseButton.on('click', function(e){
-			e.preventDefault();
-			e.stopImmediatePropagation();
-			// console.log('closing');
-			$('.popup-ads').addClass('popup-ads-closed');
-		});
-	}
+	// if($('.popup-ads').length){
+	// 	var popupAdsCloseButton = $('.popup-ads button');
+	// 	setTimeout(function(){
+	// 		$('.popup-ads').addClass('active');
+	// 	}, 3000);
+	// 	setTimeout(function(){
+	// 		$('.popup-ads').addClass('popup-ads-closed');
+	// 	}, 15000);
+	// 	popupAdsCloseButton.on('click', function(e){
+	// 		e.preventDefault();
+	// 		e.stopImmediatePropagation();
+	// 		// console.log('closing');
+	// 		$('.popup-ads').addClass('popup-ads-closed');
+	// 	});
+	// }
 
 	// Ads Zoom
 	if($('.xzoom').length){
@@ -605,17 +597,6 @@ $(function(){
 	    if (window.focus) {
 	        newWindow.focus();
 	    }
-	}
-
-	// Social Plugin Button po.st
-	if($('#home').length == 0){
-		var s = document.createElement('script');
-		s.type = 'text/javascript';
-		s.async = true;
-		s.src = ('https:' == document.location.protocol ? 'https://s' : 'http://i')
-		+ '.po.st/static/v4/post-widget.js#publisherKey=jdvfeh4402p01kh9odq2';
-		var x = document.getElementsByTagName('script')[0];
-		x.parentNode.insertBefore(s, x);
 	}
 
 	// Google Analytics

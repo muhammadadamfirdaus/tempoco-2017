@@ -1,3 +1,5 @@
 card hover ala milan official
 
-- ambil tags/topik terpopuler di bawah category title
+===
+- foto dijadikan 10
+- keluarkan gallery-title dari swiper home foto di foto detail

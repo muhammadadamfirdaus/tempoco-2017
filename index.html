@@ -334,13 +334,20 @@
 								<div id="popular-1" class="tab-content-slide selected">
 									<li>
 										<div class="card card-type-1">
-										  <div class="wrapper clearfix">
-											<div id="info_tempo_populer" style="height:1px; width:1px;" data-google-query-id="CPqz1IHp8dUCFRUkjgod-tcEAQ">
-												<script>
-												googletag.cmd.push(function() { googletag.display('info_tempo_populer'); });
-												</script>
-											<div id="google_ads_iframe_/14056285/tempo.co/desktop_home_native_list_populer_0_container" style="border: 0pt none; display: inline-block; width: 364px; height: 90px;"><iframe frameborder="0" src="https://tpc.googlesyndication.com/safeframe/1-0-10/html/container.html" id="google_ads_iframe/14056285/tempo.co/desktop_home_native_list_populer_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="364" height="90" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
-										  </div>
+											<div class="wrapper clearfix">
+												<a class="col" href="#">
+													<img src="images/popular-1.jpg" alt="pasangin deskripsi gambar">
+												</a>
+												<a class="col" href="#">
+													<h2 class="title">Hadapi Chelsea, Mourinho Minta Manchester United Lebih Agresif</h2>
+												</a>
+												<a class="col" href="link">
+													<p>Mourinho meminta lini depan Manchester United lebih agresif saat menghadapi Chelsea dalam lanjutan Liga Inggris malam nanti.</p>
+												</a>
+												<a class="col" href="#">
+													<span class="col time">180k dilihat</span>
+												</a>
+											</div>
 										</div>
 									</li>
 									<li>
@@ -2802,9 +2809,11 @@
 					<div class="ads rectangle">
 						<div class="wrapper">
 							<!-- cukup ganti dari bawah ini -->
-							<a href="#">
-								<img src="images/ads-1.jpg">
-							</a>
+							<div class="rectangle-ads">
+								<a href="#">
+									<img src="images/ads-1.jpg">
+								</a>
+							</div>
 							<!-- sampai sini -->
 						</div>
 					</div>
@@ -3025,9 +3034,11 @@
 					<div class="ads rectangle">
 						<div class="wrapper">
 							<!-- cukup ganti dari bawah ini -->
-							<a href="#">
-								<img src="images/ads-2.jpg">
-							</a>
+							<div class="rectangle-ads">
+								<a href="#">
+									<img src="images/ads-2.jpg">
+								</a>
+							</div>
 							<!-- sampai sini -->
 						</div>
 					</div>
@@ -3041,7 +3052,7 @@
 							<!-- </div> -->
 							<!-- sampai sini -->
 							<!-- untuk kanal -->
-							<a href="#" class="box-title red-500">
+							<!-- <a href="#" class="box-title red-500">
 								Resep Cantik
 							</a>
 							<div class="wrapper">
@@ -3052,6 +3063,46 @@
 								<p>
 									Resep salad buah dari Chef Eddrian kali ini terbilang unik karena menggunakan bahan keju kambing, kismis, dan bahan utama buah pir.
 								</p>
+							</div> -->
+							<a href="https://www.tempo.co/indikator" class="box-title red-500">
+								Indikator
+							</a>
+							<div class="row clearfix indikator">
+								<form action="/submitIndikator" method="POST">
+									<h2 class="title">
+										Menurut Anda, seriuskah Pemerintah menangani kasus pelanggaran hak asasi manusia (HAM)?
+									</h4>
+									<input type="hidden" name="id" value="1034">
+									<ul class="clearfix">
+										<li>
+											<input value="1" type="radio" name="indikator" id="radio1" checked="checked">
+											<label for="radio1" class="css-label">
+												<p class="jawab-indikator">Ya</p>
+											</label>
+											<div class="check"></div>
+										</li>
+										<li>
+											<input value="2" type="radio" name="indikator" id="radio2">
+											<label for="radio2" class="css-label">
+												<p class="jawab-indikator">Tidak</p>
+											</label>
+											<div class="check"></div>
+										</li>
+										<li>
+											<input value="3" type="radio" name="indikator" id="radio3">
+											<label for="radio3" class="css-label">
+												<p class="jawab-indikator">Tidak Tahu</p>
+											</label>
+											<div class="check"></div>
+										</li>
+									</ul>
+									<div class="clearfix">
+										<button>Pilih</button>
+										<a href="/indikator">
+											<button type="button" class="indikator fade">Hasil</button>
+										</a>
+									<div>
+								</form>
 							</div>
 							<!-- sampai sini -->
 						</div>
@@ -4063,8 +4114,27 @@
 							<!-- end indonesiana -->
 						</div>
 					</section>
+					<section id="update" class="list list-type-1 tabloid-bintang">
+						<iframe width="320" height="100%" src="https://www.tabloidbintang.com/feeds/tempo/iframe"></iframe>
+					</section>
 				</div>
 			</section>
+		</div>
+		<div class="container-desktop">
+			<div class="ads skin-ad">
+				<div class="wrapper">
+					<div class="skin-l">
+						<a href="#">
+							<img src="images/skin-ad.jpg">
+						</a>
+					</div>
+					<div class="skin-r">
+						<a href="#">
+							<img src="images/skin-ad.jpg">
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</main>
 	<footer>
@@ -4137,14 +4207,14 @@
 	</div>
 	<!-- end sticky bottom banner -->
 	<!-- popup ads -->
-	<!-- <div id="ads" class="ads popup-ads">
+	<div id="ads" class="ads popup-ads">
 		<button>
 			x
 		</button>
 		<a class="close-button" href="https://www.tempo.co/" target="_blank">
 			<iframe width="100%" height="100%" src="images/popup-ads/popup-ads/index.html"></iframe>
 		</a>
-	</div> -->
+	</div>
 	<!-- end popup ads -->
 </div>
 <!-- Google Tag Manager (noscript) -->

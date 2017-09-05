@@ -123,16 +123,32 @@ table {
   float: left;
 }
 
+.w-20 {
+	width: 20%;
+}
+
 .w-30 {
 	width: 33.3%;
+}
+
+.w-40 {
+	width: 40%;
 }
 
 .w-50 {
   width: 50%;
 }
 
+.w-60 {
+	width: 60%;
+}
+
 .w-70 {
 	width: 70%;
+}
+
+.w-80 {
+	width: 80%;
 }
 
 .h-50 {
@@ -306,6 +322,10 @@ footer {
 .amber-700 {
 	background-color: #ffa000;
 	color: #fff;
+}
+
+.white {
+	background: #fff;
 }
 
 .red-sky {
@@ -1316,6 +1336,25 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 	transition: all 0.3s ease;
 }
 
+.sticky.data-hasil {
+	display: block;
+	width: 688px;
+	top: 44px;
+	z-index: 2;
+	-webkit-animation: bounce-down 0.5s forwards;
+	animation: bounce-down 0.5s forwards;
+}
+
+.sticky.data-hasil h1 {
+	padding-top: 10px;
+	font-size: 14px;
+}
+
+.data-hasil.lepas {
+	-webkit-animation: bounce-up 0.5s forwards;
+	animation: bounce-up 0.5s forwards;
+}
+
 /* survey front container */
 .survey-front {
 	background: #fff;
@@ -1482,6 +1521,27 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 .ads.rectangle.r3 {
 	background: none;
+}
+
+/* skin ad */
+.skin-ad {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.skin-ad .skin-l,
+.skin-ad .skin-r {
+	display: inline-block;
+	height: auto;
+	width: 100px;
+	/*float: left;*/
+	position: absolute;
+}
+
+.skin-ad .skin-r {
+	right: -40px;
 }
 
 /* bottom ads desktop */
@@ -1792,6 +1852,7 @@ section li {
 
 #section-4 .foto-home.swiper-container .swiper-slide figcaption {
 	height: 40%;
+	z-index: 2;
 }
 
 #headline figcaption a {
@@ -2260,11 +2321,13 @@ main section > .w-30 .wrapper .wrapper {
 	padding-left: 10px;
 }
 
+/* padding: 0 */
 .video.tab-type-2 li:nth-of-type(1) .wrapper,
 .video.tab-type-2 li:nth-of-type(2n) .wrapper,
 #category .video.tab-type-2 li:nth-of-type(2n+1) .wrapper,
 .tab.tab-type-3 .wrapper,
-.tab-type-2.video .tab-content-slide li:nth-of-type(2) h2.title {
+.tab-type-2.video .tab-content-slide li:nth-of-type(2) h2.title,
+.list.list-type-1.indikator .wrapper {
 	padding: 0;
 }
 
@@ -2428,6 +2491,41 @@ main section > .w-30 .wrapper .wrapper {
 	transition: all 0.5s ease;
 }
 
+.list.list-type-1.indikator h2 {
+	display: block;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.list.list-type-1.indikator li {
+	margin: 1em 0;
+}
+
+.list.list-type-1.indikator li:nth-of-type(1) {
+	margin-top: 0;
+	border: 0;
+}
+
+#indikator .data-hasil {
+	background: #fff;
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#indikator .data-hasil .white {	
+	border-bottom: 1px solid #e53935;
+}
+
+#hasil-survey {
+	width: 100%;
+	height: 250px;
+}
+
+.list.list-type-1.indikator > .wrapper:last-child {
+	text-align: center;
+}
+
 /* berita pilihan */
 #berita-pilihan .row {
 	margin-bottom: 15px;
@@ -2465,7 +2563,7 @@ main section > .w-30 .wrapper .wrapper {
 
 /* button */
 a.button {
-	cursor: default;
+	cursor: pointer;
 	display: inline-block;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -2629,6 +2727,16 @@ a.button {
 	width: 65%;
 }
 
+.list.list-type-1.indikator li a:nth-of-type(1) {
+	width: 100%;
+	height: auto;
+}
+
+.list.list-type-1.indikator li a {
+	color: #000;
+	height: auto;
+}
+
 /*.list.list-type-1 li a:nth-of-type(2) *,
 #section-3 li .card a:nth-of-type(2) *,
 #article #section-3 li .card a:nth-of-type(2) * {
@@ -2772,6 +2880,10 @@ a.button {
 #section-4 .foto-home.swiper-container {
 	width: 100%;
 	padding: 50px 0;
+}
+
+#section-4 .foto-home.swiper-container,
+.gallery-title {
 	background: #000;
 }
 
@@ -2827,6 +2939,63 @@ a.button {
 	position: relative;
 }
 
+#section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 1;
+}
+
+#section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:hover:before,
+#section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:hover:after,
+#gallery #section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:hover:before,
+#gallery #section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:hover:after {
+	content: '';
+	background-color: rgba(0,0,0,0);
+	background-position: -80px -238px;
+	transition: background-color 0.5s ease;
+}
+
+#gallery #section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:hover:before,
+#gallery #section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:hover:after {
+	z-index: 0;
+}
+
+/*@keyframes appear {
+	0% {
+		background-color: rgba(0,0,0,0.5);
+		background-position: -8px -238px;
+		z-index: 1;
+	}
+	
+	100% {
+		background-color: rgba(0,0,0,0);
+		background-position: -80px -238px;
+		z-index: 0;
+	}
+}*/
+
+#section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:after {
+	content: '';
+	position: absolute;
+	margin: 25% auto;
+	left: 0;
+	right: 0;
+	width: 64px;
+	height: 64px;
+	overflow: hidden;
+	background-image: url(../images/sprites.png);
+	background-repeat: no-repeat;
+	background-position: -8px -238px;
+	z-index: 2;
+}
+
+#gallery #section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:after {
+	margin: 40% auto;
+}
+
 #section-4 .foto-home.swiper-container .card-type-5 figcaption a * {
 	display: block;
 	padding: 0 10px;
@@ -2861,7 +3030,7 @@ a.button {
 }
 
 #gallery #section-4 {
-	margin-top: 1em;
+	margin-top: 0;
 }
 
 #gallery .pswp__caption__center {
@@ -2870,6 +3039,17 @@ a.button {
 
 #gallery .foto-home .container-desktop {
 	margin-bottom: 5%;
+}
+
+.gallery-title h1,
+.gallery-title h4,
+.gallery-title p,
+.gallery-title span.date {
+	color: #fff;
+}
+
+.gallery-title {
+	margin-top: 1em;
 }
 
 /* video */
@@ -3327,16 +3507,16 @@ article h1 {
 	margin: 2% 0 1%;
 }
 
-article .sub-head {
+.sub-head {
 	margin: 10px 0;
 }
 
-article .sub-head .author *,
-article .sub-head span {
+.sub-head .author *,
+.sub-head span {
 	display: inline-block;
 }
 
-article .sub-head:nth-of-type(1) a.pw-widget.__pw-padding-true.__pw-layout-horizontal .pw-button:last-child {
+.sub-head:nth-of-type(1) a.pw-widget.__pw-padding-true.__pw-layout-horizontal .pw-button:last-child {
 	padding-right: 0;
 }
 
