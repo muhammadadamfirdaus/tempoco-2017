@@ -2960,7 +2960,7 @@ a.button {
 
 #gallery #section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:hover:before,
 #gallery #section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:hover:after {
-	z-index: 0;
+	z-index: -1;
 }
 
 /*@keyframes appear {
