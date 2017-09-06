@@ -536,28 +536,27 @@ $(function(){
   // }
 
 	// premium head
-  if($('.premium-head').length){
-		var premiumHead = $('.premium-head');
-    var premiumSmall = $('.premium-head-small');
-    var premiumBig = $('.premium-head-big');
-    premiumHead.on('mouseenter', function(e){
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      // console.log('opening');
-	    premiumSmall.addClass('deactive');
-	    premiumBig.addClass('active');
-    });
-		premiumHead.on('mouseleave', function(e){
-			e.preventDefault();
-			e.stopImmediatePropagation();
-			premiumSmall.removeClass('deactive');
-			premiumBig.removeClass('active');
-		});
-  }
+  // if($('.premium-head').length){
+	// 	var premiumHead = $('.premium-head');
+  //   var premiumSmall = $('.premium-head-small');
+  //   var premiumBig = $('.premium-head-big');
+  //   premiumHead.on('mouseenter', function(e){
+  //     e.preventDefault();
+  //     e.stopImmediatePropagation();
+  //     // console.log('opening');
+	//     premiumSmall.addClass('deactive');
+	//     premiumBig.addClass('active');
+  //   });
+	// 	premiumHead.on('mouseleave', function(e){
+	// 		e.preventDefault();
+	// 		e.stopImmediatePropagation();
+	// 		premiumSmall.removeClass('deactive');
+	// 		premiumBig.removeClass('active');
+	// 	});
+  // }
 	
 	// full width
 	if($('.ads-full-width').length){
-		console.log('ada');
 		$('main .container-desktop').css({
 			'background-color': '#fff',
 			'padding': '10px'
