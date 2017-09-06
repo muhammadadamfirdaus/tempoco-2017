@@ -566,7 +566,7 @@ nav {
 	float:left;
 	position:relative;
 	height: 40px;
-	margin: 0 4px;
+	margin: 0 0.25%;
 	-webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1528,6 +1528,11 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 	background: none;
 }
 
+/* rectangle ads */
+.rectangle:first-child .rectangle-ads {
+	margin-bottom: 15px;
+}
+
 /* skin ad */
 #skin-ad {
 	width: 100%;
@@ -1911,7 +1916,24 @@ main#category .w-70 {
 
 main section > .w-30,
 main#category section .w-30 {
-	width: 336px;
+	width: 300px;
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+main section > .col.w-30,
+main#category section .w-30 {
+	float:right;
+}
+
+main .container-desktop > .wrapper,
+main section .w-30 .wrapper {
+	padding: 0;
+}
+
+#section-4 {
+	padding-bottom: 15px;
 }
 
 main section .sub-head .w-30 {
@@ -1924,9 +1946,9 @@ main section .sub-head .w-70 {
 	width: 528px !important;
 }
 
-main section .w-30 .wrapper {
+/*main section .w-30 .wrapper {
 	padding: 0 0 0 34px;
-}
+}*/
 
 main section > .w-30 .wrapper .wrapper {
 	padding: initial;
@@ -2475,7 +2497,7 @@ main > .container-desktop:first-child {
 }
 
 .indikator p.jawab-indikator {
-	font-size: 15px;
+	font-size: 13px;
 	line-height: 30px;
 	margin: 0;
 }
@@ -2496,7 +2518,7 @@ main > .container-desktop:first-child {
 .indikator  div.clearfix {
 	display: block;
 	margin: 10px auto 0;
-	width: 33.3%;
+	width: 35%;
 }
 
 .indikator  button {
