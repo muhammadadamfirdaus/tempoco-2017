@@ -309,11 +309,13 @@ $(function(){
   	if(scroll > jarakheader){
 			iklanTeratasDesktop.css('margin-top', jarakheader);
 			$('header').addClass('sticky sticky-header');
+			$('#skin-ad').addClass('sticky');
   	} else {
 			iklanTeratasDesktop.css('margin-top', '10px');
 			headerBottom.removeClass('sticky-search-active');
 			extension.add('.sticky-search').removeClass('active');
   		$('header').removeClass('sticky sticky-header');
+			$('#skin-ad').removeClass('sticky');
 		}
 
 		if($('#home .r3').length){
@@ -534,24 +536,37 @@ $(function(){
   // }
 
 	// premium head
-  // if($('.premium-head').length){
-	// 	var premiumHead = $('.premium-head');
-  //   var premiumSmall = $('.premium-head-small');
-  //   var premiumBig = $('.premium-head-big');
-  //   premiumHead.on('mouseenter', function(e){
-  //     e.preventDefault();
-  //     e.stopImmediatePropagation();
-  //     // console.log('opening');
-	//     premiumSmall.addClass('deactive');
-	//     premiumBig.addClass('active');
-  //   });
-	// 	premiumHead.on('mouseleave', function(e){
-	// 		e.preventDefault();
-	// 		e.stopImmediatePropagation();
-	// 		premiumSmall.removeClass('deactive');
-	// 		premiumBig.removeClass('active');
-	// 	});
-  // }
+  if($('.premium-head').length){
+		var premiumHead = $('.premium-head');
+    var premiumSmall = $('.premium-head-small');
+    var premiumBig = $('.premium-head-big');
+    premiumHead.on('mouseenter', function(e){
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      // console.log('opening');
+	    premiumSmall.addClass('deactive');
+	    premiumBig.addClass('active');
+    });
+		premiumHead.on('mouseleave', function(e){
+			e.preventDefault();
+			e.stopImmediatePropagation();
+			premiumSmall.removeClass('deactive');
+			premiumBig.removeClass('active');
+		});
+  }
+	
+	// full width
+	if($('.ads-full-width').length){
+		console.log('ada');
+		$('main .container-desktop').css({
+			'background-color': '#fff',
+			'padding': '10px'
+		});
+		$('main .container-desktop.skin-ad').css({
+			'background-color': 'initial',
+			'padding': '10px'
+		});
+	}
 
 	// popup ads
 	// if($('.popup-ads').length){
@@ -571,15 +586,15 @@ $(function(){
 	// }
 
 	// Ads Zoom
-	if($('.xzoom').length){
-		$(".xzoom").xzoom({
-			tint: '#333',
-			position: '#ads-screen',
-			smoothLensMove: 1,
-			defaultScale: 2,
-			zoomWidth: 200
-		});
-	}
+	// if($('.xzoom').length){
+	// 	$(".xzoom").xzoom({
+	// 		tint: '#333',
+	// 		position: '#ads-screen',
+	// 		smoothLensMove: 1,
+	// 		defaultScale: 2,
+	// 		zoomWidth: 200
+	// 	});
+	// }
 
 	function windowopen(url, title, w, h) {
 	    // Fixes dual-screen position Most browsers Firefox
