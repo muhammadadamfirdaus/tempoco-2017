@@ -1533,6 +1533,61 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 	margin-bottom: 15px;
 }
 
+/* curl ads */
+.curl-ads {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 386px;
+	height: 386px;
+	z-index: 11;
+}
+
+.ads.curl-ads .wrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.curl-ads a {
+	display: block;
+}
+
+.curl-ads .curl {
+	background: url(../images/curl.png) no-repeat;
+	background-size: 150px 150px;
+	width: 366px;
+	height: 366px;
+}
+
+.curl-ads.expanded .curl {
+	animation: curl-ads-expanding 0.5s ease forwards;
+}
+
+.curl-ads.collapsed .curl {
+	animation: curl-ads-collapsing 0.5s ease;
+}
+
+@keyframes curl-ads-expanding {
+	0% {
+		background-size: 150px 150px;
+	}
+	
+	100% {
+		background-size: 366px 366px;
+	}
+}
+
+@keyframes curl-ads-collapsing {
+	0% {
+		background-size: 366px 366px;
+	}
+	
+	100% {
+		background-size: 150px 150px;
+	}
+}
+
 /* skin ad */
 #skin-ad {
 	width: 100%;
@@ -1540,7 +1595,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 	top: 0;
 	-webkit-transform: translate3d(0, 200px, 0);
 	transform: translate3d(0, 200px, 0);
-	z-index: 10;
+	z-index: 5;
 }
 
 .skin-ad .skin-l,
@@ -2725,11 +2780,6 @@ a.button {
 	margin-bottom: 0;
 }
 
-.list li:nth-of-type(1).wrapper {
-	border-top: 1px solid #f44336;
-	padding-top: 10px;
-}
-
 .list li a {
 	display: inline-block;
 	position: relative;
@@ -2875,7 +2925,8 @@ a.button {
 #indikator .row:nth-of-type(1),
 #berita-pilihan .row:nth-of-type(1),
 #section-3 li:nth-of-type(1),
-#article #section-3 li:nth-of-type(1) {
+#article #section-3 li:nth-of-type(1),
+.list li:nth-of-type(1).wrapper {
 	border-top: 1px solid #f44336;
 	padding-top: 10px;
 }
@@ -3088,8 +3139,11 @@ a.button {
 .gallery-title {
 	margin-top: 1em;
 }
-
 /* video */
+
+.container-desktop .wrapper #section-5 {
+	padding-top: 10px;
+}
 
 #category h1,
 #home h1 {

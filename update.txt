@@ -3,3 +3,7 @@ card hover ala milan official
 ===
 - foto dijadikan 10
 - keluarkan gallery-title dari swiper home foto di foto detail
+
+
+- tambah grafis terkait dan rekomendasi
+- ganti grafis populer nomor dengan gambar

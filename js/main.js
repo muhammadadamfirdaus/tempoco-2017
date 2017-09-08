@@ -524,6 +524,18 @@ $(function(){
 		$('article').photoSwipe(slideSelector, options, events);
 	}
 
+	// curl ads
+	var curlAds = $('.curl-ads');
+	curlAds.on('mouseenter', function(){
+		// console.log('hi');
+		curlAds.addClass('expanded').removeClass('collapsed');
+	});
+	curlAds.on('mouseleave', function(e){
+		e.stopImmediatePropagation();
+		// console.log('out');
+		curlAds.addClass('collapsed').removeClass('expanded');
+	});
+
 	// bottom ads
   // if($('.bottom-banner').length){
   //   var bottomAdsCloseButton = $('.bottom-banner button');
