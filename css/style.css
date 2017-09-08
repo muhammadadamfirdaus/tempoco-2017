@@ -1932,10 +1932,6 @@ main section .w-30 .wrapper {
 	padding: 0;
 }
 
-#section-4 {
-	padding-bottom: 15px;
-}
-
 main section .sub-head .w-30 {
 	margin: 0 !important;
 	width: 200px !important;
@@ -2518,7 +2514,7 @@ main > .container-desktop:first-child {
 .indikator  div.clearfix {
 	display: block;
 	margin: 10px auto 0;
-	width: 35%;
+	width: 40%;
 }
 
 .indikator  button {
