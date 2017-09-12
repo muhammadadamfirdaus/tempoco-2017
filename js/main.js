@@ -318,6 +318,7 @@ $(function(){
 			$('#skin-ad').removeClass('sticky');
 		}
 
+		var section3 = $('.kanal-pilihan');
 		if($('#home .r3').length){
 			if(scroll > jarakstickyrectangle3){
 				$('.r3').removeClass('lepas').addClass('sticky');
@@ -325,7 +326,6 @@ $(function(){
 				$('.r3').removeClass('sticky');
 			}
 		
-			var section3 = $('.kanal-pilihan');
 			var overSection3 = section3.offset().top - 300;
 			if(scroll > overSection3){
 				$('.r3').addClass('lepas').removeClass('sticky');
@@ -356,6 +356,17 @@ $(function(){
 				$('#list-indikator.indikator').css('margin-top', '400px');
 			}
 		}
+
+		// var article = $('article'),
+		// 		komentar = $('.comments'),
+		// 		komentarHasScrolled = section3.offset().top + section3.height();
+		// if(komentar.length || article.length){
+		// 	if(scroll >= komentarHasScrolled){
+		// 		komentar.addClass('sticky');
+		// 	} else {
+		// 		komentar.removeClass('sticky');
+		// 	}
+		// }
 
 		// if($('#category').length){
 
@@ -526,7 +537,7 @@ $(function(){
 
 	// curl ads
 	var curlAds = $('.curl-ads');
-	curlAds.on('mouseenter', function(){
+	curlAds.add('.curl').on('mouseenter', function(){
 		// console.log('hi');
 		curlAds.addClass('expanded').removeClass('collapsed');
 	});
@@ -537,45 +548,45 @@ $(function(){
 	});
 
 	// bottom ads
-  // if($('.bottom-banner').length){
-  //   var bottomAdsCloseButton = $('.bottom-banner button');
-  //   bottomAdsCloseButton.on('click', function(e){
-  //     e.preventDefault();
-  //     e.stopImmediatePropagation();
-  //     // console.log('closing');
-  //     $('.bottom-banner').addClass('bottom-banner-closed');
-  //   });
-  // }
+  if($('.bottom-banner').length){
+    var bottomAdsCloseButton = $('.bottom-banner button');
+    bottomAdsCloseButton.on('click', function(e){
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      // console.log('closing');
+      $('.bottom-banner').addClass('bottom-banner-closed');
+    });
+  }
 
 	// premium head
-  // if($('.premium-head').length){
-	// 	var premiumHead = $('.premium-head');
-  //   var premiumSmall = $('.premium-head-small');
-  //   var premiumBig = $('.premium-head-big');
-  //   premiumHead.on('mouseenter', function(e){
-  //     e.preventDefault();
-  //     e.stopImmediatePropagation();
-  //     // console.log('opening');
-	//     premiumSmall.addClass('deactive');
-	//     premiumBig.addClass('active');
-  //   });
-	// 	premiumHead.on('mouseleave', function(e){
-	// 		e.preventDefault();
-	// 		e.stopImmediatePropagation();
-	// 		premiumSmall.removeClass('deactive');
-	// 		premiumBig.removeClass('active');
-	// 	});
-  // }
+	var premiumHead = $('.premium-head');
+	var premiumSmall = $('.premium-head-small');
+	var premiumBig = $('.premium-head-big');
+  if(premiumSmall.length){
+    premiumHead.on('mouseenter', function(e){
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      // console.log('opening');
+	    premiumSmall.addClass('deactive');
+	    premiumBig.addClass('active');
+    });
+		premiumHead.on('mouseleave', function(e){
+			e.preventDefault();
+			e.stopImmediatePropagation();
+			premiumSmall.removeClass('deactive');
+			premiumBig.removeClass('active');
+		});
+  }
 	
 	// full width
 	if($('.ads-full-width').length){
-		$('main .container-desktop').css({
+		$('main.ads-full-width .container-desktop > .wrapper').css({
 			'background-color': '#fff',
 			'padding': '10px'
 		});
-		$('main .container-desktop.skin-ad').css({
-			'background-color': 'initial',
-			'padding': '10px'
+		$('#skin-ad .container-desktop.skin-ad .wrapper, main > .container-desktop:first-child').css({
+			'background-color': 'none',
+			'padding': 0
 		});
 	}
 

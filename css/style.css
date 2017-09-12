@@ -879,8 +879,14 @@ main .navigation {
     -webkit-box-shadow: 0 0 0 30px white inset;
 }
 
-/*.header-bottom .col:last-child div {
-	padding-left: 10px;
+/*.sticky.comments {
+	top: 44px;
+	width: 728px;
+	height: 400;
+	overflow-y: auto;
+	background: #fff;
+	padding-top: 20px;
+	margin-bottom: 1em;
 }*/
 
 @keyframes menu-fade-out {
@@ -1534,13 +1540,14 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 
 /* curl ads */
+#curl-ads.sticky {
+	z-index: 11;
+}
+
 .curl-ads {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
-	width: 386px;
-	height: 386px;
-	z-index: 11;
 }
 
 .ads.curl-ads .wrapper {
@@ -1556,8 +1563,8 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .curl-ads .curl {
 	background: url(../images/curl.png) no-repeat;
 	background-size: 150px 150px;
-	width: 366px;
-	height: 366px;
+	width: 150px;
+	height: 150px;
 }
 
 .curl-ads.expanded .curl {
@@ -1571,20 +1578,28 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 @keyframes curl-ads-expanding {
 	0% {
 		background-size: 150px 150px;
+		width: 150px;
+		height: 150px;
 	}
 	
 	100% {
 		background-size: 366px 366px;
+		width: 366px;
+		height: 366px;
 	}
 }
 
 @keyframes curl-ads-collapsing {
 	0% {
 		background-size: 366px 366px;
+		width: 366px;
+		height: 366px;
 	}
 	
 	100% {
 		background-size: 150px 150px;
+		width: 150px;
+		height: 150px;
 	}
 }
 
@@ -2299,7 +2314,7 @@ main > .container-desktop:first-child {
 .tab .tab-content-slide li a:nth-of-type(2),
 #section-3 .col li a:nth-of-type(2),
 #article #section-3 .col li a:nth-of-type(2) {
-	width: 70%;
+	width: 65%;
 }
 
 .tab .tab-content-slide li:nth-of-type(1) a:nth-of-type(2),
@@ -3102,6 +3117,10 @@ a.button {
 	color: #fff;
 	position: absolute;
 	bottom: 10px;
+}
+
+#section-5.clearfix {
+	padding-top: 30px;
 }
 
 .pswp h2.title {
