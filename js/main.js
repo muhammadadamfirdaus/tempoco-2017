@@ -396,51 +396,55 @@ $(function(){
 	/* end onscroll */
 	
 	/* datepicker */
-	var picker = new Pikaday(
-		{
-			field: document.getElementById('tanggal'),
-			firstDay: 0,
-			minDate: new Date(2011, 11, 31),
-			maxDate: new Date,
-			yearRange: [2000],
-			container: document.getElementById('datepicker'),
-			format: 'DD/MM/YYYY',
-	    toString(date, format) {
-        // you should do formatting based on the passed format,
-        // but we will just return 'D/M/YYYY' for simplicity
-        var day = date.getDate();
-        var month = date.getMonth() + 1;
-        var year = date.getFullYear();
+	var inputTanggal = $('input#tanggal');
+	var picker = new Pikaday({
+		field: document.getElementById('tanggal'),
+		firstDay: 0,
+		minDate: new Date(2011, 11, 31),
+		maxDate: new Date,
+		yearRange: [2000],
+		container: document.getElementById('datepicker'),
+		format: 'DD/MM/YYYY',
+		toString(date, format) {
+			// you should do formatting based on the passed format,
+			// but we will just return 'D/M/YYYY' for simplicity
+			var day = date.getDate();
+			var month = date.getMonth() + 1;
+			var year = date.getFullYear();
 
-		if(day < 10){
-			day = '0'+day;
+			if(day < 10){
+				day = '0'+day;
+			}
+			if(month < 10){
+				month = '0'+month;
+			}
+			var dmy = +year+'/'+month+'/'+day;
+			// return `${day}/${month}/${year}`;
+			return dmy;
+		},
+		parse(dateString, format) {
+			// dateString is the result of `toString` method
+			const parts = dateString.split('/');
+			var day = parseInt(parts[0], 10);
+			var month = parseInt(parts[1] - 1, 10);
+			var year = parseInt(parts[1], 10);
+			if(day < 10){
+				day = '0'+day;
+			}
+			if(month < 10){
+				month = '0'+month;
+			}
+			var dmy = +year+'/'+month+'/'+day;
+			//return new Date(year, month, day);
+			return dmy;
 		}
-		if(month < 10){
-			month = '0'+month;
-		}
-		var dmy = +year+'/'+month+'/'+day;
+	});
 
-        // return `${day}/${month}/${year}`;
-		return dmy;
-		    
-	    },
-	    parse(dateString, format) {
-        // dateString is the result of `toString` method
-        const parts = dateString.split('/');
-        var day = parseInt(parts[0], 10);
-        var month = parseInt(parts[1] - 1, 10);
-        var year = parseInt(parts[1], 10);
-		if(day < 10){
-			day = '0'+day;
-		}
-		if(month < 10){
-			month = '0'+month;
-		}
-		var dmy = +year+'/'+month+'/'+day;
-        //return new Date(year, month, day);
-	return dmy;
-	    }
-		});
+	inputTanggal.on('change', function(e) {
+		e.preventDefault();
+		var tanggal = $('#tanggal').val();
+		window.location = "https://www.tempo.co/indeks/"+tanggal;
+	});
 
 	var fotoHome = new Swiper('.foto-home', {
 		pagination: '.swiper-pagination',
