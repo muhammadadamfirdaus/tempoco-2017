@@ -582,36 +582,38 @@ $(function(){
   }
 
 	// premium head
-	var premiumHead = $('.premium-head');
-	var premiumSmall = $('.premium-head-small');
-	var premiumBig = $('.premium-head-big');
-  if(premiumSmall.length){
-    premiumHead.on('mouseenter', function(e){
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      // console.log('opening');
-	    premiumSmall.addClass('deactive');
-	    premiumBig.addClass('active');
-    });
-		premiumHead.on('mouseleave', function(e){
-			e.preventDefault();
-			e.stopImmediatePropagation();
-			premiumSmall.removeClass('deactive');
-			premiumBig.removeClass('active');
-		});
-  }
+	// var premiumHead = $('.premium-head');
+	// var premiumSmall = $('.premium-head-small');
+	// var premiumBig = $('.premium-head-big');
+  // if(premiumSmall.length){
+  //   premiumHead.on('mouseenter', function(e){
+  //     e.preventDefault();
+  //     e.stopImmediatePropagation();
+  //     // console.log('opening');
+	//     premiumSmall.addClass('deactive');
+	//     premiumBig.addClass('active');
+  //   });
+	// 	premiumHead.on('mouseleave', function(e){
+	// 		e.preventDefault();
+	// 		e.stopImmediatePropagation();
+	// 		premiumSmall.removeClass('deactive');
+	// 		premiumBig.removeClass('active');
+	// 	});
+  // }
 	
 	// full width
-	if($('.ads-full-width').length){
-		$('main.ads-full-width .container-desktop > .wrapper').css({
-			'background-color': '#fff',
-			'padding': '10px'
-		});
-		$('#skin-ad .container-desktop.skin-ad .wrapper, main > .container-desktop:first-child').css({
-			'background-color': 'none',
-			'padding': 0
-		});
-	}
+	// if($('.ads-full-width').length){
+	// 	var tagMain = $('main');
+	// 	tagMain.addClass('ads-full-width-container');
+	// 	$('main.ads-full-width-container .container-desktop > .wrapper').css({
+	// 		'background-color': '#fff',
+	// 		'padding': '10px'
+	// 	});
+	// 	$('#skin-ad .container-desktop.skin-ad .wrapper, main > .container-desktop:first-child').css({
+	// 		'background-color': 'none',
+	// 		'padding': 0
+	// 	});
+	// }
 
 	// popup ads
 	// if($('.popup-ads').length){

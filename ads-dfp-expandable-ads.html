@@ -1,0 +1,125 @@
+<html>
+<head>
+</head>
+<body>
+<style>
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 250px;
+}
+
+/* premium head */
+.ads.premium-head {
+	width: 970px;
+	margin: 10px auto;
+}
+
+.ads.premium-head a {
+  display: block;
+}
+
+.ads.premium-head .premium-head-small {
+	height: 90px;
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transition: -webkit-transform 0.8s ease;
+	transition: transform 0.8s ease;
+}
+
+.ads.premium-head .premium-head-big {
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transform: translate3d(0, 50px, 0);
+	transform: translate3d(0, 50px, 0);
+	-webkit-transition: all 0.8s ease;
+	transition: all 0.8s ease;
+}
+
+.ads.premium-head .premium-head-small.deactive {
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transform: translate3d(0, -25px, 0);
+	transform: translate3d(0, -25px, 0);
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.ads.premium-head .premium-head-big.active {
+	height: 250px;
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.ads.premium-head .wrapper {
+	padding: 0;
+}
+</style>
+<!-- ads full width -->
+<div class="container">
+  <div class="ads top-banner premium-head">
+    <div class="wrapper">
+      <div class="premium-head-small">
+        <!-- cukup ganti dari bawah ini -->
+        <a href="#">
+          <img src="images/meikarta-small.jpg">
+        </a>
+        <!-- sampai sini -->
+      </div>
+      <div class="premium-head-big">
+        <!-- cukup ganti dari bawah ini -->
+        <a href="#">
+          <img src="images/meikarta-big.jpg">
+        </a>
+        <!-- sampai sini -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end ads full width --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  $('#leaderboard_1', parent.document).css({
+    'height': '108px'
+  });
+  // premium head
+	var premiumHead = $('.premium-head');
+	var premiumSmall = $('.premium-head-small');
+	var premiumBig = $('.premium-head-big');
+  if(premiumSmall.length){
+    premiumHead.on('mouseenter', function(e){
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      // console.log('opening');
+	    premiumSmall.addClass('deactive');
+      premiumBig.addClass('active');
+      
+      $('#leaderboard_1', parent.document).css({
+        'height': '300px'
+      });
+    });
+		premiumHead.on('mouseleave', function(e){
+			e.preventDefault();
+			e.stopImmediatePropagation();
+			premiumSmall.removeClass('deactive');
+      premiumBig.removeClass('active');
+    
+      $('#leaderboard_1', parent.document).css({
+        'height': '108px'
+      });
+		});
+  }
+</script>
+</body>
+</html>
