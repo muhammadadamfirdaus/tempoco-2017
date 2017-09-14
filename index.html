@@ -4164,9 +4164,8 @@
 		$('input#tanggal').on('change', function(e) {
 			e.preventDefault();
 			var tanggal = $('#tanggal').val();
-			console.log('tes :'+tanggal);
-
-			// location.reload('https://www.tempo.co/indeks/'+tanggal);
+			console.log('tes : '+tanggal);
+			window.location = "https://www.tempo.co/indeks/"+tanggal;
 		});
 
 	</script>
