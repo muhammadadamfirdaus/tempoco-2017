@@ -408,18 +408,37 @@ $(function(){
 	    toString(date, format) {
         // you should do formatting based on the passed format,
         // but we will just return 'D/M/YYYY' for simplicity
-        const day = date.getDate();
-        const month = date.getMonth() + 1;
-        const year = date.getFullYear();
-        return `${day}/${month}/${year}`;
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+
+		if(day < 10){
+			day = '0'+day;
+		}
+		if(month < 10){
+			month = '0'+month;
+		}
+		var dmy = +year+'/'+month+'/'+day;
+
+        // return `${day}/${month}/${year}`;
+		return dmy;
+		    
 	    },
 	    parse(dateString, format) {
         // dateString is the result of `toString` method
         const parts = dateString.split('/');
-        const day = parseInt(parts[0], 10);
-        const month = parseInt(parts[1] - 1, 10);
-        const year = parseInt(parts[1], 10);
-        return new Date(year, month, day);
+        var day = parseInt(parts[0], 10);
+        var month = parseInt(parts[1] - 1, 10);
+        var year = parseInt(parts[1], 10);
+		if(day < 10){
+			day = '0'+day;
+		}
+		if(month < 10){
+			month = '0'+month;
+		}
+		var dmy = +year+'/'+month+'/'+day;
+        //return new Date(year, month, day);
+	return dmy;
 	    }
 		});
 
