@@ -477,7 +477,7 @@ $(function(){
 	});
 
 	//detail foto
-	var fotoDetail = new Swiper('#detail-foto .foto-home', {
+	var fotoDetail = new Swiper('#gallery .foto-home', {
 		pagination: '.swiper-pagination',
 		nextButton: '.swiper-button-next',
 		prevButton: '.swiper-button-prev',
