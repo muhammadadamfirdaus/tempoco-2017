@@ -33,26 +33,26 @@ body, html {
 }
 
 .ads.premium-head .premium-head-big {
-	height: 0;
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transform: translate3d(0, 50px, 0);
-	transform: translate3d(0, 50px, 0);
+	height: 250px;
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 	-webkit-transition: all 0.8s ease;
 	transition: all 0.8s ease;
 }
 
-.ads.premium-head .premium-head-small.deactive {
-	height: 0;
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transform: translate3d(0, -25px, 0);
-	transform: translate3d(0, -25px, 0);
+.ads.premium-head .premium-head-small.active {
+	height: 90px;
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 	-webkit-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
 
-.ads.premium-head .premium-head-big.active {
+.ads.premium-head .premium-head-big.deactive {
 	height: 250px;
 	opacity: 1;
 	visibility: visible;
@@ -70,17 +70,17 @@ body, html {
 <div class="container">
   <div class="ads top-banner premium-head">
     <div class="wrapper">
+        <div class="premium-head-big">
+          <!-- cukup ganti dari bawah ini -->
+          <a href="#">
+            <img src="images/meikarta-big.jpg">
+          </a>
+          <!-- sampai sini -->
+        </div>
       <div class="premium-head-small">
         <!-- cukup ganti dari bawah ini -->
         <a href="#">
           <img src="images/meikarta-small.jpg">
-        </a>
-        <!-- sampai sini -->
-      </div>
-      <div class="premium-head-big">
-        <!-- cukup ganti dari bawah ini -->
-        <a href="#">
-          <img src="images/meikarta-big.jpg">
         </a>
         <!-- sampai sini -->
       </div>

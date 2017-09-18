@@ -3692,6 +3692,8 @@ article figure figcaption p {
 	line-height: 16px;
 }
 
+article a,
+article a:visited,
 article p a {
 	color: #00b0ff;
 }
