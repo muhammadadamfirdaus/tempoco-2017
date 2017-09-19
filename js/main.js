@@ -104,6 +104,42 @@ $(function(){
 	});
 	/* end head focus */
 
+	/* newsflash */
+	var newsFlash = new Swiper('.head-newsflash', {
+		pagination: '.swiper-pagination',
+		nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+		paginationClickable: true,
+		direction: 'vertical',
+		autoplay: 3000,
+		autoplayDisableOnInteraction: false,
+		loop: true,
+		spaceBetween: 20,
+		// onAutoplayStop: function(){
+		// 	setTimeout(function(){
+		// 		headFocus.updateContainerSize();
+		// 	}, 2000);
+		// }
+	});
+	/* end newsflash */
+
+	/* headline */
+	var headline = new Swiper('.headline-terbaru', {
+		pagination: '.swiper-pagination',
+		paginationClickable: true,
+		autoplay: 5000,
+		autoplayDisableOnInteraction: false,
+		loop: true,
+		spaceBetween: 20,
+		effect: 'slide'
+		// onAutoplayStop: function(){
+		// 	setTimeout(function(){
+		// 		headFocus.updateContainerSize();
+		// 	}, 2000);
+		// }
+	});
+	/* end headline */
+
 	/* desktop menu */
 	var submenuDesktop = $(this).find('.sub ul');
 	$('.menu li.sub').on('mouseenter', function(){

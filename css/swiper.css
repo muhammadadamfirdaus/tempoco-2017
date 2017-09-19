@@ -173,6 +173,32 @@ section nav:nth-of-type(1) li a:after {
   border: 1px solid #555;
 }
 
+.head-newsflash .swiper-button-prev {
+  right: 20px;
+  left: auto;
+}
+
+.head-newsflash .swiper-button-next {
+  right: 1px;
+  left: auto;
+}
+
+.head-newsflash .swiper-button-prev,
+.head-newsflash .swiper-button-next {
+  -webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+  width: 18px;
+  height: 18px;
+  top: 23px;
+  background-size: 4px 44px;
+  background-color: #fff;
+  border: 0.2px solid #ddd;
+}
+
+.headline-terbaru.swiper-container-horizontal > .swiper-pagination-bullets {
+  padding: 5px 0;
+}
+
 #section-4 .foto-home.swiper-container .swiper-button-prev {
   left: 5%;
 }
@@ -222,7 +248,6 @@ section nav:nth-of-type(1) li a:after {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 2% 0;
 }
 /* Bullets */
 .swiper-pagination-bullet {
