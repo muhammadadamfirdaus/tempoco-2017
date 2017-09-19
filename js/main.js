@@ -85,30 +85,10 @@ $(function(){
 		return false;
 	});
 
-	/* head focus */
-	var headFocus = new Swiper('.head-focus', {
-		pagination: '.swiper-pagination',
-		nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-		paginationClickable: true,
-		direction: 'vertical',
-		autoplay: 2000,
-		autoplayDisableOnInteraction: false,
-		loop: true,
-		spaceBetween: 20,
-		onAutoplayStop: function(){
-			setTimeout(function(){
-				headFocus.updateContainerSize();
-			}, 2000);
-		}
-	});
-	/* end head focus */
-
 	/* newsflash */
 	var newsFlash = new Swiper('.head-newsflash', {
-		pagination: '.swiper-pagination',
-		nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
+		nextButton: '.head-newsflash .swiper-button-next',
+    prevButton: '.head-newsflash .swiper-button-prev',
 		paginationClickable: true,
 		direction: 'vertical',
 		autoplay: 3000,
@@ -125,18 +105,13 @@ $(function(){
 
 	/* headline */
 	var headline = new Swiper('.headline-terbaru', {
-		pagination: '.swiper-pagination',
+		pagination: '.headline-terbaru .swiper-pagination',
 		paginationClickable: true,
 		autoplay: 5000,
 		autoplayDisableOnInteraction: false,
 		loop: true,
 		spaceBetween: 20,
 		effect: 'slide'
-		// onAutoplayStop: function(){
-		// 	setTimeout(function(){
-		// 		headFocus.updateContainerSize();
-		// 	}, 2000);
-		// }
 	});
 	/* end headline */
 
@@ -345,13 +320,13 @@ $(function(){
   	if(scroll > jarakheader){
 			iklanTeratasDesktop.css('margin-top', jarakheader);
 			$('header').addClass('sticky sticky-header');
-			$('#skin-ad').addClass('sticky');
+			// $('#skin-ad').addClass('sticky');
   	} else {
 			iklanTeratasDesktop.css('margin-top', '10px');
 			headerBottom.removeClass('sticky-search-active');
 			extension.add('.sticky-search').removeClass('active');
   		$('header').removeClass('sticky sticky-header');
-			$('#skin-ad').removeClass('sticky');
+			// $('#skin-ad').removeClass('sticky');
 		}
 
 		var section3 = $('.kanal-pilihan');

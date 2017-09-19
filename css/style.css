@@ -1376,7 +1376,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }*/
 
 .r3.sticky {
-	width: 344px;
+	width: 300px;
 	opacity: 1;
 	top: 60px;
 	-webkit-animation: bounce-down 0.5s forwards;
@@ -2166,7 +2166,7 @@ main section > .w-30 .wrapper .wrapper {
 }
 
 main > .container-desktop:first-child {
-	padding-bottom: 0;
+	padding-bottom: 40px;
 }
 
 /* tab */
