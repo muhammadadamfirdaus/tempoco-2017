@@ -2144,7 +2144,8 @@ main#category section .w-30 {
 
 main .container-desktop > .wrapper,
 main section .w-30 .wrapper {
-	padding: 0;
+	padding: 10px;
+	/* background: #fff; */
 }
 
 main section .sub-head .w-30 {

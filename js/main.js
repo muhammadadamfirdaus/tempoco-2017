@@ -320,13 +320,13 @@ $(function(){
   	if(scroll > jarakheader){
 			iklanTeratasDesktop.css('margin-top', jarakheader);
 			$('header').addClass('sticky sticky-header');
-			// $('#skin-ad').addClass('sticky');
+			$('#skin-ad').addClass('sticky');
   	} else {
 			iklanTeratasDesktop.css('margin-top', '10px');
 			headerBottom.removeClass('sticky-search-active');
 			extension.add('.sticky-search').removeClass('active');
   		$('header').removeClass('sticky sticky-header');
-			// $('#skin-ad').removeClass('sticky');
+			$('#skin-ad').removeClass('sticky');
 		}
 
 		var section3 = $('.kanal-pilihan');
