@@ -376,6 +376,39 @@ $(function(){
 			}
 		}
 
+		if($('article').length){
+			var subHead1 = $('.sub-head:nth-of-type(1)'),
+					subHead2 = $('.sub-head:nth-of-type(2)'),
+					gambarArtikelTeratas = $('article figure:nth-of-type(1)');
+					jarakSubHead2 = subHead1.offset().top;
+					// tecotoolbar = subHead2.append('');
+
+			if(scroll > jarakSubHead2){
+				console.log('sticky');
+				subHead2.addClass('sticky');
+				subHead1.css('margin-bottom', '44px');
+
+				var paragrafArtikel = $('#article article p');
+				$(".font-increase").click(function(){
+					var currentFontSize = paragrafArtikel.css('font-size'),
+							currentLineHeight = paragrafArtikel.css('line-height'),
+							currentFontSizeNum = parseFloat(currentFontSize),
+							newFontSize = currentFontSizeNum + 5.5 + 'px';
+							currentLineHeightNum = parseFloat(currentLineHeight),
+							newLineHeight = currentLineHeightNum + 5.4 + 'px';
+					paragrafArtikel.css('font-size', newFontSize);
+					paragrafArtikel.css('line-height', newLineHeight);
+
+					return false;
+				});
+
+			} else {
+				console.log('get off');
+				subHead2.removeClass('sticky');
+				subHead1.css('margin-bottom', 'initial');
+			}
+		}
+
 		// var article = $('article'),
 		// 		komentar = $('.comments'),
 		// 		komentarHasScrolled = section3.offset().top + section3.height();
