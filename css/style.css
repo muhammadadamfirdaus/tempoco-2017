@@ -2142,9 +2142,8 @@ main#category section .w-30 {
 	float:right;
 }
 
-main .container-desktop > .wrapper,
 main section .w-30 .wrapper {
-	padding: 10px;
+	padding: 10px 0;
 	/* background: #fff; */
 }
 
@@ -2167,7 +2166,7 @@ main section > .w-30 .wrapper .wrapper {
 }
 
 main > .container-desktop:first-child {
-	padding-bottom: 40px;
+	/* padding-bottom: 40px; */
 }
 
 /* tab */
@@ -2404,6 +2403,7 @@ main > .container-desktop:first-child {
 	margin: 0;
 }
 
+main .container-desktop > .wrapper,
 .video.tab .tab-content-slide li a:nth-of-type(2),
 #category .video.tab-type-2 .tab-content-slide li a:nth-of-type(2),
 #category li figcaption a {
@@ -3942,7 +3942,7 @@ article twitterwidget {
 
 /* comments */
 .comments {
-	margin-bottom: 30px;
+	margin: 30px 0;
 }
 
 .fb_iframe_widget,
