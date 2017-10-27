@@ -383,30 +383,30 @@ $(function(){
 					jarakSubHead2 = subHead1.offset().top;
 					// tecotoolbar = subHead2.append('');
 
-			if(scroll > jarakSubHead2){
-				console.log('sticky');
-				subHead2.addClass('sticky');
-				subHead1.css('margin-bottom', '44px');
+			// if(scroll > jarakSubHead2){
+			// 	console.log('sticky');
+			// 	subHead2.addClass('sticky');
+			// 	subHead1.css('margin-bottom', '44px');
 
-				var paragrafArtikel = $('#article article p');
-				$(".font-increase").click(function(){
-					var currentFontSize = paragrafArtikel.css('font-size'),
-							currentLineHeight = paragrafArtikel.css('line-height'),
-							currentFontSizeNum = parseFloat(currentFontSize),
-							newFontSize = currentFontSizeNum + 5.5 + 'px';
-							currentLineHeightNum = parseFloat(currentLineHeight),
-							newLineHeight = currentLineHeightNum + 5.4 + 'px';
-					paragrafArtikel.css('font-size', newFontSize);
-					paragrafArtikel.css('line-height', newLineHeight);
+			// 	var paragrafArtikel = $('#article article p');
+			// 	$(".font-increase").click(function(){
+			// 		var currentFontSize = paragrafArtikel.css('font-size'),
+			// 				currentLineHeight = paragrafArtikel.css('line-height'),
+			// 				currentFontSizeNum = parseFloat(currentFontSize),
+			// 				newFontSize = currentFontSizeNum + 5.5 + 'px';
+			// 				currentLineHeightNum = parseFloat(currentLineHeight),
+			// 				newLineHeight = currentLineHeightNum + 5.4 + 'px';
+			// 		paragrafArtikel.css('font-size', newFontSize);
+			// 		paragrafArtikel.css('line-height', newLineHeight);
 
-					return false;
-				});
+			// 		return false;
+			// 	});
 
-			} else {
-				console.log('get off');
-				subHead2.removeClass('sticky');
-				subHead1.css('margin-bottom', 'initial');
-			}
+			// } else {
+			// 	console.log('get off');
+			// 	subHead2.removeClass('sticky');
+			// 	subHead1.css('margin-bottom', 'initial');
+			// }
 		}
 
 		// var article = $('article'),
