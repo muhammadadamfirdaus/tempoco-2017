@@ -551,6 +551,13 @@ $(function(){
     }
 	});
 
+	var fotoDetailCaption = new Swiper('#gallery .foto-caption', {
+		slidesPerView: 'auto'
+	});
+
+	// fotoDetail.controller.control = fotoDetailCaption;
+	// fotoDetailCaption.controller.control = fotoDetail;
+
 	$('#gallery .foto-home.swiper-container img').on('click', function(e){
 		e.preventDefault();
 	});
