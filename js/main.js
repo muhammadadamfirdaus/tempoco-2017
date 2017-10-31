@@ -120,7 +120,9 @@ $(function(){
 		loop: true,
 		spaceBetween: 20,
 		effect: 'slide',
-		speed: 900
+		speed: 900,
+		hashnav: true,
+		hashnavWatchState: true,
 	});
 	/* end headline */
 
@@ -529,7 +531,7 @@ $(function(){
 	});
 
 	//detail foto
-	var fotoDetail = new Swiper('#gallery .foto-home', {
+	var fotoDetail = new Swiper('.foto-detail', {
 		pagination: '.swiper-pagination',
 		nextButton: '.swiper-button-next',
 		prevButton: '.swiper-button-prev',
@@ -537,13 +539,13 @@ $(function(){
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
-		loop: true,
+		// loop: true,
 		hashnav: true,
 		hashnavWatchState: true,
 		// hashnavreplaceState: true,
-    slidesPerView: 'auto',
+		slidesPerView: 'auto',
     coverflow: {
-      rotate: 30,
+      rotate: 50,
       stretch: 0,
       depth: 120,
       modifier: 1,
@@ -551,14 +553,15 @@ $(function(){
     }
 	});
 
-	var fotoDetailCaption = new Swiper('#gallery .foto-caption', {
-		slidesPerView: 'auto'
+	var fotoDetailCaption = new Swiper('.foto-caption', {
+		centeredSlides: true,
+		spaceBetween: 30
 	});
 
-	// fotoDetail.controller.control = fotoDetailCaption;
-	// fotoDetailCaption.controller.control = fotoDetail;
+	fotoDetail.params.control = fotoDetailCaption;
+	fotoDetailCaption.params.control = fotoDetail;
 
-	$('#gallery .foto-home.swiper-container img').on('click', function(e){
+	$('.foto-detail.swiper-container a').on('click', function(e){
 		e.preventDefault();
 	});
 
@@ -730,8 +733,6 @@ $(function(){
   // j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   // 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   // })(window,document,'script','dataLayer','GTM-TVGQF5T');
-
-	
 
 
 		// Google Tag Manager

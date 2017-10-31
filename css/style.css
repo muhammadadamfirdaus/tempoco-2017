@@ -510,7 +510,7 @@ http://www.muhammadadamfirdaus.com/
  /* newsflash */
  .head-newsflash {
    width: 400px;
-   height: 80px;
+   height: 75px;
    font-size: 0;
    position: relative;
    /* border: 0.2px solid #ddd; */
@@ -589,10 +589,10 @@ http://www.muhammadadamfirdaus.com/
 
  .head-newsflash a h2 {
    color: #555;
-   font-size: 18px;
+   font-size: 16px;
    font-weight: 400;
-   line-height: 22px;
-   height: 70px;
+   line-height: 23px;
+   height: 48px;
    overflow: hidden;
  }
 
@@ -2100,7 +2100,7 @@ http://www.muhammadadamfirdaus.com/
  /*.widget-article img,*/
  #section-3 .col li img,
  #article #section-3 .col li img,
- #section-4 .foto-home.swiper-container .card-type-5 img,
+ #section-4 .foto.swiper-container .card-type-5 img,
  .video.tab-type-2 .tab-content-slide li:nth-of-type(2) img,
  #category .tab-type-3 .tab-content-slide li img,
  .head-newsflash a.thumbnail img {
@@ -2138,7 +2138,7 @@ http://www.muhammadadamfirdaus.com/
  }
 
  #headline.headline-mobile-terbaru .swiper-slide figcaption,
- #section-4 .foto-home.swiper-container .swiper-slide figcaption {
+ #section-4 .foto.swiper-container .swiper-slide figcaption {
    position: absolute;
    bottom: 0;
    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
@@ -2149,7 +2149,7 @@ http://www.muhammadadamfirdaus.com/
    width: 100%;
  }
 
- #section-4 .foto-home.swiper-container .swiper-slide figcaption {
+ #section-4 .foto.swiper-container .swiper-slide figcaption {
    height: 40%;
    z-index: 2;
  }
@@ -3195,17 +3195,20 @@ http://www.muhammadadamfirdaus.com/
    font-size: 10px;
  }
 
- #section-4 .foto-home.swiper-container {
+ #section-4 .foto.swiper-container {
    width: 100%;
-   padding: 50px 0;
  }
 
- #section-4 .foto-home.swiper-container,
+ #section-4 .foto.swiper-container,
  .gallery-title {
    background: #000;
  }
 
- #section-4 .foto-home.swiper-container .container-desktop > a:nth-of-type(1) h2 {
+ #section-4 .foto.swiper-container .swiper-wrapper {
+   margin: 30px 0;
+ }
+
+ #section-4 .foto.swiper-container .container-desktop > a:nth-of-type(1) h2 {
    color: #fff;
    font-family: 'Poppins-Light', Helvetica, Arial;
    font-size: 12px;
@@ -3215,7 +3218,7 @@ http://www.muhammadadamfirdaus.com/
    position: relative;
  }
 
- #section-4 .foto-home.swiper-container .container-desktop > a:nth-of-type(1) h2:after {
+ #section-4 .foto.swiper-container .container-desktop > a:nth-of-type(1) h2:after {
    border: 0;
    content: '';
    position: absolute;
@@ -3226,7 +3229,7 @@ http://www.muhammadadamfirdaus.com/
    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
  }
 
- #category #section-4 .foto-home.swiper-container .container-desktop > h2:nth-of-type(1):after {
+ #category #section-4 .foto.swiper-container .container-desktop > h2:nth-of-type(1):after {
    content: '';
    background-image: none;
  }
@@ -3238,17 +3241,19 @@ http://www.muhammadadamfirdaus.com/
    height: 300px;
  }
 
- #gallery #section-4 .foto-home.swiper-container .swiper-slide {
-  width: 520px;
-  height: 292.5px;
+ #section-4 .foto-detail.swiper-container .swiper-slide {
+   background-position: center;
+   background-size: cover;
+   width: 720px;
  }
 
- #section-4 .foto-home.swiper-container .swiper-button-next,
- #section-4 .foto-home.swiper-container .swiper-button-prev {
+ #section-4 .foto.swiper-container .swiper-button-next,
+ #section-4 .foto.swiper-container .swiper-button-prev {
    color: #ff0000;
+   background-color: rgba(0,0,0,0.75);
  }
 
- #section-4 .foto-home.swiper-container .card-type-5 .wrapper {
+ #section-4 .foto.swiper-container .card-type-5 .wrapper {
    padding: 0;
    position: relative;
  }
@@ -3262,13 +3267,13 @@ http://www.muhammadadamfirdaus.com/
    position: relative;
  }
 
- #gallery #section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col {
-  width: 520px;
-  height: 292.5px;
+#section-4 .foto-detail.swiper-container .card-type-5 a:nth-of-type(1).col {
+  width: 720px;
+  height: 405px;
  }
 
-#section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:before,
- {
+#section-4 .foto.swiper-container .card-type-5 a:nth-of-type(1).col:before,
+#gallery #section-4 .foto-detail.swiper-container .card-type-5 a:nth-of-type(1).col:before {
    content: '';
    position: absolute;
    width: 100%;
@@ -3277,23 +3282,24 @@ http://www.muhammadadamfirdaus.com/
    z-index: 1;
  }
 
- #gallery #section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:before,
- #gallery #section-4 .foto-home.swiper-container .swiper-slide figcaption {
+
+ #gallery #section-4 .foto-detail.swiper-container .swiper-slide figcaption {
    content: '';
    position: static;
    background-color: none;
  }
 
 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:hover:before,
-.foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:hover:after {
+.foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:hover:after,
+#gallery #section-4 .foto-detail.swiper-container .swiper-slide-active .card-type-5 a:nth-of-type(1).col:before {
    content: '';
    background-color: rgba(0,0,0,0);
    background-position: -80px -238px;
    transition: background-color 0.5s ease;
  }
 
- #gallery #section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:hover:before,
- #gallery #section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:hover:after {
+ #gallery #section-4 .foto.swiper-container .card-type-5 a:nth-of-type(1).col:hover:before,
+ #gallery #section-4 .foto.swiper-container .card-type-5 a:nth-of-type(1).col:hover:after {
    z-index: -1;
  }
 
@@ -3311,7 +3317,7 @@ http://www.muhammadadamfirdaus.com/
    }
  }*/
 
- #section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:after {
+ #section-4 .foto.swiper-container .card-type-5 a:nth-of-type(1).col:after {
    content: '';
    position: absolute;
    margin: 25% auto;
@@ -3326,28 +3332,28 @@ http://www.muhammadadamfirdaus.com/
    z-index: 2;
  }
 
- #gallery #section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:after {
+ #gallery #section-4 .foto.swiper-container .card-type-5 a:nth-of-type(1).col:after {
    content: '';
    background-image: none;
  }
 
- #gallery #section-4 .foto-home.swiper-container .card-type-5 a:nth-of-type(1).col:after {
+ #gallery #section-4 .foto.swiper-container .card-type-5 a:nth-of-type(1).col:after {
    margin: 40% auto;
  }
 
- #section-4 .foto-home.swiper-container .card-type-5 figcaption a * {
+ #section-4 .foto.swiper-container .card-type-5 figcaption a * {
    display: block;
    padding: 0 10px;
  }
 
- #section-4 .foto-home.swiper-container .card-type-5 figcaption h2.title {
+ #section-4 .foto.swiper-container .card-type-5 figcaption h2.title {
    color: #fff;
    font-size: 16px;
    position: absolute;
    bottom: 30px;
  }
 
- #section-4 .foto-home.swiper-container .card-type-5 figcaption span {
+ #section-4 .foto.swiper-container .card-type-5 figcaption span {
    font-size: 10px;
    /*margin: 10% 0;*/
    color: #fff;
@@ -3380,7 +3386,7 @@ http://www.muhammadadamfirdaus.com/
    max-width: 728px;
  }
 
- #gallery .foto-home .container-desktop {
+ #gallery .foto .container-desktop {
    margin-bottom: 5%;
  }
 
@@ -3613,8 +3619,8 @@ http://www.muhammadadamfirdaus.com/
    background: #f7f8f9;
  }
 
- #category section .foto-home h1,
- #gallery section .foto-home h1 {
+ #category section .foto h1,
+ #gallery section .foto h1 {
    color: #fff;
  }
 
@@ -3636,7 +3642,7 @@ http://www.muhammadadamfirdaus.com/
    color: #555;
  }
 
- #category section .foto-home .container-desktop {
+ #category section .foto .container-desktop {
    margin-bottom: 30px;
  }
 
@@ -3790,6 +3796,10 @@ http://www.muhammadadamfirdaus.com/
    font-size: 12px;
    text-align: center;
    line-height: 40px;
+ }
+
+ .kolom-navigation .swiper-slide h4 a {
+  color: #333;
  }
 
  .kolom-konten .swiper-slide li {
@@ -4349,7 +4359,7 @@ http://www.muhammadadamfirdaus.com/
 .swiper-button-next {
   position: absolute;
   top: 50%;
-  width: 50px;
+  width: 60px;
   height: 64px;
   margin-top: -22px;
   z-index: 10;
@@ -4443,28 +4453,29 @@ section nav:nth-of-type(1) li a:after {
   padding: 5px 0;
 }
 
-#section-4 .foto-home.swiper-container .swiper-button-prev {
+#section-4 .foto.swiper-container .swiper-button-prev {
   left: 10%;
 }
 
-#section-4 .foto-home.swiper-container .swiper-button-next {
+#section-4 .foto.swiper-container .swiper-button-next {
   right: 10%;
 }
 
-#section-4 .foto-home.swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+#section-4 .foto.swiper-container .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #fff;
 }
 
-#section-4 .foto-home.swiper-container .swiper-pagination .swiper-pagination-bullet-active:before {
+#section-4 .foto.swiper-container .swiper-pagination .swiper-pagination-bullet-active:before {
   border: 1px solid #fff;
 }
 
-#section-4 .foto-home.swiper-container .swiper-pagination .swiper-pagination-bullet {
+#section-4 .foto.swiper-container .swiper-pagination .swiper-pagination-bullet {
   background-color: #ddd;
+  margin: 15px 5px 30px;
 }
 
-#gallery #section-4 .foto-home.swiper-container .swiper-button-next,
-#gallery #section-4 .foto-home.swiper-container .swiper-button-prev {
+#gallery #section-4 .foto.swiper-container .swiper-button-next,
+#gallery #section-4 .foto.swiper-container .swiper-button-prev {
   top: 45%;
 }
 
@@ -4495,7 +4506,7 @@ section nav:nth-of-type(1) li a:after {
 }
 
 #section-4 .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: -15px;
+  bottom: 0;
 }
 /* Bullets */
 .swiper-pagination-bullet {
