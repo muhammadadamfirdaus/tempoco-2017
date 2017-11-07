@@ -321,9 +321,12 @@ $(function(){
 	});
 
 	$(document).on('click', function(e){
-		e.stopImmediatePropagation();
+		// console.log('outside area');
 		trendingList.removeClass('active');
+		$('.tooltip').removeClass('active');
 	});
+
+
 
 	function sticky(){
 		var scroll = getCurrentScroll();
@@ -385,30 +388,47 @@ $(function(){
 					jarakSubHead2 = subHead1.offset().top;
 					// tecotoolbar = subHead2.append('');
 
-			// if(scroll > jarakSubHead2){
-			// 	console.log('sticky');
-			// 	subHead2.addClass('sticky');
-			// 	subHead1.css('margin-bottom', '44px');
+			if(scroll > jarakSubHead2){
+				console.log('sticky');
+				subHead2.addClass('sticky');
+				subHead1.css('margin-bottom', '44px');
 
-			// 	var paragrafArtikel = $('#article article p');
-			// 	$(".font-increase").click(function(){
-			// 		var currentFontSize = paragrafArtikel.css('font-size'),
-			// 				currentLineHeight = paragrafArtikel.css('line-height'),
-			// 				currentFontSizeNum = parseFloat(currentFontSize),
-			// 				newFontSize = currentFontSizeNum + 5.5 + 'px';
-			// 				currentLineHeightNum = parseFloat(currentLineHeight),
-			// 				newLineHeight = currentLineHeightNum + 5.4 + 'px';
-			// 		paragrafArtikel.css('font-size', newFontSize);
-			// 		paragrafArtikel.css('line-height', newLineHeight);
+				var paragrafArtikel = $('#isi p');
+				$('#font-family').on('change', function(){
+					var fontSelected = $('#font-family').val();
+					console.log(fontSelected);
+					paragrafArtikel.css('font-family', fontSelected);
+				});
 
-			// 		return false;
-			// 	});
+				$(".font-increase").on('click', function(e){
+					e.preventDefault();
+					e.stopImmediatePropagation();
+							newFontSize = parseFloat(paragrafArtikel.css('font-size')) + 2 + 'px';	
+							newLineHeight = parseFloat( paragrafArtikel.css('line-height')) + 4 + 'px';
+					paragrafArtikel.css('font-size', newFontSize);
+					paragrafArtikel.css('line-height', newLineHeight);
 
-			// } else {
-			// 	console.log('get off');
-			// 	subHead2.removeClass('sticky');
-			// 	subHead1.css('margin-bottom', 'initial');
-			// }
+					return false;
+				});
+
+				$(".font-decrease").on('click', function(e){
+					e.preventDefault();
+					e.stopImmediatePropagation();
+					var decurrentFontSize = paragrafArtikel.css('font-size'),
+							decurrentLineHeight = paragrafArtikel.css('line-height'),
+							decurrentFontSizeNum = parseFloat(decurrentFontSize),
+							denewFontSize = decurrentFontSizeNum - 2 + 'px';
+							decurrentLineHeightNum = parseFloat(decurrentLineHeight),
+							denewLineHeight = decurrentLineHeightNum - 4 + 'px';
+					paragrafArtikel.css('font-size', denewFontSize);
+					paragrafArtikel.css('line-height', denewLineHeight);
+				});
+
+			} else {
+				console.log('get off');
+				subHead2.removeClass('sticky');
+				subHead1.css('margin-bottom', 'initial');
+			}
 		}
 
 		// var article = $('article'),
@@ -449,10 +469,15 @@ $(function(){
   }
 	/* end onscroll */
 
+	/* tags active selected */
+	var navigationTags = $('.navigation a');
+	navigationTags.on('click', function(){
+		$(this).addClass('active').siblings().removeClass('active');
+	});
+
 	/* datepicker */
-	var inputTanggal = $('input#tanggal');
-	var picker = new Pikaday({
-		field: document.getElementById('tanggal'),
+	var tanggalSearch = new Pikaday({
+		field: document.getElementById('tanggal-search'),
 		firstDay: 0,
 		minDate: new Date(2011, 11, 31),
 		maxDate: new Date,
@@ -493,11 +518,100 @@ $(function(){
 			return dmy;
 		}
 	});
+	var tanggalIndex = new Pikaday({
+		field: document.getElementById('tanggal-index'),
+		firstDay: 0,
+		minDate: new Date(2011, 11, 31),
+		maxDate: new Date,
+		yearRange: [2000],
+		container: document.getElementById('datepicker-index'),
+		format: 'DD/MM/YYYY',
+		toString(date, format) {
+			// you should do formatting based on the passed format,
+			// but we will just return 'D/M/YYYY' for simplicity
+			var day = date.getDate();
+			var month = date.getMonth() + 1;
+			var year = date.getFullYear();
 
-	inputTanggal.on('change', function(e) {
+			if(day < 10){
+				day = '0'+day;
+			}
+			if(month < 10){
+				month = '0'+month;
+			}
+			var dmy = +year+'/'+month+'/'+day;
+			// return `${day}/${month}/${year}`;
+			return dmy;
+		},
+		parse(dateString, format) {
+			// dateString is the result of `toString` method
+			const parts = dateString.split('/');
+			var day = parseInt(parts[0], 10);
+			var month = parseInt(parts[1] - 1, 10);
+			var year = parseInt(parts[1], 10);
+			if(day < 10){
+				day = '0'+day;
+			}
+			if(month < 10){
+				month = '0'+month;
+			}
+			var dmy = +year+'/'+month+'/'+day;
+			//return new Date(year, month, day);
+			return dmy;
+		}
+	});
+
+	var inputTanggalSearch = $('#tanggal-search');
+	inputTanggalSearch.on('change', function(e) {
 		e.preventDefault();
-		var tanggal = $('#tanggal').val();
-		window.location = "https://www.tempo.co/indeks/"+tanggal;
+		var pilihanTanggalSearch = inputTanggalSearch.val();
+		window.location = "https://www.tempo.co/indeks/"+pilihanTanggalSearch;
+	});
+
+	var inputTanggalIndex = $('#tanggal-index');
+	var pilihanTanggalIndex = inputTanggalIndex.val();
+	inputTanggalIndex.on('change', function(e) {
+		e.preventDefault();
+		var pilihanTanggalIndex = inputTanggalIndex.val();
+		var pilihanKanal = $('#kanal').val();
+		if(pilihanKanal == ""){
+			window.location = "https://www.tempo.co/indeks/"+pilihanTanggalIndex;
+		} else {
+			window.location = "https://www.tempo.co/indeks/"+pilihanTanggalIndex+"/"+pilihanKanal;
+		}
+	});
+
+	var pilihanKanal = $('#kanal').val();
+	var tooltipIndexDateEmpty = inputTanggalIndex.add('.tooltip');
+	
+	var contentTooltipIndexDateEmpty = $('<div class="tooltip red-500"><div class="wrapper"><div class="arrow-up"></div><p>Pilih tanggal tayang artikel.</p><div class="wrapper"><a class="white" href="#">OK</a></div></div></div>');
+	inputTanggalIndex.after(contentTooltipIndexDateEmpty);
+
+	$('#kanal').on('change', function(e){
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		window.location.hash = $('#kanal').val();
+		if(pilihanTanggalIndex == ""){
+			console.log('isi tanggal');
+			var caution = setTimeout(function(){
+				var tooltipIndexDateEmpty = inputTanggalIndex.add('.tooltip');
+				
+				if($('.pika-single.is-hidden').length){
+					tooltipIndexDateEmpty.addClass('active');
+				}
+
+				tooltipIndexDateEmpty.add('a .white').on('click', function(e){
+					e.preventDefault();
+					e.stopImmediatePropagation();
+					tooltipIndexDateEmpty.removeClass('active');
+				});
+
+			clearTimeout(caution);
+			}, 0);
+
+		} else {
+			window.location = "https://www.tempo.co/indeks/"+pilihanTanggalIndex+"/"+pilihanKanal;
+		}
 	});
 
 	var fotoHome = new Swiper('.foto-home', {
@@ -640,15 +754,15 @@ $(function(){
 	// });
 
 	// bottom ads
-  if($('.bottom-banner').length){
-    var bottomAdsCloseButton = $('.bottom-banner button');
-    bottomAdsCloseButton.on('click', function(e){
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      // console.log('closing');
-      $('.bottom-banner').addClass('bottom-banner-closed');
-    });
-  }
+  // if($('.bottom-banner').length){
+  //   var bottomAdsCloseButton = $('.bottom-banner button');
+  //   bottomAdsCloseButton.on('click', function(e){
+  //     e.preventDefault();
+  //     e.stopImmediatePropagation();
+  //     // console.log('closing');
+  //     $('.bottom-banner').addClass('bottom-banner-closed');
+  //   });
+  // }
 
 	// premium head
 	// var premiumHead = $('.premium-head');

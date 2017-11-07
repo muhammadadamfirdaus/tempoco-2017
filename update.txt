@@ -1,6 +1,10 @@
 card hover ala milan official
 
 ===
-Tue, Oct 31
+Fri, Nov 03
 
-- ngupdate class focus, headline, cekin paginationnya
+- tambah tag main#index
+- clear inline style section.list-ist-type-1
+- clear script search sticky pikaday
+
+
