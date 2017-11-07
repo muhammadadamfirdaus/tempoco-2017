@@ -1079,7 +1079,7 @@ http://www.muhammadadamfirdaus.com/
  .tooltip {
    width: 160px;
    opacity: 0;
-   transform: translate3d(-65px, 15px, 0);
+   transform: translate3d(45px, 15px, 0);
    transition: all 0.5s ease-in;
    z-index: 10;
  }
@@ -1096,12 +1096,17 @@ http://www.muhammadadamfirdaus.com/
 
 .tooltip.active {
    opacity: 1;
-   transform: translate3d(-65px, 30px, 0);
+   transform: translate3d(45px, 30px, 0);
    transition: all 0.5s ease-in;
  }
 
- .tooltip > .wrapper:nth-child(1) {
+ .tooltip > .wrapper {
    position: relative;
+   padding: 0 10px !important;
+ }
+
+ .tooltip .wrapper .wrapper {
+   padding: 0 25px !important;
  }
 
  .tooltip.red-500 p {
@@ -4040,10 +4045,6 @@ http://www.muhammadadamfirdaus.com/
   background-repeat: no-repeat;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
- }
-
- .sub-head:nth-of-type(2) .wrapper {
-	 height: 32px;
  }
 
  .sub-head .author *,

@@ -21,12 +21,12 @@ $(function(){
   //   }, 8000);
 	// };
 
-	//sticky-search notification
+	//sticky-toolbar notification
 	if(!localStorage.getItem('saya mengerti')){
-		var contentTooltipHeaderBottom = $('<div class="tooltip red-500"><div class="wrapper"><div class="arrow-up"></div><p>Manfaatkan kemudahan pencarian artikel TEMPO.CO</p><div class="wrapper"><a class="white" href="#">Saya mengerti</a></div></div></div>');
-		$('.header-bottom li a.search-button').append(contentTooltipHeaderBottom);
+		var contentTooltipHeaderBottom = $('<div class="tooltip red-500"><div class="wrapper"><div class="arrow-up"></div><p>Kini Anda dapat mengganti jenis dan ukuran font sesuai preferensi Anda.</p><div class="wrapper"><a class="white" href="#">Saya mengerti</a></div></div></div>');
+		$('.sub-head .toolbar').append(contentTooltipHeaderBottom);
 		setTimeout(function(){
-			var tooltipHeaderBottom = $('.header-bottom .tooltip');
+			var tooltipHeaderBottom = $('.tooltip');
 			tooltipHeaderBottom.addClass('active');
 			tooltipHeaderBottom.add('a .white').on('click', function(e){
 				e.preventDefault();
