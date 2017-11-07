@@ -747,7 +747,7 @@ http://www.muhammadadamfirdaus.com/
  }
 
  .menu li a {
-   padding:10px 4px;
+   padding:10px 2.5px;
  }
 
  .menu li:nth-child(2) {
@@ -3763,7 +3763,7 @@ http://www.muhammadadamfirdaus.com/
  }
 
  #index #pilih-kanal select {
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   border: 1px solid #e53935;
@@ -3773,9 +3773,10 @@ http://www.muhammadadamfirdaus.com/
   font-size: 12px;
   margin: 10px auto;
   padding: 10px 20px;
+  width: 125px;
  }
 
- #index #pilih-kanal select::-ms-expand { 
+ #index #pilih-kanal select::-ms-expand {
   display: none; /* hide the default arrow in ie10 and ie11 */
 }
 
@@ -4022,7 +4023,7 @@ http://www.muhammadadamfirdaus.com/
  }
 
  .sub-head .toolbar select#font-family {
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   box-sizing: border-box;
@@ -5162,7 +5163,7 @@ button.swiper-pagination-bullet {
      height: 80px;
    }
  }
- 
+
 
  /* custome image order */
  .img-artikel-other img {

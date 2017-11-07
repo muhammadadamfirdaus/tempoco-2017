@@ -375,7 +375,7 @@ $(function(){
 				hasilSurveyContainer.removeClass('sticky');
 				$('#list-indikator.indikator').css('margin-top', 'initial');
 			} else {
-				console.log('pasang');
+				// console.log('pasang');
 				hasilSurveyContainer.addClass('sticky');
 				$('#list-indikator.indikator').css('margin-top', '400px');
 			}
@@ -389,21 +389,21 @@ $(function(){
 					// tecotoolbar = subHead2.append('');
 
 			if(scroll > jarakSubHead2){
-				console.log('sticky');
+				// console.log('sticky');
 				subHead2.addClass('sticky');
 				subHead1.css('margin-bottom', '44px');
 
 				var paragrafArtikel = $('#isi p');
 				$('#font-family').on('change', function(){
 					var fontSelected = $('#font-family').val();
-					console.log(fontSelected);
+					// console.log(fontSelected);
 					paragrafArtikel.css('font-family', fontSelected);
 				});
 
 				$(".font-increase").on('click', function(e){
 					e.preventDefault();
 					e.stopImmediatePropagation();
-							newFontSize = parseFloat(paragrafArtikel.css('font-size')) + 2 + 'px';	
+							newFontSize = parseFloat(paragrafArtikel.css('font-size')) + 2 + 'px';
 							newLineHeight = parseFloat( paragrafArtikel.css('line-height')) + 4 + 'px';
 					paragrafArtikel.css('font-size', newFontSize);
 					paragrafArtikel.css('line-height', newLineHeight);
@@ -425,7 +425,7 @@ $(function(){
 				});
 
 			} else {
-				console.log('get off');
+				// console.log('get off');
 				subHead2.removeClass('sticky');
 				subHead1.css('margin-bottom', 'initial');
 			}
@@ -470,10 +470,10 @@ $(function(){
 	/* end onscroll */
 
 	/* tags active selected */
-	var navigationTags = $('.navigation a');
-	navigationTags.on('click', function(){
-		$(this).addClass('active').siblings().removeClass('active');
-	});
+	// var navigationTags = $('.navigation a');
+	// navigationTags.on('click', function(){
+	// 	$(this).addClass('active').siblings().removeClass('active');
+	// });
 
 	/* datepicker */
 	var tanggalSearch = new Pikaday({
@@ -583,7 +583,7 @@ $(function(){
 
 	var pilihanKanal = $('#kanal').val();
 	var tooltipIndexDateEmpty = inputTanggalIndex.add('.tooltip');
-	
+
 	var contentTooltipIndexDateEmpty = $('<div class="tooltip red-500"><div class="wrapper"><div class="arrow-up"></div><p>Pilih tanggal tayang artikel.</p><div class="wrapper"><a class="white" href="#">OK</a></div></div></div>');
 	inputTanggalIndex.after(contentTooltipIndexDateEmpty);
 
@@ -592,10 +592,10 @@ $(function(){
 		e.stopImmediatePropagation();
 		window.location.hash = $('#kanal').val();
 		if(pilihanTanggalIndex == ""){
-			console.log('isi tanggal');
+			// console.log('isi tanggal');
 			var caution = setTimeout(function(){
 				var tooltipIndexDateEmpty = inputTanggalIndex.add('.tooltip');
-				
+
 				if($('.pika-single.is-hidden').length){
 					tooltipIndexDateEmpty.addClass('active');
 				}
