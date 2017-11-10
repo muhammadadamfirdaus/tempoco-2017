@@ -1964,7 +1964,7 @@ http://www.muhammadadamfirdaus.com/
    border-radius: 50%;
    position: absolute;
    left: 20px;
-   top: 33px;
+   top: 8px;
    -webkit-animation: live-white 1s ease infinite;
    animation: live-white 1s ease infinite;
  }
@@ -2986,6 +2986,7 @@ http://www.muhammadadamfirdaus.com/
  #headline .swiper-slide a:nth-of-type(1) {
    overflow: hidden;
    display: block;
+   position: relative;
  }
 
  .terpopuler.col {
