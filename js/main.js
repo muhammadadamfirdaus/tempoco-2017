@@ -461,12 +461,41 @@ $(function(){
 		/* clear the old timeout */
     clearTimeout(timer);
     /* wait until 400 ms for callback */
-    timer = setTimeout(sticky, 0);
+		timer = setTimeout(sticky, 0);
+		
+		
 	});
 
 	function getCurrentScroll() {
     return window.pageYOffset || document.documentElement.scrollTop;
-  }
+	}
+	
+	
+		$(window).on('scroll', function () {
+		 if ($('.load-more').offset().top <= $(window).scrollTop() + $(window).height()) {
+
+				console.log('bottom');
+				$.ajax({
+					type: "GET",
+					url: 'http://www.tmpo.co/ajax?tipe=beritaterkini&limit=10&start=10',
+					success: function (result) {
+						$(".divContent").append(result);
+		
+						sIndex = sIndex + offSet;
+						isPreviousEventComplete = true;
+		
+						if (result == '') //When data is not available
+								isDataAvailable = false;
+		
+						$(".LoaderImage").css("display", "none");
+					},
+					error: function (error) {
+							alert(error);
+					}
+				});
+
+		 }
+		});
 	/* end onscroll */
 
 	/* tags active selected */
