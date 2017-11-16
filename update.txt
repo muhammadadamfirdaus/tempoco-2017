@@ -1,10 +1,10 @@
 card hover ala milan official
 
 ===
-Fri, Nov 03
+Thu, 16 Nov
 
-- tambah tag main#index
-- clear inline style section.list-ist-type-1
-- clear script search sticky pikaday
-
-
+MOBILE:
+- update style.css, sprites.png, dan main.js
+- clear footer facebook script API
+- ganti google tag manager di footer, samakan dengan main.js
+- link karir double source
