@@ -1,10 +1,11 @@
 card hover ala milan official
 
 ===
-Thu, 16 Nov
+Fri, 17 Nov
 
 MOBILE:
 - update style.css, sprites.png, dan main.js
-- clear footer facebook script API
+- clear footer facebook script API (double)
 - ganti google tag manager di footer, samakan dengan main.js
 - link karir double source
+- .header-bottom keluarin tepat di bawah .header-main
