@@ -472,29 +472,29 @@ $(function(){
 	
 	
 	
-		$(window).on('scroll', function () {
-			if ($('.load-more').offset().top <= $(window).scrollTop() + $(window).height()) {
-				 console.log('bottom');
-				 $.ajax({
-					 type: "GET",
-					 url: 'http://www.tmpo.co/ajax?tipe=beritaterkini&limit=10&start=10',
-					 success: function (result) {
-						 $(".divContent").append(result);
+		// $(window).on('scroll', function () {
+		// 	if ($('.load-more').offset().top <= $(window).scrollTop() + $(window).height()) {
+		// 		 console.log('bottom');
+		// 		 $.ajax({
+		// 			 type: "GET",
+		// 			 url: 'http://www.tmpo.co/ajax?tipe=beritaterkini&limit=10&start=10',
+		// 			 success: function (result) {
+		// 				 $(".divContent").append(result);
 		 
-						 sIndex = sIndex + offSet;
-						 isPreviousEventComplete = true;
+		// 				 sIndex = sIndex + offSet;
+		// 				 isPreviousEventComplete = true;
 		 
-						 if (result == '') //When data is not available
-								 isDataAvailable = false;
+		// 				 if (result == '') //When data is not available
+		// 						 isDataAvailable = false;
 		 
-						 $(".LoaderImage").css("display", "none");
-					 },
-					 error: function (error) {
-							 alert(error);
-					 }
-				 });
-			}
-		 });
+		// 				 $(".LoaderImage").css("display", "none");
+		// 			 },
+		// 			 error: function (error) {
+		// 					 alert(error);
+		// 			 }
+		// 		 });
+		// 	}
+		//  });
 	
 	/* end onscroll */
 
