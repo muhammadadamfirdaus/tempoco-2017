@@ -22,23 +22,23 @@ $(function(){
 	// };
 
 	//sticky-toolbar notification
-	if(!localStorage.getItem('saya mengerti')){
-		var contentTooltipHeaderBottom = $('<div class="tooltip red-500"><div class="wrapper"><div class="arrow-up"></div><p>Kini Anda dapat mengganti jenis dan ukuran font sesuai preferensi Anda.</p><div class="wrapper"><a class="white" href="#">Saya mengerti</a></div></div></div>');
-		$('.sub-head .toolbar').append(contentTooltipHeaderBottom);
-		setTimeout(function(){
-			var tooltipHeaderBottom = $('.tooltip');
-			tooltipHeaderBottom.addClass('active');
-			tooltipHeaderBottom.add('a .white').on('click', function(e){
-				e.preventDefault();
-				e.stopImmediatePropagation();
-				tooltipHeaderBottom.removeClass('active');
-				setTimeout(function(){
-					contentTooltipHeaderBottom.detach();
-				}, 800);
-				localStorage.setItem('saya mengerti','yes');
-			});
-		}, 2500);
-	}
+	// if(!localStorage.getItem('saya mengerti')){
+	// 	var contentTooltipHeaderBottom = $('<div class="tooltip red-500"><div class="wrapper"><div class="arrow-up"></div><p>Kini Anda dapat mengganti jenis dan ukuran font sesuai preferensi Anda.</p><div class="wrapper"><a class="white" href="#">Saya mengerti</a></div></div></div>');
+	// 	$('.sub-head .toolbar').append(contentTooltipHeaderBottom);
+	// 	setTimeout(function(){
+	// 		var tooltipHeaderBottom = $('.tooltip');
+	// 		tooltipHeaderBottom.addClass('active');
+	// 		tooltipHeaderBottom.add('a .white').on('click', function(e){
+	// 			e.preventDefault();
+	// 			e.stopImmediatePropagation();
+	// 			tooltipHeaderBottom.removeClass('active');
+	// 			setTimeout(function(){
+	// 				contentTooltipHeaderBottom.detach();
+	// 			}, 800);
+	// 			localStorage.setItem('saya mengerti','yes');
+	// 		});
+	// 	}, 2500);
+	// }
 
 
 	// survey front-end
