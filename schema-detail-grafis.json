@@ -1,0 +1,38 @@
+{
+  "@context": "http://schema.org",
+  "@type": "MediaObject",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://webtorial.tempo.co/adam/tempo/desktop/10.3/detail-article.html"
+  },
+  "headline": "Ahok Hampir Khatam Al Quran, Ini Kata Politikus PPP",
+  "author": {
+    "@type": "Person",
+    "name": "Bambang Priyo Jatmiko"
+  },
+  "editor": {
+    "@type": "Person",
+    "name": "Bambang Priyo Jatmiko"
+  },
+  "keywords": "Ahok",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://cdn.tmpo.co/data/2017/10/27/id_658005/658005_720.jpg",
+    "width": "720",
+    "height": "405",
+    "caption": "Mantan Presiden Megawati Soekarnoputri, disambut oleh Jenderal Thailand Teerachai Nakwanich saat tiba untuk menghadiri prosesi pemakaman dan upacara kremasi Raja Thailand Bhumibol Adulyadej, di Bangkok, Thailand, 26 Oktober 2017. (Kementerian Luar Negeri Thailand via AP)"
+  },
+  "description": "Waketum DPP Partai Persatuan Pembanguan, Fadly Nurzal mengapresiasi kabar Basuki Tjahja Purnama atau Ahok hampir khatam kitab suci Al Quran.",
+  "datePublished": "2018-02-18T07:46:31+07:00",
+  "dateModified": "2018-02-18T07:46:31+07:00",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TEMPO.CO",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.tempo.co/images/logo-tempo-co.png",
+      "width": "418",
+      "height": "70"
+    }
+  }
+}

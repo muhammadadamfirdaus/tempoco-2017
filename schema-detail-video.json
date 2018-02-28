@@ -1,0 +1,37 @@
+{
+  "@context": "http://schema.org",
+  "@type": "VideoGallery",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://webtorial.tempo.co/adam/tempo/desktop/10.3/detail-article.html"
+  },
+  "headline": "Ahok Hampir Khatam Al Quran, Ini Kata Politikus PPP",
+  "author": {
+    "@type": "Person",
+    "name": "Bambang Priyo Jatmiko"
+  },
+  "editor": {
+    "@type": "Person",
+    "name": "Bambang Priyo Jatmiko"
+  },
+  "keywords": "Ahok",
+  "video": {
+    "@type": "VideoObject",
+    "name": "Samain kaya Headline",
+    "contentUrl": "https://cdn.tmpo.co/data/2017/10/27/id_658005/658005_720.jpg",
+    "thumbnailUrl": "https://cdn.tmpo.co/data/2017/10/27/id_658005/658005_720.jpg",
+    "description": "Waketum DPP Partai Persatuan Pembanguan, Fadly Nurzal mengapresiasi kabar Basuki Tjahja Purnama atau Ahok hampir khatam kitab suci Al Quran.",
+    "uploadDate": "2018-02-18T07:46:31+07:00"
+  },
+  "description": "Waketum DPP Partai Persatuan Pembanguan, Fadly Nurzal mengapresiasi kabar Basuki Tjahja Purnama atau Ahok hampir khatam kitab suci Al Quran.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TEMPO.CO",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.tempo.co/images/logo-tempo-co.png",
+      "width": "418",
+      "height": "70"
+    }
+  }
+}

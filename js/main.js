@@ -381,7 +381,8 @@ $(function(){
 			}
 		}
 
-		if($('article').length){
+		if($('#detail').length){
+			console.log('article');
 			var subHead1 = $('.sub-head:nth-of-type(1)'),
 					subHead2 = $('.sub-head:nth-of-type(2)'),
 					gambarArtikelTeratas = $('article figure:nth-of-type(1)');

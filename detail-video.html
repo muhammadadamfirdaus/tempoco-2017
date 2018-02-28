@@ -439,32 +439,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         window.location = "https://www.tempo.co/indeks/"+tanggal;
       });
       </script>
-<main id="category">
+	<main id="gallery">
 		<div class="container-desktop">
 			<section class="clearfix">
-				<nav class="breadcrumbs">
-					<li><a href="https://www.tempo.co/">Home</a></li>
-					<li><a href="//video.tempo.co">Video</a></li>
+				<nav class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="https://www.tempo.co/">Home</a></li>
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="//video.tempo.co">Video</a></li>
 				</nav>
 			</section>
 		</div>
-
-
-
-		<section id="section-4">
-			<div class="foto foto-detail swiper-container">
+		
+		<section class="gallery-title">
+			<div class="video video-detail swiper-container" itemscope itemtype="http://schema.org/VideoGallery">
 				<div class="container-desktop clearfix">
 					<div class="col w-70">
-						<h1>
-							Live: Pengumuman Nominasi Festival Film Tempo 2017						</h1>
-
+						<h1 itemprop="headline">
+							Live: Pengumuman Nominasi Festival Film Tempo 2017
+						</h1>
 						<!-- Untuk reporter & waktu publish-->
 						<div class="sub-head">
 							<div id="author" class="author">
-																<p style="color:#fff">Videografer:</p><h4>Tempo Channel</h4><br>
-								<p style="color:#fff">Editor:</p><h4>Ngarto Februana</h4>
-														</div>
-							<span id="date" class="date" style="color:#fff">Kamis, 16 November 2017 12:43 WIB</span><span id="time" class="time"></span>
+								<p style="color:#fff">Videografer:</p><h4 itemprop="author">Tempo Channel</h4><br>
+								<p style="color:#fff">Editor:</p><h4 itemprop="editor">Ngarto Februana</h4>
+							</div>
+							<span id="date" class="date" itemprop="datePublished" style="color:#fff">Kamis, 16 November 2017 12:43 WIB</span><span id="time" class="time"></span>
 						</div>
 						<!-- end -->
 
@@ -485,54 +483,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 						<!-- plug n play video -->
 						<div class="player brightcove wrapper">
-															<iframe width="640" height="480" src="https://www.youtube.com/embed/8W264is1ooo?ecver=2" frameborder="0" allowfullscreen></iframe>
-												</div>
-
+							<iframe itemprop="video" width="640" height="480" src="https://www.youtube.com/embed/8W264is1ooo?ecver=2" frameborder="0" allowfullscreen></iframe>
+						</div>
 						<!-- end -->
-
 					</div>
-
-
-
 					<div class="col w-30">
 						<div class="ads rectangle">
-	<div class="wrapper">		
-		<div id='mr_1' class='rectangle-ads' style='width:auto;height:auto;text-align: center;'>
-			<script type='text/javascript'>
-			googletag.cmd.push(function() { googletag.display('mr_1'); });
-			</script>
-		</div>
-	</div>
-</div>
+							<div class="wrapper">		
+								<div id='mr_1' class='rectangle-ads' style='width:auto;height:auto;text-align: center;'>
+									<script type='text/javascript'>
+									googletag.cmd.push(function() { googletag.display('mr_1'); });
+									</script>
+								</div>
+							</div>
+						</div>
 						<div class="ads rectangle">
-	<div class="wrapper">
-		<div id='mr_2' class='rectangle-ads' style='width:auto;height:auto;text-align: center;'>
-			<script type='text/javascript'>
-			googletag.cmd.push(function() { googletag.display('mr_2'); });
-			</script>
-		</div>
-	</div>
-</div>
+							<div class="wrapper">
+								<div id='mr_2' class='rectangle-ads' style='width:auto;height:auto;text-align: center;'>
+									<script type='text/javascript'>
+									googletag.cmd.push(function() { googletag.display('mr_2'); });
+									</script>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-
 		<div class="container-desktop">
 			<section id="article" class="clearfix">
 				<div class="col w-70">
 					<div class="wrapper">
-						<article>
+						<article itemprop="description">
 
 							<p><p>Tempo.co, Jakarta - Tahun ini Tempo menggelar Festival&nbsp;Film Tempo. Pengumuman nomine&nbsp;dilakukan hari ini, Kamis, 16 November 2017, di Gedung Tempo, Jl Palmerah&nbsp;Barat, Jakarta.</p>
-<p>Vdeografer: Tempo Channel</p></p>
+							<p>Vdeografer: Tempo Channel</p></p>
 
 							<hr class="w-50">
 							<!-- TAG -->
 							<div class="tags clearfix">
-																		<li><a href="https://www.tempo.co/tag/festival-film-tempo-fft">Festival Film Tempo | FFT</a></li>
-															</div>
+								<li><a href="https://www.tempo.co/tag/festival-film-tempo-fft" itemprop="keywords">Festival Film Tempo | FFT</a></li>
+							</div>
 							<!-- end -->
 
 							<div class="author">

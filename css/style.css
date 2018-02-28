@@ -200,57 +200,6 @@ http://www.muhammadadamfirdaus.com/
  }
 
  /* fonts */
- /* @font-face {
-   font-family: 'Helvetica';
-   src:	url('https://statik.tempo.co/css/fonts/Helvetica.eot?#iefix') format('embedded-opentype'),
-         url('https://statik.tempo.co/css/fonts/Helvetica.otf')  format('opentype'),
-         url('https://statik.tempo.co/css/fonts/Helvetica.woff') format('woff'),
-         url('https://statik.tempo.co/css/fonts/Helvetica.ttf')  format('truetype'),
-         url('https://statik.tempo.co/css/fonts/Helvetica.svg#Helvetica') format('svg');
-   font-weight: normal;
-   font-style: normal;
- }
-
- @font-face {
-   font-family: 'Roboto';
-   font-style: normal;
-   font-weight: 100;
-   src: local('Roboto Thin'), local('Roboto-Thin'), url(https://statik.tempo.co/css/fonts/Roboto-100.woff2) format('woff2');
-   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
- }
-
- @font-face {
-   font-family: 'Roboto';
-   font-style: normal;
-   font-weight: 300;
-   src: local('Roboto Light'), local('Roboto-Light'), url(https://statik.tempo.co/css/fonts/Roboto-300.woff2) format('woff2');
-   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
- }
-
- @font-face {
-   font-family: 'Roboto';
-   font-style: normal;
-   font-weight: 400;
-   src: local('Roboto'), local('Roboto-Regular'), url(https://statik.tempo.co/css/fonts/Roboto-400.woff2) format('woff2');
-   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
- }
-
- @font-face {
-   font-family: 'Roboto';
-   font-style: normal;
-   font-weight: 500;
-   src: local('Roboto Medium'), local('Roboto-Medium'), url(https://statik.tempo.co/css/fonts/Roboto-500.woff2) format('woff2');
-   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
- }
-
- @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://statik.tempo.co/css/fonts/Roboto-700.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-} */
-
 @font-face{font-family:Roboto;font-style:normal;font-weight:100;src:local('Roboto Light'),local('Roboto-Light'),url(https://fonts.gstatic.com/s/roboto/v18/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff'),url(https://fonts.gstatic.com/s/roboto/v18/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}
 @font-face{font-family:Roboto;font-style:normal;font-weight:300;src:local('Roboto Light'),local('Roboto-Light'),url(https://fonts.gstatic.com/s/roboto/v18/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff'),url(https://fonts.gstatic.com/s/roboto/v18/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}
 @font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),url(https://fonts.gstatic.com/s/roboto/v18/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff'),url(https://fonts.gstatic.com/s/roboto/v18/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}
@@ -2143,7 +2092,8 @@ http://www.muhammadadamfirdaus.com/
  }
 
  main section > .w-30,
- main#category section .w-30 {
+ main#category section .w-30,
+ main#gallery section div > .w-30 {
    width: 300px;
    -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
@@ -2151,12 +2101,14 @@ http://www.muhammadadamfirdaus.com/
  }
 
  main section > .col.w-30,
- main#category section .w-30 {
+ main#category section .w-30,
+ main#gallery section div > .w-30 {
    float:right;
  }
 
  main .container-desktop > .wrapper,
- main section .w-30 .wrapper {
+ main section .w-30 .wrapper,
+ main#gallery .w-70 > .wrapper {
    padding: 0;
  }
 
@@ -3162,6 +3114,7 @@ http://www.muhammadadamfirdaus.com/
    width: 100%;
  }
 
+ #section-4 .video.swiper-container,
  #section-4 .foto.swiper-container,
  .gallery-title {
    background: #000;
@@ -3338,8 +3291,8 @@ http://www.muhammadadamfirdaus.com/
    padding-bottom: 10%;
  }
 
- #gallery #section-4 {
-   margin: 0 0 30px 0;
+ #gallery > .container-desktop:last-child {
+   margin-top: 30px;
  }
 
  #gallery .pswp__caption__center {
