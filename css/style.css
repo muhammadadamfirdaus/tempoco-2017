@@ -3559,14 +3559,6 @@ http://www.muhammadadamfirdaus.com/
    margin-bottom: 30px;
  }
 
- #category #section-4 .brightcove.wrapper {
-   padding: 0;
-   margin-top: 30px;
-   width: 728px;
-   height: 405px;
-   position: relative;
- }
-
  #category .swiper-button-white {
    background-color: rgba(0,0,0,0.5);
    padding: 1.5% 0;
@@ -3588,6 +3580,14 @@ http://www.muhammadadamfirdaus.com/
 
  #category.tags h1 {
    margin-bottom: 1em;
+ }
+
+ #gallery .gallery-title .brightcove.wrapper {
+   padding: 0;
+   margin-top: 30px;
+   width: 728px;
+   height: 405px;
+   position: relative;
  }
 
  /* index */
