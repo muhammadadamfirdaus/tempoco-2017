@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^blog/its-a-sunny-day/?$ / [L,R,NC]

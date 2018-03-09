@@ -337,7 +337,7 @@ http://www.muhammadadamfirdaus.com/
   display: inline-block;
   vertical-align: middle;
   width: 55%;
-  height: 70px;
+  /* height: 70px; */
   line-height: 30px;
   /* background-image: url(../images/sprites.png); */
   background-repeat: no-repeat;
@@ -530,8 +530,8 @@ http://www.muhammadadamfirdaus.com/
  .search a {
    content:'';
    background: url(../images/sprites.png) no-repeat;
-   background-position: -16px -45px;
-   background-size: 195px;
+   background-position: -16px -48px;
+   background-size: 200px;
    display: inline-block;
    width: 16px;
    height: 16px;
@@ -710,11 +710,11 @@ http://www.muhammadadamfirdaus.com/
 
  .header-bottom li a#search {
    background: url(../images/sprites.png) no-repeat;
-   background-position: -15px -52px;
+   background-position: -18px -52px;
    background-size: 220px;
    display: none;
-   width: 20px;
-   height: 20px;
+   width: 18px;
+   height: 18px;
    line-height: 20px;
    padding: 0;
    position: absolute;
@@ -4529,7 +4529,7 @@ section nav:nth-of-type(1) li a:after,
 }
 
 .headline-terbaru.swiper-container-horizontal > .swiper-pagination-bullets {
-  padding: 5px 0;
+  padding: 8px 0;
 }
 
 #section-4 .foto.swiper-container .swiper-button-prev {
@@ -4589,8 +4589,8 @@ section nav:nth-of-type(1) li a:after,
 }
 /* Bullets */
 .swiper-pagination-bullet {
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   display: inline-block;
   border-radius: 100%;
   background-color: #555;
@@ -4621,11 +4621,11 @@ button.swiper-pagination-bullet {
 .swiper-pagination-bullet-active:before {
 	content:'';
   opacity: 1;
-  width: 23px;
-  height: 23px;
+  width: 16px;
+  height: 16px;
   position:absolute;
-  left:-5px;
-  top:-5px;
+  left:-3px;
+  top:-3px;
   display: inline-block;
   border-radius: 100%;
   border:1px solid rgba(244,67,54,0.75);
@@ -4646,12 +4646,13 @@ button.swiper-pagination-bullet {
   -ms-transform: translate3d(0px, -50%, 0);
   transform: translate3d(0px, -50%, 0);
 }
+
 .swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 5px 0;
   display: block;
 }
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 1px 5px;
+  margin: 0px 4px;
 }
 /* Progress */
 .swiper-pagination-progress {

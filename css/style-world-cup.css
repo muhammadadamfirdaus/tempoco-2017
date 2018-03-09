@@ -1,0 +1,179 @@
+.world-cup {
+  /* background: url('../images/background-world-cup.jpg') no-repeat;
+  background-size: auto;
+  background-attachment: fixed; */
+  background-color: #9e0b0f;
+}
+
+.world-cup .terpopuler .card-type-1 a:nth-of-type(2) h2.title,
+.world-cup #section-3 .card span {
+  color: #fff;
+}
+
+#full-dark header,
+#full-dark span.date,
+#full-dark .head-newsflash h1,
+#full-dark .head-newsflash a h2,
+#full-dark .menu li a {
+  color: #fff;
+}
+
+.world-cup header,
+.world-cup .sticky-header .header-bottom .menu {
+  background: url('../images/background-world-cup-header.jpg') no-repeat;
+  border-bottom: 5px solid #fde7bb;
+}
+
+.world-cup .blue-diagonal-75,
+.world-cup .red-500,
+.world-cup .red-sky,
+.world-cup .green-diagonal-75,
+.world-cup .amber-700 {
+  background: #fde7bb;
+  color: #ff0000;
+}
+
+.world-cup .tab-type-1 .tab-pagination,
+.world-cup .terpopuler .tab-pagination,
+.world-cup .bola .tab-pagination {
+  border-bottom:  1px solid #fde7bb;
+}
+
+.world-cup .header-top-new {
+  background: none;
+  box-shadow: none;
+}
+
+#full-dark .header-bottom li a#search,
+.world-cup .search a {
+  background-position-x: 0;
+}
+
+.world-cup .header-main a.logo-tempo:before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  right: -90px;
+  width: 100px;
+  height: 100px;
+  background: url('../images/logo-piala-dunia.png') no-repeat;
+}
+
+.world-cup .header-bottom {
+  background: none;
+}
+
+.world-cup #headline.swiper-container.headline-mobile-terbaru .swiper-slide:nth-child(1) {
+  border-left: 5px solid #fff;
+}
+
+.world-cup #headline.swiper-container .swiper-wrapper {
+  border-top: 5px solid #fff;
+}
+
+.world-cup #headline.swiper-container.headline-mobile-terbaru .swiper-slide:nth-child(2n+1) {
+  border-right: 5px solid #fff;
+}
+
+.world-cup .card .wrapper > a:nth-of-type(1) {
+  border: 5px solid #fff;
+}
+
+.world-cup .search input,
+.world-cup .tab .tab-content-slide a, .card-type-4 h2,
+.world-cup .tab-content-slide li span,
+.world-cup .list li a span,
+.world-cup .tab-content li span,
+.world-cup .tab .tab-content-slide li:nth-of-type(1) h2.title,
+.tab.tab-type-2 .tab-content-slide li:nth-of-type(2) h2.title,
+/* .world-cup .tab.tab-type-2 .tab-content-slide li:nth-of-type(2) h2.title, */
+.world-cup #section-3 li:nth-of-type(1) a:nth-of-type(2) h2.title,
+/* .world-cup .video.tab-type-2 .tab-content-slide li h2.title, */
+.world-cup .list li a:nth-of-type(2) h2.title,
+.world-cup .tab .tab-content-slide li h2.title,
+.world-cup .list.list-type-2 li a:nth-of-type(2) h2.title,
+.world-cup #section-3 li .card h2.title,
+.world-cup .terpopuler.list li a:nth-of-type(2) h2.title,
+.world-cup .tab.tab-type-3 .tab-content .tab-content-slide li h2.title,
+/* .world-cup .video.tab-type-2 .tab-content-slide li a:nth-of-type(2) h2.title, */
+.world-cup .tab .tab-content-slide li h2,
+.world-cup .tab .tab-content-slide li p,
+.world-cup #section-3 .card p,
+.world-cup .widget-article h2,
+.world-cup .kolom-konten .swiper-slide li a,
+.world-cup .indikator input[type=radio]:checked ~ label,
+.world-cup .indikator p.jawab-indikator {
+  color: #fff;
+}
+
+.world-cup .tab.video .tab-content li a span,
+.tab.video .tab-content li:nth-of-type(2) a span,
+.world-cup #article li:nth-of-type(1) a:nth-of-type(2) h2.title {
+  color: #000;
+}
+
+.world-cup .swiper-pagination-bullet-active,
+.world-cup .video.tab-type-2 li:nth-of-type(1) .wrapper,
+.world-cup .video.tab .tab-content-slide li a {
+  background: #fff;
+}
+
+
+.world-cup .list-type-3 li:nth-of-type(1):before,
+.world-cup .indikator input[type=radio]:checked ~ .check::before {
+  background: #fde7bb;
+}
+
+.world-cup #indikator .row:nth-of-type(1),
+.world-cup #berita-pilihan .row:nth-of-type(1),
+.world-cup #section-3 li:nth-of-type(1),
+.world-cup #article #section-3 li:nth-of-type(1),
+.world-cup .list li:nth-of-type(1).wrapper,
+.world-cup #berita-pilihan .row:nth-of-type(1),
+.world-cup .list.list-type-1 li:nth-of-type(1),
+.world-cup .list.list-type-2 li:nth-of-type(-n+2) {
+  border-top: 1px solid #fde7bb;
+}
+
+.world-cup .tab.tab-type-2 .tab-pagination {
+  border-bottom: 1px solid #fde7bb;
+}
+
+.world-cup #section-4 .foto.swiper-container .swiper-slide figcaption {
+  background: none;
+}
+
+.world-cup #section-4 .foto.swiper-container .swiper-pagination .swiper-pagination-bullet {
+  margin-top: 25px;
+}
+
+.world-cup .swiper-pagination-bullet-active:before {
+  border: 1px solid #fde7bb;
+}
+
+.world-cup .indikator ul li .check {
+  border: 2px solid #fff;
+}
+
+.world-cup .indikator input[type=radio]:checked ~ .check {
+  border: 2px solid #fde7bb;
+  background: #fde7bb;
+}
+
+.world-cup #article .w-70 .wrapper {
+  background: #fff;
+}
+
+/* give space on detail article */
+.world-cup #article .w-70 .wrapper > nav > *:nth-of-type(1),
+.world-cup article h1,
+.world-cup article > .sub-head,
+.world-cup article figcaption > p,
+.world-cup article div > p,
+.world-cup article .kanal-pilihan {
+  padding: 0 20px;
+}
+
+.world-cup .tags > li:nth-of-type(1) {
+  margin-left: 20px;
+}

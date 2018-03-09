@@ -116,7 +116,7 @@ $(function(){
 	var headline = new Swiper('.headline-terbaru', {
 		pagination: '.headline-terbaru .swiper-pagination',
 		paginationClickable: true,
-		autoplay: 10000,
+		// autoplay: 10000,
 		loop: true,
 		spaceBetween: 20,
 		effect: 'slide',
@@ -325,8 +325,6 @@ $(function(){
 		trendingList.removeClass('active');
 		$('.tooltip').removeClass('active');
 	});
-
-
 
 	function sticky(){
 		var scroll = getCurrentScroll();
@@ -856,35 +854,27 @@ $(function(){
 	// 	});
 	// }
 
-	// Google Analytics
-	// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	// })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	//
-	// ga('create', 'UA-57161828-3', 'auto', {'allowAnchor': true});
-	// ga('set', {
-	// 	page: '/#terbaru'
-	// });
-	//
-	// ga('send', 'pageview', {
-	// 	'page': location.pathname + location.search + location.hash
-	// });
-	//
-	// // Google Tag Manager
-	// (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  // new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  // j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  // 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  // })(window,document,'script','dataLayer','GTM-TVGQF5T');
+	// check if page contain special element
+	// if($('body.asian-games').length){
+	// 	console.log('asian games ready!');
+	// 	$("head link[rel='stylesheet']").last().after('<link rel="stylesheet" type="text/css" href="css/style-asian-games.css">');
+	// }
 
+	if($('body.world-cup').length){
+		console.log('world cup ready!');
+		$("head link[rel='stylesheet']").last().after('<link rel="stylesheet" type="text/css" href="css/style-world-cup.css">');
+		var logoTEMPO = $('body#full-dark .header-main .logo-tempo img');
+		var fokusNavigationDarkTheme = $('body#full-dark .head-newsflash .swiper-button-newsflash');
+		logoTEMPO.attr("src","images/logo-tempo-co-white.png"); // change logo to white
+		fokusNavigationDarkTheme.removeClass('swiper-button-black, swiper-button-black').addClass('swiper-button-white, swiper-button-white');
+	}
 
-		// Google Tag Manager
-		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-KNSBXFS');
+	// Google Tag Manager
+	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNSBXFS');
 
 });
 

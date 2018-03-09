@@ -1,0 +1,43 @@
+.asian-games {
+  background: url('../images/asian-games.png') no-repeat;
+  background-size: cover;
+}
+
+.asian-games .header-top-new {
+  background: url('../images/asian-games-top.png') no-repeat;
+  box-shadow: 1px 1px 1px 1px #eee;
+}
+
+.asian-games .header-main a.logo-tempo:before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  right: -90px;
+  width: 119px;
+  height: 60px;
+  background: url('../images/logo-asian-games-2018.png') no-repeat;
+}
+
+.asian-games .header-bottom {
+  background: none;
+}
+
+.asian-games #headline.swiper-container.headline-mobile-terbaru .swiper-slide:nth-child(1) {
+  border-left: 5px solid #fff;
+}
+
+.asian-games #headline.swiper-container .swiper-wrapper {
+  border-top: 5px solid #fff;
+}
+
+.asian-games #headline.swiper-container.headline-mobile-terbaru .swiper-slide:nth-child(2n+1) {
+  border-right: 5px solid #fff;
+}
+
+.asian-games .card .wrapper > a:nth-of-type(1) {
+  border: 5px solid #fff;
+}
+
+.asian-games .terpopuler .card-type-1 a:nth-of-type(2) h2.title {
+  color: #000;
+}

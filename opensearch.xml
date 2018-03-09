@@ -1,0 +1,7 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+   <ShortName>TEMPO.CO</ShortName>
+   <Description>Cari berita menarik, akurat, dan terbaru.</Description>
+   <Tags>TEMPO.CO</Tags>
+   <Contact>adam@muhammadadamfirdaus.com</Contact>
+   <Url type="application/rss+xml" template="https://www.tempo.co/?q={searchTerms}"/>
+ </OpenSearchDescription>
