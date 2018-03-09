@@ -79,6 +79,10 @@
   border: 5px solid #fff;
 }
 
+.world-cup li .card .wrapper > a:nth-of-type(1) {
+  border: 1px solid#fff;
+}
+
 .world-cup .search input,
 .world-cup .tab .tab-content-slide a, .card-type-4 h2,
 .world-cup .tab-content-slide li span,
@@ -108,7 +112,7 @@
 
 .world-cup .tab.video .tab-content li a span,
 .tab.video .tab-content li:nth-of-type(2) a span,
-.world-cup #article li:nth-of-type(1) a:nth-of-type(2) h2.title {
+.world-cup #article .kanal-pilihan li a:nth-of-type(2) h2.title {
   color: #000;
 }
 
@@ -174,6 +178,18 @@
   padding: 0 20px;
 }
 
+.world-cup .sticky.sub-head {
+  padding: 14px 0 8px;
+}
+
 .world-cup .tags > li:nth-of-type(1) {
   margin-left: 20px;
+}
+
+#article #section-3 > .wrapper > .col:first-child > .wrapper {
+  padding: 0 7.5px 0 15px;
+}
+
+#article #section-3 > .wrapper > .col:last-child > .wrapper {
+  padding: 0 15px 0 7.5px;
 }
