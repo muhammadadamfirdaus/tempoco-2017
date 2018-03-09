@@ -866,7 +866,7 @@ $(function(){
 		var logoTEMPO = $('body#full-dark .header-main .logo-tempo img');
 		var fokusNavigationDarkTheme = $('body#full-dark .head-newsflash .swiper-button-newsflash');
 		logoTEMPO.attr("src","images/logo-tempo-co-white.png"); // change logo to white
-		fokusNavigationDarkTheme.removeClass('swiper-button-black, swiper-button-black').addClass('swiper-button-white, swiper-button-white');
+		fokusNavigationDarkTheme.removeClass('swiper-button-black').addClass('swiper-button-white');
 	}
 
 	// Google Tag Manager
