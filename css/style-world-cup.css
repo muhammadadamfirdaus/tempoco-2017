@@ -106,7 +106,8 @@
 .world-cup .widget-article h2,
 .world-cup .kolom-konten .swiper-slide li a,
 .world-cup .indikator input[type=radio]:checked ~ label,
-.world-cup .indikator p.jawab-indikator {
+.world-cup .indikator p.jawab-indikator,
+.world-cup #category h1 {
   color: #fff;
 }
 

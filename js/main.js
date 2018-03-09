@@ -862,11 +862,18 @@ $(function(){
 
 	if($('body.world-cup').length){
 		console.log('world cup ready!');
-		$("head link[rel='stylesheet']").last().after('<link rel="stylesheet" type="text/css" href="css/style-world-cup.css">');
+		$("head link[rel='stylesheet']").last().after('<link rel="stylesheet" type="text/css" href="https://statik.tempo.co/css/desktop/style-world-cup.css">');
 		var logoTEMPO = $('body#full-dark .header-main .logo-tempo img');
 		var fokusNavigationDarkTheme = $('body#full-dark .head-newsflash .swiper-button-newsflash');
-		logoTEMPO.attr("src","images/logo-tempo-co-white.png"); // change logo to white
+		logoTEMPO.attr("src","https://www.tempo.co/images/logo-tempo-co-white.png"); // change logo to white
 		fokusNavigationDarkTheme.removeClass('swiper-button-black').addClass('swiper-button-white');
+	} else if($('body.asian-games').length){
+		console.log('asian games ready!');
+		$("head link[rel='stylesheet']").last().after('<link rel="stylesheet" type="text/css" href="https://statik.tempo.co/css/desktop/style-asian-games.css">');
+		// var logoTEMPO = $('body.asian-games .header-main .logo-tempo img');
+		// var fokusNavigationDarkTheme = $('body.asian-games .head-newsflash .swiper-button-newsflash');
+		// logoTEMPO.attr("src","images/logo-tempo-co-white.png"); // change logo to white
+		// fokusNavigationDarkTheme.removeClass('swiper-button-black').addClass('swiper-button-white');
 	}
 
 	// Google Tag Manager
