@@ -325,36 +325,47 @@ googletag.defineSlot('/14056285/tempo.co/desktop_home_native_headline', [1, 1], 
     		<div class="header-bottom">
     			<nav id="menu" class="menu clearfix">
           	<div class="container-desktop scroll-container clearfix">
-              <li>
-                        <a id="Home" href="https://www.tempo.co/">Home</a></li><li>
-                        <a id="Nasional" href="//nasional.tempo.co">Nasional</a></li><li>
-                        <a id="Bisnis" href="//bisnis.tempo.co">Bisnis</a></li><li>
-                        <a id="Metro" href="//metro.tempo.co">Metro</a></li><li>
-                        <a id="Dunia" href="//dunia.tempo.co">Dunia</a></li><li class="sub">
-                      <a id="Bola" href="//bola.tempo.co">Bola</a>
-                      <ul><li><a href="//bola.tempo.co">Bola</a></li><li><a href="//sport.tempo.co">Sport</a></li></ul>
-                   </li><li class="sub">
-                      <a id="Seleb" href="//seleb.tempo.co">Seleb</a>
-                      <ul><li><a href="//seleb.tempo.co">Seleb</a></li><li><a href="//gaya.tempo.co">Gaya</a></li></ul>
-                   </li><li>
-                        <a id="Cantik" href="//cantik.tempo.co">Cantik</a></li><li>
-                        <a id="Tekno" href="//tekno.tempo.co">Tekno</a></li><li>
-                        <a id="Otomotif" href="//otomotif.tempo.co">Otomotif</a></li><li>
-                        <a id="Travel" href="//travel.tempo.co">Travel</a></li><li>
-                        <a id="Foto" href="//foto.tempo.co">Foto</a></li><li>
-                        <a id="Video" href="//video.tempo.co">Video</a></li><li>
-                        <a id="Grafis" href="//grafis.tempo.co">Grafis</a></li><li>
-                        <a id="Investigasi" href="https://investigasi.tempo.co">Investigasi</a></li><li>
-                        <a id="Indeks" href="https://www.tempo.co/indeks">Indeks</a></li><li>
-                        <a id="Bekraf" href="https://microsite.tempo.co/bekraf">Bekraf</a></li>              <li><a id="search" class="search-button" href="#"></a>
-     					</li>
+              <li><a id="Home" href="https://www.tempo.co/">Home</a></li>
+							<li class="sub"><a id="Nasional" href="//nasional.tempo.co">Nasional</a>
+								<ul>
+									<li><a href="//Nasional.tempo.co">Nasional</a></li>
+									<li><a href="//pilkada.tempo.co">Pilkada</a></li>
+									<li><a href="//hukum.tempo.co">Lawmag</a></li>
+								</ul>
+							</li>
+							<li><a id="Bisnis" href="//bisnis.tempo.co">Bisnis</a></li>
+							<li><a id="Metro" href="//metro.tempo.co">Metro</a></li>
+							<li class="sub"><a id="Bola" href="//bola.tempo.co">Bola</a>
+								<ul>
+									<li><a href="//bola.tempo.co">Bola</a></li>
+									<li><a href="//sport.tempo.co">Sport</a></li>
+								</ul>
+							</li>
+							<li><a id="Foto" href="//foto.tempo.co">Foto</a></li>
+							<li><a id="Investigasi" href="https://investigasi.tempo.co">Investigasi</a></li>
+							<li><a id="Cantik" href="//cantik.tempo.co">Cantik</a></li>
+							<li><a id="Otomotif" href="//otomotif.tempo.co">Otomotif</a></li>
+							<li><a id="Indeks" href="https://www.tempo.co/indeks">Indeks</a></li>
+							<li><a id="Bekraf" href="https://microsite.tempo.co/bekraf">Bekraf</a></li>
+							<li class="sub"><a id="more" href="#">Lainnya</a>
+								<ul class="more clearfix">
+									<h4>Kanal Lainnya</h4>
+									<li><a href="">Tekno</a></li>
+									<li><a href="">Dunia</a></li>
+									<li><a href="">Seleb</a></li>
+									<li><a href="">Gaya</a></li>
+									<li><a href="">Travel</a></li>
+									<li><a href="">Ramadan</a></li>
+								</ul>
+							</li>
+							<li><a id="search" class="search-button" href="#"></a></li>
      					<div id="extension" class="sticky-search clearfix">
-     					<div class="wrapper clearfix">
+     						<div class="wrapper clearfix">
      							<div id="sticky-search" class="col">
      								<form action="https://www.tempo.co/search" class="clearfix" method="get" id="text">
      									<div class="search clearfix">
      										<a class="col" href="javascript:document.getElementById('text').submit();"></a>
-     										<input class="col" type="search" value="Cari konten menarik?" onfocus="this.value = this.value=='Cari konten menarik?'?'':this.value;" onblur="this.value = this.value==''?'Cari konten menarik?':this.value;" name="q">
+     										<input class="col" autocomplete="off" type="search" value="Cari konten menarik?" onfocus="this.value = this.value=='Cari konten menarik?'?'':this.value;" onblur="this.value = this.value==''?'Cari konten menarik?':this.value;" name="q">
      									</div>
 
                       <section id="trending" class="list list-type-3">
@@ -396,7 +407,6 @@ googletag.defineSlot('/14056285/tempo.co/desktop_home_native_headline', [1, 1], 
      							</a>
      						</div>
      					</div>
-
     	      </div>
         	</nav>
     		</div>
@@ -408,7 +418,7 @@ googletag.defineSlot('/14056285/tempo.co/desktop_home_native_headline', [1, 1], 
     		<div class="wrapper">
     			<div class="">
     				<!-- cukup ganti dari bawah ini -->
-    				<div id='leaderboard_1' style='width:auto;height:auto;text-align: center;'>
+					<div id='leaderboard_1' style='width:auto;height:auto;text-align: center;'>
 					<script type='text/javascript'>
 					googletag.cmd.push(function() { googletag.display('leaderboard_1'); });
 					</script>
