@@ -239,17 +239,68 @@ $(function(){
 		});
 	}
 
-	var submenuDesktop = $(this).find('.sub ul');
-	$('.menu li.sub').on('mouseenter', function(e){
-		e.preventDefault();
-		e.stopImmediatePropagation();
-		$(this).not(submenuDesktop).addClass('sub-menu-active');
-		$(this).siblings(submenuDesktop).removeClass('sub-menu-active');
-	}).on('mouseleave', function(e){
-		e.preventDefault();
-		e.stopImmediatePropagation();
-		$('.sub').removeClass('sub-menu-active');
+	/* menu detail */
+	// $('.more .w-20 > li').on('mouseenter', function(e) {
+	// 	console.log('hit');
+	// 	var moreMenuLiHovered = $(this).closest('.more');
+	// 	moreMenuLiHovered.find('.more li.more-active').find('.more .tab-menu.tab-menu-active').removeClass('more-active');
+	// 	$(this).addClass('more-active');
+
+	// 	// var menuContent = $(this).closest('.menu-content');
+	// 	// moreMenuLiHovered.find('.more .tab-menu:not(:hidden)').removeClass('tab-menu-active');
+	// 	// $(this.hash).addClass('.tab-menu-active');
+
+  //   e.preventDefault();
+  // }).on('mouseleave', function(e){
+	// 	e.preventDefault();
+	// 	e.stopImmediatePropagation();
+	// 	$('.more .w-20 > li').removeClass('more-active');
+	// 	$('.more .tab-menu:not(:hidden)').removeClass('.tab-menu-active');
+	// });;
+
+	$('.more-navigation li > a').on('mouseenter', function(e) {
+    var $tabs = $(this).closest('.sub > .more');
+    $tabs.find('.more-navigation li > a.current').removeClass('current');
+    $(this).addClass('current');
+
+    $tabs.find('.more-content:not(:hidden)').removeClass('selected');
+    $(this.hash).addClass('selected');
+
+    e.preventDefault();
+  });
+
+	// $('.tabs .tabsNav a').click(function(e) {
+  //   var $tabs = $(this).closest('.tabs');
+  //   $tabs.find('.tabsNav a.current').removeClass('current');
+  //   $(this).addClass('current');
+
+  //   $tabs.find('div.linkTab:not(:hidden)').hide();
+  //   $(this.hash).show();
+
+  //   e.preventDefault();
+	// });
+	
+
+
+
+
+
+	$('.tab .tab-pagination li:last-child a').on('click', function(e){
+		window.location.href = $(this).attr("href");
 	});
+
+	// submenu
+	// var submenuDesktop = $(this).find('.sub ul');
+	// $('.menu li.sub').on('mouseenter', function(e){
+	// 	e.preventDefault();
+	// 	e.stopImmediatePropagation();
+	// 	$(this).not(submenuDesktop).addClass('sub-menu-active');
+	// 	$(this).siblings(submenuDesktop).removeClass('sub-menu-active');
+	// }).on('mouseleave', function(e){
+	// 	e.preventDefault();
+	// 	e.stopImmediatePropagation();
+	// 	$('.sub').removeClass('sub-menu-active');
+	// });
 
 	/* tab */
 	$('.tab .tab-pagination li a').on('click', function(e) {
