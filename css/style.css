@@ -761,6 +761,9 @@ nav {
 .sub-menu-active > .more {
   visibility: visible;
   opacity: 1;
+  -webkit-transform: translate3d(-940px, 0px, 0);
+  transform: translate3d(-940px, 0px, 0);
+  transition: all 0.5s ease;
 }
 
 .more {
@@ -770,14 +773,21 @@ nav {
   height: 320px;
   position: absolute;
   border: 1px solid #ccc;
-  -webkit-transform: translate3d(-941px, 0px, 0);
-  transform: translate3d(-941px, 0px, 0);
+  border-top: 0;
+  /* -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5); */
+  -webkit-transform: translate3d(-940px, -10px, 0);
+  transform: translate3d(-940px, -10px, 0);
   transition: all 0.5s ease;
+  backface-visibility: hidden;
 }
 
 .more > .wrapper {
   background:#f9f7f7;
   height: 100%;
+
+  z-index: -10;
 }
 
 .more .wrapper > .more-navigation {
@@ -828,6 +838,21 @@ nav {
 
 .more .more-content .card {
   width: 33.3%;
+}
+
+.more .more-content .card .wrapper > a:first-child {
+  height: 142px;
+  overflow: hidden;
+}
+
+.more .more-content .card .wrapper .title {
+  color: #111;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.more .more-content .card img {
+  width: 100%;
 }
 
 .more .more-content .card > .wrapper {
