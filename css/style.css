@@ -790,11 +790,13 @@ nav {
 .more .more-content {
   color: #000;
   opacity: 0;
+  visibility: hidden;
   position: absolute;
 }
 
 .more .more-content.selected {
   opacity: 1;
+  visibility: visible;
   overflow: hidden;
   clear: both;
   padding-top: 6px;
