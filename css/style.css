@@ -2160,6 +2160,18 @@ border-bottom: 1px solid #e53935;
   border-top: 1px solid #269218;
 }
 
+.box-abc-grey{
+  background-color: #e6e6e6;
+  padding: 5px;
+}
+
+.box-abc-blue{
+  background-color: #0084d5;
+  color: #fff;
+  font-size: 13px;
+  padding: 5px;
+}
+
 .list .card-type-1 a:nth-of-type(1) img,
 .tab .tab-content-slide a:nth-of-type(1) img,
 .card-type-3 a:nth-of-type(1) img,

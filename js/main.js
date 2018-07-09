@@ -277,8 +277,6 @@ $(function(){
 
 		$(this).addClass('current');
 		$("#"+tabMenu).addClass('selected');
-
-    e.preventDefault();
   });
 
 	// $('.tabs .tabsNav a').click(function(e) {
