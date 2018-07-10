@@ -277,7 +277,10 @@ $(function(){
 
 		$(this).addClass('current');
 		$("#"+tabMenu).addClass('selected');
-  });
+  }).on('mouseleave', function(e){
+		e.stopImmediatePropagation();
+		console.log('triggered');
+	});
 
 	// $('.tabs .tabsNav a').click(function(e) {
   //   var $tabs = $(this).closest('.tabs');
