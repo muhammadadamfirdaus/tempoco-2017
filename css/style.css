@@ -631,8 +631,8 @@ nav {
 .menu li > a {
   color: #777;
   font-family: 'Roboto', Helvetica, Arial;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 400;
   letter-spacing: 0.45px;
   line-height: 40px;
   text-decoration:none;
@@ -640,7 +640,7 @@ nav {
 }
 
 .menu li > a {
-  padding:10px 11.5px;
+  padding:10px 7.5px;
 }
 
 .menu li:nth-child(2) {
@@ -728,8 +728,13 @@ nav {
   /* -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5); */
+<<<<<<< HEAD
   -webkit-transform: translate3d(-969px, 0, 0);
   transform: translate3d(-969px, 0, 0);
+=======
+  -webkit-transform: translate3d(-948px, 0, 0);
+  transform: translate3d(-948px, 0, 0);
+>>>>>>> v-10.3
   transition: all 0.2s ease;
   backface-visibility: hidden;
 }
@@ -890,7 +895,7 @@ nav {
 
 .header-bottom li a#search {
   background: url(../images/sprites.png) no-repeat;
-  background-position: -18px -52px;
+  background-position: -16px -52px;
   background-size: 220px;
   display: none;
   width: 18px;
@@ -2139,7 +2144,7 @@ section li {
 
 /* title box */
 .bbc-indonesia .box-title {
-  background: url(../images/logo-bbc-indonesia.png) no-repeat;
+  background: url(../images/logo-bbc-indonesia-new.png) no-repeat;
 }
 
 .tab .tab-pagination,
@@ -2165,11 +2170,13 @@ border-bottom: 1px solid #e53935;
 }
 
 .australia-plus .box-title {
-  background: url(../images/logo-australia-plus.png) no-repeat;
+  background: url(../images/logo-abc-new.png) no-repeat;
+  width: 300px;
+  height: 50px;
 }
 
 .list.list-type-1.australia-plus li:nth-of-type(1) {
-  border-top: 1px solid #269218;
+  border-top: 0px solid #269218;
 }
 
 .box-abc-grey{
@@ -2183,6 +2190,29 @@ border-bottom: 1px solid #e53935;
   font-size: 13px;
   padding: 5px;
 }
+
+.dw .box-title {
+  background: url(../images/dw-logo.png) no-repeat;
+  width: 300px;
+  height: 50px;
+}
+
+.list.list-type-1.dw li:nth-of-type(1) {
+  border-top: 0px solid #269218;
+}
+
+.box-dw-grey{
+  padding: 5px;
+  border-bottom: 1px solid #d6d8d8;
+}
+
+.box-dw-blue{
+  background-color: #0084d5;
+  color: #fff;
+  font-size: 13px;
+  padding: 5px;
+}
+
 
 .list .card-type-1 a:nth-of-type(1) img,
 .tab .tab-content-slide a:nth-of-type(1) img,
@@ -5277,3 +5307,53 @@ background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%20
   width: 100%;
   height: auto;
 }
+
+
+div.paging {
+	width: 100%; 
+	padding: 3px;
+	margin: 70px 0px;
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 17px;
+  color: #FF6500;
+ }
+
+ div.paging a {
+ 	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+ 	border-radius: 25px;
+ 	padding: 7px 10px;
+ 	margin-right: 3px;
+  margin-left: 3px;
+ 	text-decoration: none;
+ 	background: #e53935;
+ 	background-position: bottom;
+ 	color: #FFF;
+ }
+
+ div.paging a:hover {
+ 	border: 1px solid #FF9600;
+ 	color: #FF6500;
+ 	background-color: #FFC794;
+ 	background-image: none;
+ }
+
+ div.paging span.current {
+ 	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+ 	border-radius: 25px;
+  padding: 7px 10px;
+  margin-right: 3px;
+  margin-left: 3px;
+  border: 1px solid #FFF;
+  text-decoration: none;
+  background: #EDEBEB; 
+  background-position: bottom;
+ 	color: #909090;
+ }
+
+ div.paging span.prevnext {
+  margin-left: 0px;
+  margin-right: 3px; 
+ }
