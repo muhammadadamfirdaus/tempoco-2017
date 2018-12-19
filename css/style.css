@@ -274,6 +274,10 @@ hr {
   position: relative;
 }
 
+.container-desktop.date {
+  padding: 0.5em 0;
+}
+
 .wrapper {
   padding: 0 20px;
 }
@@ -308,8 +312,8 @@ header {
 }
 
 .header-top-new {
-background: rgba(225,37,24,1);
-height: 25px;
+  background: rgba(225,37,24,1);
+  height: 25px;
 }
 
 span.date,
@@ -319,6 +323,70 @@ span.time {
   font-weight: 300;
   line-height: 12px;
   letter-spacing: 0.01em;
+}
+
+.container-desktop.date > .col:nth-child(2){
+  display: inline-block;
+  text-align: right;
+}
+
+.language,
+#search form {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.language {
+  margin-right: 1em;
+  position: relative;
+  width: 150px;
+  height: 18px;
+}
+
+.language > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  display: none;
+}
+
+.language > div.active {
+  display: block;
+}
+
+.language > div:last-child {
+  position: relative;
+  top: 22px;
+  right: 8px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  z-index: 4;
+}
+
+.language .flags {
+  display: inline-block;
+  background-image: url(../images/sprites.png);
+  background-repeat: no-repeat;
+  background-size: 230px;
+  width: 18px;
+  height: 16px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.language .country {
+  color: #555;
+  font-size: 13px;
+}
+
+.language .id .flags {
+  background-position: 0 -75px;
+}
+.language .en .flags {
+  background-position: -17px -75px;
 }
 
 .header-main {
@@ -334,17 +402,17 @@ span.time {
 }
 
 .logo-tempo {
-display: inline-block;
-vertical-align: middle;
-width: 55%;
-/* height: 70px; */
-line-height: 30px;
-/* background-image: url(../images/sprites.png); */
-background-repeat: no-repeat;
-background-size: 235%;
-margin-left: 5px;
-position: relative;
-background-position-x: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: 55%;
+  /* height: 70px; */
+  line-height: 30px;
+  /* background-image: url(../images/sprites.png); */
+  background-repeat: no-repeat;
+  background-size: 235%;
+  margin-left: 5px;
+  position: relative;
+  background-position-x: 0;
 }
 
 .logo-tempo:after {
@@ -388,8 +456,8 @@ background-position-x: 0;
 }
 
 .header-bottom {
-/* background: rgba(196, 22, 28, 1); */
-background: #f9f8f7;
+  /* background: rgba(196, 22, 28, 1); */
+  background: #f9f8f7;
 }
 
 .header-main > .w-50:nth-of-type(1) {
@@ -523,7 +591,6 @@ background: #e53935;
 }*/
 
 .search {
-  float:right;
   position:relative;
 }
 
@@ -1472,7 +1539,8 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 
 .sticky-header .header-top .w-50,
-.sticky-header .header-main .w-50 {
+.sticky-header .header-main .w-50,
+.sticky-header .container-desktop.date > .col:nth-child(2) {
   opacity: 0;
   display: none;
   -webkit-transition: all 0.1s ease;

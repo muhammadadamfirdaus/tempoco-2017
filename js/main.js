@@ -390,8 +390,8 @@ $(function(){
 		$('.tooltip').removeClass('active');
 	});
 
-	var scroll = getCurrentScroll();
 	function sticky(){
+		var scroll = getCurrentScroll();
   	if(scroll > jarakheader){
 			iklanTeratasDesktop.css('margin-top', jarakheader);
 			$('header').addClass('sticky sticky-header');
@@ -492,20 +492,6 @@ $(function(){
 				subHead2.removeClass('sticky');
 				subHead1.css('margin-bottom', 'initial');
 			}
-
-
-			var subArticle = $('.content').offset().top;
-			$('.content h2').each(function(){
-				if($(this).offset().top < window.pageYOffset + 120
-				//begins before top
-				&& $(this).offset().top + $(this).height() > window.pageYOffset + 120
-				//but ends in visible area
-				//+ 100 allows you to change hash before it hits the top border
-								){
-					console.log('sub judul');
-					window.location.hash = $(this).data('hash');
-				}
-			});
 		}
 
 		// var article = $('article'),
@@ -533,8 +519,6 @@ $(function(){
 		// 	}
 		// }
 	}
-
-	
 
   $(window).on('load scroll', function(){
 		/* clear the old timeout */
@@ -957,17 +941,11 @@ $(function(){
 	}
 
 	// Google Tag Manager
-	// (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	// new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	// j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	// 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	// })(window,document,'script','dataLayer','GTM-KNSBXFS');
-
 	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-KQF9SVJ');
+	})(window,document,'script','dataLayer','GTM-KNSBXFS');
 
 });
 
@@ -989,3 +967,25 @@ function windowopen(url, title, w, h) {
 			newWindow.focus();
 	}
 }
+
+const language = document.querySelector('.language');
+const dropdownLanguage = document.querySelector('.language .dropdown');
+// if(language.length){
+language.addEventListener('click', function(){
+	console.log('active');
+	if(dropdownLanguage == 'active'){
+		dropdownLanguage.classList.remove('active');
+	} else {
+		dropdownLanguage.classList.add('active');
+	}
+
+	window.addEventListener('click', function(e){
+		if(e.target.closest('.language')) {
+			return
+		};
+
+		dropdownLanguage.classList.remove('active');
+	});
+});
+
+// }
